@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Volume2 } from 'lucide-react';
 import '../styles/index.css';
 
@@ -7,6 +7,7 @@ export default function Flashcard({ front, back, onPlayAudio }) {
 
   // Reset flip state when moving to next question
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsFlipped(false);
   }, [front]);
 

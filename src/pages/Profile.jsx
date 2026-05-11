@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import useStore from '../store/useStore';
-import { User, Settings, Flame, Star, Zap, LogIn, LogOut } from 'lucide-react';
+import { User, Flame, Star, Zap, LogIn, LogOut } from 'lucide-react';
 import { signInWithPopup, signOut, onAuthStateChanged } from 'firebase/auth';
 import { auth, googleProvider } from '../firebase';
 import '../styles/index.css';

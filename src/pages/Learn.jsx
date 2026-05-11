@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import confetti from 'canvas-confetti';
 import Flashcard from '../components/Flashcard';
@@ -18,6 +18,7 @@ export default function Learn() {
 
   // Reset index when route type changes
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setCurrentIndex(0);
   }, [type]);
 
@@ -43,19 +44,22 @@ export default function Learn() {
     title = 'Kanji N5 Practice';
   }
 
-  // Handle case where route is invalid or data is missing
-  if (!currentData || currentData.length === 0) {
-    return <div style={{ padding: '2rem', textAlign: 'center' }}>Data not found for {type}</div>;
-  }
-
-  const currentItem = currentData[currentIndex];
+  const currentItem = currentData && currentData.length > 0 ? currentData[currentIndex] : null;
 
   useEffect(() => {
-    // Generate new options whenever the current item changes
-    const newOptions = generateQuizOptions(currentData, currentItem, answerKey);
-    setOptions(newOptions);
-    setSelectedAnswer(null);
+    if (currentItem) {
+      // Generate new options whenever the current item changes
+      const newOptions = generateQuizOptions(currentData, currentItem, answerKey);
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setOptions(newOptions);
+      setSelectedAnswer(null);
+    }
   }, [currentIndex, currentData, currentItem, answerKey]);
+
+  // Handle case where route is invalid or data is missing
+  if (!currentItem) {
+    return <div style={{ padding: '2rem', textAlign: 'center' }}>Data not found for {type}</div>;
+  }
 
   const handlePlayAudio = () => {
     if ('speechSynthesis' in window) {
@@ -71,6 +75,7 @@ export default function Learn() {
 
   const triggerConfetti = () => {
     const duration = 3 * 1000;
+    // eslint-disable-next-line react-hooks/purity
     const end = Date.now() + duration;
 
     const frame = () => {

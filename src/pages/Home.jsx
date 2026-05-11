@@ -1,4 +1,3 @@
-import React from 'react';
 import { BookOpen, Star, Flame, Trophy, Lock } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import LessonCard from '../components/LessonCard';
@@ -8,7 +7,7 @@ import '../styles/index.css';
 
 export default function Home() {
   const navigate = useNavigate();
-  const { streak, userLevel, exp } = useStore();
+  const { userLevel, streak } = useStore();
 
   return (
     <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>

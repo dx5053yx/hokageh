@@ -1,4 +1,3 @@
-import React from 'react';
 import { Home, Book, Trophy, User, Library as LibraryIcon } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 

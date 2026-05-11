@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import kanaData from '../data/kana.json';
 import kanjiData from '../data/kanji.json';
 import vocabData from '../data/vocab.json';

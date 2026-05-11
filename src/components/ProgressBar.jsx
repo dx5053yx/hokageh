@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 export default function ProgressBar({ progress, colorClass = 'var(--accent-primary)' }) {
   return (

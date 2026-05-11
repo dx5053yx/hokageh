@@ -1,4 +1,4 @@
-import React from 'react';
+
 import grammarData from '../data/grammar.json';
 import { BookOpen } from 'lucide-react';
 import '../styles/index.css';
