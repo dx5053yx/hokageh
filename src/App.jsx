@@ -1,4 +1,9 @@
+import React, { useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { onAuthStateChanged } from 'firebase/auth'
+import { doc, getDoc, setDoc } from 'firebase/firestore'
+import { auth, db } from './firebase'
+import useStore from './store/useStore'
 import Home from './pages/Home'
 import Learn from './pages/Learn'
 import Theory from './pages/Theory'
@@ -16,6 +21,51 @@ const NotFound = () => (
 );
 
 function App() {
+  const syncFromFirestore = useStore((state) => state.syncFromFirestore);
+
+  useEffect(() => {
+    let unsubscribeStore = null;
+
+    const unsubscribeAuth = onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        // Fetch existing data
+        const userRef = doc(db, 'users', user.uid);
+        const docSnap = await getDoc(userRef);
+
+        if (docSnap.exists()) {
+          syncFromFirestore(docSnap.data());
+        } else {
+          // Initialize user in firestore with local data
+          const state = useStore.getState();
+          await setDoc(userRef, {
+            userLevel: state.userLevel,
+            exp: state.exp,
+            streak: state.streak,
+            unlockedChapters: state.unlockedChapters
+          });
+        }
+
+        // Subscribe to local changes and push to Firestore
+        unsubscribeStore = useStore.subscribe((state) => {
+          setDoc(userRef, {
+            userLevel: state.userLevel,
+            exp: state.exp,
+            streak: state.streak,
+            unlockedChapters: state.unlockedChapters
+          }, { merge: true });
+        });
+
+      } else {
+        if (unsubscribeStore) unsubscribeStore();
+      }
+    });
+
+    return () => {
+      unsubscribeAuth();
+      if (unsubscribeStore) unsubscribeStore();
+    };
+  }, [syncFromFirestore]);
+
   return (
     <div className="app-container" style={{ paddingBottom: '80px' }}>
       <Routes>

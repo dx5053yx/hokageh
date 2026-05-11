@@ -24,6 +24,12 @@ const useStore = create(
           ? state.unlockedChapters 
           : [...state.unlockedChapters, chapterId]
       })),
+      syncFromFirestore: (data) => set((state) => ({
+        userLevel: data.userLevel || state.userLevel,
+        streak: data.streak || state.streak,
+        exp: data.exp || state.exp,
+        unlockedChapters: data.unlockedChapters || state.unlockedChapters
+      })),
     }),
     {
       name: 'nihonz-storage', // unique name
