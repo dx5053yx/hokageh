@@ -22,7 +22,7 @@ export default function Profile() {
       await signInWithPopup(auth, googleProvider);
     } catch (error) {
       console.error("Error signing in with Google:", error);
-      alert("Pastikan Anda sudah mengganti Firebase Config dengan API Key asli Anda di src/firebase.js");
+      alert(`Login Gagal! Pesan Error: ${error.message}\n\nPastikan Anda sudah mengaktifkan 'Google Sign-in' di menu Authentication Firebase Console.`);
     }
   };
 
