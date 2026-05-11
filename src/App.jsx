@@ -38,6 +38,8 @@ function App() {
           // Initialize user in firestore with local data
           const state = useStore.getState();
           await setDoc(userRef, {
+            displayName: user.displayName || 'Guest Senpai',
+            photoURL: user.photoURL || '',
             userLevel: state.userLevel,
             exp: state.exp,
             streak: state.streak,
@@ -48,6 +50,8 @@ function App() {
         // Subscribe to local changes and push to Firestore
         unsubscribeStore = useStore.subscribe((state) => {
           setDoc(userRef, {
+            displayName: user.displayName || 'Guest Senpai',
+            photoURL: user.photoURL || '',
             userLevel: state.userLevel,
             exp: state.exp,
             streak: state.streak,

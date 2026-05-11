@@ -1,4 +1,17 @@
 [
   { "id": 1, "particle": "は", "romaji": "wa", "usage": "Topic marker", "example": "わたしはがくせいです", "meaning": "I am a student" },
-  { "id": 2, "particle": "を", "romaji": "o", "usage": "Object marker", "example": "りんごをたべます", "meaning": "I eat an apple" }
+  { "id": 2, "particle": "を", "romaji": "o", "usage": "Object marker", "example": "りんごをたべます", "meaning": "I eat an apple" },
+  { "id": 3, "particle": "も", "romaji": "mo", "usage": "Also / Too", "example": "わたしもがくせいです", "meaning": "I am also a student" },
+  { "id": 4, "particle": "に", "romaji": "ni", "usage": "Time / Destination", "example": "３じにいきます", "meaning": "I will go at 3 o'clock" },
+  { "id": 5, "particle": "で", "romaji": "de", "usage": "Location of action / Means", "example": "くるまでいきます", "meaning": "I will go by car" },
+  { "id": 6, "particle": "が", "romaji": "ga", "usage": "Subject marker / But", "example": "ねこがすきです", "meaning": "I like cats" },
+  { "id": 7, "particle": "から", "romaji": "kara", "usage": "From / Because", "example": "にほんからきました", "meaning": "I came from Japan" },
+  { "id": 8, "particle": "まで", "romaji": "made", "usage": "Until / To", "example": "とうきょうまでいきます", "meaning": "I will go to Tokyo" },
+  { "id": 9, "particle": "と", "romaji": "to", "usage": "And (exhaustive) / With", "example": "いぬとねこ", "meaning": "Dog and cat" },
+  { "id": 10, "particle": "や", "romaji": "ya", "usage": "And (non-exhaustive)", "example": "ほんやペン", "meaning": "Book, pen, and others" },
+  { "id": 11, "particle": "の", "romaji": "no", "usage": "Possessive marker", "example": "わたしのほん", "meaning": "My book" },
+  { "id": 12, "particle": "です", "romaji": "desu", "usage": "To be (Polite)", "example": "これはペンです", "meaning": "This is a pen" },
+  { "id": 13, "particle": "ます", "romaji": "masu", "usage": "Verb ending (Polite)", "example": "ごはんをたべます", "meaning": "I will eat rice" },
+  { "id": 14, "particle": "ません", "romaji": "masen", "usage": "Negative verb ending", "example": "わかりません", "meaning": "I don't understand" },
+  { "id": 15, "particle": "ました", "romaji": "mashita", "usage": "Past tense verb ending", "example": "ほんをよみました", "meaning": "I read a book" }
 ]
