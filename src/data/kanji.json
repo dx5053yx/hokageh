@@ -1,0 +1,22 @@
+[
+  {"id":1,"character":"一","onyomi":"イチ, イツ","kunyomi":"ひと, ひとつ","meaning":"One","level":"N5"},
+  {"id":2,"character":"二","onyomi":"ニ","kunyomi":"ふた, ふたつ","meaning":"Two","level":"N5"},
+  {"id":3,"character":"三","onyomi":"サン","kunyomi":"み, みつ, みっつ","meaning":"Three","level":"N5"},
+  {"id":4,"character":"四","onyomi":"シ","kunyomi":"よ, よつ, よっつ, よん","meaning":"Four","level":"N5"},
+  {"id":5,"character":"五","onyomi":"ゴ","kunyomi":"いつ, いつつ","meaning":"Five","level":"N5"},
+  {"id":6,"character":"六","onyomi":"ロク","kunyomi":"む, むつ, むっつ, むい","meaning":"Six","level":"N5"},
+  {"id":7,"character":"七","onyomi":"シチ","kunyomi":"なな, ななつ, なの","meaning":"Seven","level":"N5"},
+  {"id":8,"character":"八","onyomi":"ハチ","kunyomi":"や, やつ, やっつ, よう","meaning":"Eight","level":"N5"},
+  {"id":9,"character":"九","onyomi":"キュウ, ク","kunyomi":"ここの, ここのつ","meaning":"Nine","level":"N5"},
+  {"id":10,"character":"十","onyomi":"ジュウ","kunyomi":"とお, と","meaning":"Ten","level":"N5"},
+  {"id":11,"character":"百","onyomi":"ヒャク","kunyomi":"もも","meaning":"Hundred","level":"N5"},
+  {"id":12,"character":"千","onyomi":"セン","kunyomi":"ち","meaning":"Thousand","level":"N5"},
+  {"id":13,"character":"日","onyomi":"ニチ, ジツ","kunyomi":"ひ, -び, -か","meaning":"Sun, Day","level":"N5"},
+  {"id":14,"character":"月","onyomi":"ゲツ, ガツ","kunyomi":"つき","meaning":"Moon, Month","level":"N5"},
+  {"id":15,"character":"火","onyomi":"カ","kunyomi":"ひ, -び, ほ-","meaning":"Fire","level":"N5"},
+  {"id":16,"character":"水","onyomi":"スイ","kunyomi":"みず","meaning":"Water","level":"N5"},
+  {"id":17,"character":"木","onyomi":"ボク, モク","kunyomi":"き, こ-","meaning":"Tree, Wood","level":"N5"},
+  {"id":18,"character":"金","onyomi":"キン, コン","kunyomi":"かね, かな-","meaning":"Gold, Money","level":"N5"},
+  {"id":19,"character":"土","onyomi":"ド, ト","kunyomi":"つち","meaning":"Earth, Soil","level":"N5"},
+  {"id":20,"character":"人","onyomi":"ジン, ニン","kunyomi":"ひと","meaning":"Person","level":"N5"}
+]

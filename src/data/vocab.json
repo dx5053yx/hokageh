@@ -1,0 +1,22 @@
+[
+  {"id":1,"word":"おはよう","romaji":"ohayou","meaning":"Good morning","category":"Greetings"},
+  {"id":2,"word":"こんにちは","romaji":"konnichiwa","meaning":"Good afternoon","category":"Greetings"},
+  {"id":3,"word":"こんばんは","romaji":"konbanwa","meaning":"Good evening","category":"Greetings"},
+  {"id":4,"word":"ありがとう","romaji":"arigatou","meaning":"Thank you","category":"Greetings"},
+  {"id":5,"word":"すみません","romaji":"sumimasen","meaning":"Excuse me / I'm sorry","category":"Greetings"},
+  {"id":6,"word":"さようなら","romaji":"sayounara","meaning":"Goodbye","category":"Greetings"},
+  {"id":7,"word":"はい","romaji":"hai","meaning":"Yes","category":"Common Words"},
+  {"id":8,"word":"いいえ","romaji":"iie","meaning":"No","category":"Common Words"},
+  {"id":9,"word":"ねこ","romaji":"neko","meaning":"Cat","category":"Animals"},
+  {"id":10,"word":"いぬ","romaji":"inu","meaning":"Dog","category":"Animals"},
+  {"id":11,"word":"とり","romaji":"tori","meaning":"Bird","category":"Animals"},
+  {"id":12,"word":"くるま","romaji":"kuruma","meaning":"Car","category":"Nouns"},
+  {"id":13,"word":"ほん","romaji":"hon","meaning":"Book","category":"Nouns"},
+  {"id":14,"word":"みず","romaji":"mizu","meaning":"Water","category":"Nouns"},
+  {"id":15,"word":"ごはん","romaji":"gohan","meaning":"Meal / Rice","category":"Nouns"},
+  {"id":16,"word":"たべる","romaji":"taberu","meaning":"To eat","category":"Verbs"},
+  {"id":17,"word":"のむ","romaji":"nomu","meaning":"To drink","category":"Verbs"},
+  {"id":18,"word":"いく","romaji":"iku","meaning":"To go","category":"Verbs"},
+  {"id":19,"word":"くる","romaji":"kuru","meaning":"To come","category":"Verbs"},
+  {"id":20,"word":"する","romaji":"suru","meaning":"To do","category":"Verbs"}
+]

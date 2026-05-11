@@ -1,0 +1,4 @@
+[
+  { "id": 1, "particle": "は", "romaji": "wa", "usage": "Topic marker", "example": "わたしはがくせいです", "meaning": "I am a student" },
+  { "id": 2, "particle": "を", "romaji": "o", "usage": "Object marker", "example": "りんごをたべます", "meaning": "I eat an apple" }
+]
