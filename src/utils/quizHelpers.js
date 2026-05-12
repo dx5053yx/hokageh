@@ -22,3 +22,51 @@ export const generateQuizOptions = (fullData, currentItem, answerKey) => {
   // Shuffle options
   return newOptions.sort(() => Math.random() - 0.5);
 };
+
+/**
+ * Create a mixed list of boss questions from available module progress and datasets
+ * @param {Object} params
+ * @param {Object} params.moduleProgress - { kana, vocab, kanji, grammar }
+ * @param {Object} params.datasets - { kanaData, vocabData, kanjiData, grammarData }
+ * @param {Number} params.n - number of questions (default 10)
+ * @returns {Array} Array of { type, item }
+ */
+export const createBossQuestions = ({ moduleProgress = {}, datasets = {}, n = 10 } = {}) => {
+  const { kanaData = [], vocabData = [], kanjiData = [], grammarData = [] } = datasets;
+  const pool = [];
+
+  const addRange = (arr, limit, type) => {
+    const count = Math.min(arr.length, Math.max(0, Math.floor(limit || 0)));
+    for (let i = 0; i < count; i++) {
+      pool.push({ type, item: arr[i] });
+    }
+  };
+
+  addRange(kanaData, moduleProgress.kana || 0, 'kana');
+  addRange(vocabData, moduleProgress.vocab || 0, 'vocab');
+  addRange(kanjiData, moduleProgress.kanji || 0, 'kanji');
+  addRange(grammarData, moduleProgress.grammar || 0, 'grammar');
+
+  // Fallback: if pool empty, seed with first few kana items
+  if (pool.length === 0) {
+    for (let i = 0; i < Math.min(10, kanaData.length); i++) pool.push({ type: 'kana', item: kanaData[i] });
+  }
+
+  // Shuffle pool and pick up to n unique items
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+
+  const selected = [];
+  const seen = new Set();
+  for (let i = 0; i < pool.length && selected.length < n; i++) {
+    const key = `${pool[i].type}-${pool[i].item.id ?? i}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      selected.push(pool[i]);
+    }
+  }
+
+  return selected;
+};

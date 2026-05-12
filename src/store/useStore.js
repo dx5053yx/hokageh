@@ -10,14 +10,22 @@ const useStore = create(
       lastStreakDate: null,
       currentUser: null,
       moduleProgress: { kana: 0, vocab: 0, kanji: 0, grammar: 0 },
+      categoryProgress: {},
       unlockedChapters: ['kana', 'vocab'],
       achievements: [],
       dailyQuests: [],
       lastQuestDate: null,
+      inventory: { streakShields: 0 },
+      weakItems: [], // { id/key, type, data }
+      lastChestDate: null,
+      bossBattles: [], // history of boss battles { time, correct, total, win }
       
       setCurrentUser: (user) => set({ currentUser: user }),
       updateModuleProgress: (module, index) => set((state) => ({
         moduleProgress: { ...state.moduleProgress, [module]: index }
+      })),
+      updateCategoryProgress: (category, index) => set((state) => ({
+        categoryProgress: { ...state.categoryProgress, [category]: index }
       })),
       addExp: (amount) => set((state) => {
         const newExp = state.exp + amount;
@@ -34,6 +42,9 @@ const useStore = create(
         
         if (state.lastStreakDate === todayStr) return {}; // Already incremented today
 
+        let newStreak = state.streak + 1;
+        let newShields = state.inventory.streakShields;
+
         if (state.lastStreakDate) {
           const lastDate = new Date(state.lastStreakDate);
           today.setHours(0,0,0,0);
@@ -42,12 +53,28 @@ const useStore = create(
           const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
 
           if (diffDays > 1) {
-            // Missed a day! Reset to 1 (they just finished a lesson today)
-            return { streak: 1, lastStreakDate: todayStr };
+            // Missed a day! 
+            if (state.inventory.streakShields > 0) {
+              // Use a shield!
+              newShields -= 1;
+              // Keep the old streak but increment it as if they just returned
+            } else {
+              // Reset to 1 (they just finished a lesson today)
+              newStreak = 1;
+            }
           }
         }
         
-        return { streak: state.streak + 1, lastStreakDate: todayStr };
+        // Grant a shield every 7 days (7, 14, 21) if they just hit it
+        if (newStreak > 0 && newStreak % 7 === 0) {
+          newShields += 1;
+        }
+        
+        return { 
+          streak: newStreak, 
+          lastStreakDate: todayStr,
+          inventory: { ...state.inventory, streakShields: newShields }
+        };
       }),
       checkStreak: () => set((state) => {
         if (state.lastStreakDate) {
@@ -59,7 +86,16 @@ const useStore = create(
           const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
 
           if (diffDays > 1 && state.streak > 0) {
-            return { streak: 0 }; // Missed a day, reset streak to 0
+            if (state.inventory.streakShields > 0) {
+              // Consume shield silently to protect streak until they return
+              return { 
+                inventory: { ...state.inventory, streakShields: state.inventory.streakShields - 1 },
+                // We update lastStreakDate so it doesn't consume multiple shields for the same missed period
+                lastStreakDate: new Date(lastDate.getTime() + (24 * 60 * 60 * 1000)).toDateString()
+              };
+            } else {
+              return { streak: 0 }; // Missed a day, reset streak to 0
+            }
           }
         }
         return {};
@@ -124,6 +160,59 @@ const useStore = create(
         return { dailyQuests: updatedQuests };
       }),
 
+      addWeakItem: (item, type) => set((state) => {
+        // Prevent duplicates
+        const exists = state.weakItems.some(w => w.id === item.id && w.__type === type);
+        if (exists) return {};
+        return { weakItems: [...state.weakItems, { ...item, __type: type }] };
+      }),
+      
+      removeWeakItem: (itemId, type) => set((state) => ({
+        weakItems: state.weakItems.filter(w => !(w.id === itemId && w.__type === type))
+      })),
+      
+      openDailyChest: () => set((state) => {
+        const todayStr = new Date().toDateString();
+        if (state.lastChestDate === todayStr) return {};
+        
+        // Random reward: 80% chance for EXP, 20% chance for Streak Shield
+        const rand = Math.random();
+        if (rand > 0.8) {
+          return {
+            inventory: { ...state.inventory, streakShields: state.inventory.streakShields + 1 },
+            lastChestDate: todayStr
+          };
+        } else {
+          const bonusExp = Math.floor(Math.random() * 50) + 50; // 50 - 100 EXP
+          const newExp = state.exp + bonusExp;
+          const newLevel = Math.floor(newExp / 100) + 1;
+          return {
+            exp: newExp,
+            userLevel: newLevel > state.userLevel ? newLevel : state.userLevel,
+            lastChestDate: todayStr
+          };
+        }
+      }),
+
+      endBossBattle: (result) => set((state) => {
+        const { correct = 0, total = 10, win = false, badgeId } = result || {};
+        const expAward = win ? 200 : 25;
+        const newExp = state.exp + expAward;
+        const newLevel = Math.floor(newExp / 100) + 1;
+        const newAchievements = Array.from(state.achievements || []);
+        if (win) {
+          const id = badgeId || 'boss_victor';
+          if (!newAchievements.includes(id)) newAchievements.push(id);
+        }
+
+        return {
+          bossBattles: [...(state.bossBattles || []), { time: new Date().toISOString(), correct, total, win }],
+          exp: newExp,
+          userLevel: newLevel > state.userLevel ? newLevel : state.userLevel,
+          achievements: newAchievements
+        };
+      }),
+
       syncFromFirestore: (data) => set((state) => ({
         userLevel: data.userLevel ?? state.userLevel,
         streak: data.streak ?? state.streak,
@@ -133,7 +222,10 @@ const useStore = create(
         unlockedChapters: data.unlockedChapters ?? state.unlockedChapters,
         achievements: data.achievements ?? state.achievements,
         dailyQuests: data.dailyQuests ?? state.dailyQuests,
-        lastQuestDate: data.lastQuestDate ?? state.lastQuestDate
+        lastQuestDate: data.lastQuestDate ?? state.lastQuestDate,
+        inventory: data.inventory ?? state.inventory,
+        weakItems: data.weakItems ?? state.weakItems,
+        lastChestDate: data.lastChestDate ?? state.lastChestDate
       })),
     }),
     {

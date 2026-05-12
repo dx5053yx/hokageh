@@ -10,6 +10,7 @@ import Theory from './pages/Theory'
 import Leaderboard from './pages/Leaderboard'
 import Profile from './pages/Profile'
 import Library from './pages/Library'
+import BossBattle from './pages/BossBattle'
 import BottomNav from './components/BottomNav'
 
 // NotFound Component
@@ -107,8 +108,10 @@ function App() {
   return (
     <div className="app-container" style={{ paddingBottom: '80px' }}>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/learn/:type" element={<Learn />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/learn/:type/:category" element={<Learn />} />
+          <Route path="/learn/:type" element={<Learn />} />
+        <Route path="/boss" element={<BossBattle />} />
         <Route path="/theory" element={<Theory />} />
         <Route path="/library" element={<Library />} />
         <Route path="/leaderboard" element={<Leaderboard />} />

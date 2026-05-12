@@ -13,7 +13,8 @@ export default function LessonCard({
   buttonText = 'Continue',
   animationDelay = '0s',
   secondaryButtonText,
-  onSecondaryClick
+  onSecondaryClick,
+  onClick = () => {}
 }) {
   return (
     <div className="glass-panel animate-pop-in" style={{ padding: '1.5rem', animationDelay: animationDelay, display: 'flex', flexDirection: 'column' }}>

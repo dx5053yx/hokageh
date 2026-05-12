@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import useStore from '../store/useStore';
 import { User, Flame, Star, Zap, LogIn, LogOut } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import vocabData from '../data/vocab.json';
 import { signInWithPopup, signOut } from 'firebase/auth';
 import { auth, googleProvider } from '../firebase';
 import '../styles/index.css';
@@ -15,7 +17,7 @@ const ACHIEVEMENT_DATA = {
 };
 
 export default function Profile() {
-  const { userLevel, exp, streak, achievements, currentUser } = useStore();
+  const { userLevel, exp, streak, achievements, currentUser, categoryProgress } = useStore();
   const rank = getRank(userLevel);
 
   const handleLogin = async () => {
@@ -111,6 +113,35 @@ export default function Profile() {
                   <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>{data.desc}</p>
                 </div>
                 {isUnlocked && <div style={{ marginLeft: 'auto', color: 'var(--accent-success)', fontSize: '0.8rem', fontWeight: 'bold' }}>Unlocked!</div>}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="glass-panel animate-pop-in" style={{ padding: '1.5rem', marginTop: '1rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+          <Medal color="var(--accent-primary)" />
+          <h3 style={{ margin: 0 }}>Category Progress</h3>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+          {Array.from(new Set(vocabData.map(v => v.category).filter(Boolean))).map(cat => {
+            const total = vocabData.filter(v => v.category === cat).length || 1;
+            const done = (categoryProgress && categoryProgress[cat]) || 0;
+            const pct = Math.min(100, Math.round((done / total) * 100));
+            return (
+              <div key={cat} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <div style={{ flex: 1 }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.25rem' }}>
+                    <div style={{ fontWeight: 'bold' }}>{cat}</div>
+                    <div style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>{done}/{total} ({pct}%)</div>
+                  </div>
+                  <div style={{ height: 8, background: 'var(--bg-glass)', borderRadius: 8, overflow: 'hidden' }}>
+                    <div style={{ height: '100%', width: `${pct}%`, background: 'linear-gradient(90deg,#8b5cf6,#10b981)' }} />
+                  </div>
+                </div>
+                <Link to={`/learn/vocab/${encodeURIComponent(cat)}`} className="glass-panel" style={{ padding: '0.5rem 0.75rem', textDecoration: 'none' }}>Practice</Link>
               </div>
             );
           })}

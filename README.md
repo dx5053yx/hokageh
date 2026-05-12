@@ -83,8 +83,7 @@ Berikut adalah urutan kerja (workflow) yang harus diikuti oleh agen AI untuk mem
 ## 🤖 Instruksi untuk Agen AI Selanjutnya
 
 Jika Anda adalah agen AI yang membaca dokumen ini untuk melanjutkan pengembangan:
-1. **Jangan mulai dengan setup backend kompleks.** Gunakan data statis (JSON) terlebih dahulu untuk MVP (*Minimum Viable Product*).
-2. **Prioritaskan UI/UX yang *stunning*.** Gunakan CSS modern, hindari desain kaku.
-3. **Eksekusi secara bertahap:** Mulai dari Phase 1. Jangan langsung melompat ke Phase 3 tanpa memastikan arsitektur Vite dan CSS berjalan dengan baik.
-4. Jika ada perintah untuk menginisiasi proyek, gunakan perintah terminal: `npx create-vite@latest ./ --template react` (atau sesuaikan dengan kebutuhan spesifik).
-5. **Setiap membuat komponen, pastikan bersifat *reusable*.**
+1. **Prioritaskan UI/UX yang *stunning*.** Gunakan CSS modern, hindari desain kaku.
+2. **Eksekusi secara bertahap:** Mulai dari Phase 1. Jangan langsung melompat ke Phase 3 tanpa memastikan arsitektur Vite dan CSS berjalan dengan baik.
+3. Jika ada perintah untuk menginisiasi proyek, gunakan perintah terminal: `npx create-vite@latest ./ --template react` (atau sesuaikan dengan kebutuhan spesifik).
+4. **Setiap membuat komponen, pastikan bersifat *reusable*.**

@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Search } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import kanaData from '../data/kana.json';
 import kanjiData from '../data/kanji.json';
 import vocabData from '../data/vocab.json';
+import useStore from '../store/useStore';
 import '../styles/index.css';
 
 export default function Library() {
@@ -21,6 +23,8 @@ export default function Library() {
   const katakanaList = filterData(kanaData.filter(k => k.type.includes('katakana')), ['character', 'romaji']);
   const filteredKanji = filterData(kanjiData, ['character', 'meaning', 'onyomi', 'kunyomi']);
   const filteredVocab = filterData(vocabData, ['word', 'romaji', 'meaning']);
+  const categories = [...new Set(vocabData.map(v => v.category).filter(Boolean))];
+  const { categoryProgress } = useStore();
 
   return (
     <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto', paddingBottom: '100px' }}>
@@ -102,6 +106,30 @@ export default function Library() {
       {/* Vocab List */}
       {activeTab === 'vocab' && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <div style={{ display: 'flex', gap: '0.5rem', overflowX: 'auto', padding: '0.25rem 0 0.5rem 0' }}>
+            {categories.map(cat => {
+              const total = vocabData.filter(v => v.category === cat).length || 1;
+              const done = (categoryProgress && categoryProgress[cat]) || 0;
+              const pct = Math.min(100, Math.round((done / total) * 100));
+              return (
+                <Link key={cat} to={`/learn/vocab/${encodeURIComponent(cat)}`} style={{
+                  padding: '0.5rem 1rem',
+                  borderRadius: '999px',
+                  background: 'var(--bg-glass)',
+                  border: '1px solid var(--border-color)',
+                  color: 'var(--text-secondary)',
+                  fontWeight: 'bold',
+                  textDecoration: 'none',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '0.5rem'
+                }}>
+                  <span>{cat}</span>
+                  <span style={{ background: 'var(--bg-secondary)', padding: '0.15rem 0.4rem', borderRadius: 8, fontSize: '0.75rem', color: 'var(--text-secondary)' }}>{pct}%</span>
+                </Link>
+              );
+            })}
+          </div>
           {filteredVocab.length === 0 && <p style={{ textAlign: 'center', color: 'var(--text-secondary)' }}>No vocabulary found.</p>}
           {filteredVocab.map(item => (
             <div key={item.id} className="glass-panel animate-pop-in" style={{ padding: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

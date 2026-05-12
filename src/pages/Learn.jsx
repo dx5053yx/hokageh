@@ -12,11 +12,13 @@ import kanjiData from '../data/kanji.json';
 import grammarData from '../data/grammar.json';
 
 export default function Learn() {
-  const { type } = useParams();
+  const { type, category } = useParams();
+  const decodedCategory = category ? decodeURIComponent(category) : null;
   const navigate = useNavigate();
-  const { addExp, incrementStreak, updateModuleProgress, moduleProgress, updateQuestProgress, unlockAchievement } = useStore();
+  const { addExp, incrementStreak, updateModuleProgress, moduleProgress, updateQuestProgress, unlockAchievement, addWeakItem, removeWeakItem, categoryProgress, updateCategoryProgress } = useStore();
 
-  const [currentIndex, setCurrentIndex] = useState(moduleProgress[type] || 0);
+  const [sessionQueue, setSessionQueue] = useState([]); // [{ item, source: 'base'|'weak', dataIndex? }]
+  const [queuePos, setQueuePos] = useState(0);
 
   // RPG Session State
   const [hearts, setHearts] = useState(3);
@@ -28,15 +30,16 @@ export default function Learn() {
   const [sessionState, setSessionState] = useState('playing'); // playing, gameover, summary
   const [expPopup, setExpPopup] = useState(null); // { amount, combo }
 
-  // Reset session when route type changes
+  // Reset session when route type changes (basic state)
   useEffect(() => {
-    setCurrentIndex(useStore.getState().moduleProgress[type] || 0);
     setHearts(3);
     setCombo(0);
     setSessionExp(0);
     setCorrectAnswers(0);
     setQuestionsAnswered(0);
     setSessionState('playing');
+    setSessionQueue([]);
+    setQueuePos(0);
   }, [type]);
 
   const [options, setOptions] = useState([]);
@@ -68,6 +71,10 @@ export default function Learn() {
     answerKey = 'meaning';
     title = 'Vocabulary';
     baseExp = 10;
+    if (decodedCategory) {
+      currentData = vocabData.filter(item => (item.category || '').toLowerCase() === decodedCategory.toLowerCase());
+      title = `Vocabulary — ${decodedCategory}`;
+    }
   } else if (type === 'kanji') {
     currentData = kanjiData;
     questionKey = 'character';
@@ -82,7 +89,46 @@ export default function Learn() {
     baseExp = 15;
   }
 
-  const currentItem = currentData && currentData.length > currentIndex ? currentData[currentIndex] : null;
+  const buildSessionQueue = () => {
+    if (!currentData || currentData.length === 0) {
+      setSessionQueue([]);
+      setQueuePos(0);
+      return;
+    }
+
+    const state = useStore.getState();
+    const start = category ? (state.categoryProgress && state.categoryProgress[decodedCategory] ? state.categoryProgress[decodedCategory] : 0) : (state.moduleProgress[type] || 0);
+    const baseNeeded = 20;
+    const baseSlice = currentData.slice(start, start + baseNeeded);
+
+    const q = baseSlice.map((it, idx) => ({ item: it, source: 'base', dataIndex: start + idx }));
+
+    const weakItems = (state.weakItems || []).filter(w => w.__type === type);
+    if (weakItems.length > 0) {
+      for (let pos = 3; pos < q.length; pos += 4) {
+        const w = weakItems[Math.floor(Math.random() * weakItems.length)];
+        q.splice(pos, 0, { item: w, source: 'weak' });
+      }
+    }
+
+    while (q.length < 10 && weakItems.length > 0) {
+      const w = weakItems[Math.floor(Math.random() * weakItems.length)];
+      q.push({ item: w, source: 'weak' });
+    }
+
+    setSessionQueue(q);
+    setQueuePos(0);
+  };
+
+  const currentEntry = sessionQueue && sessionQueue.length > 0 ? sessionQueue[queuePos] : null;
+  const currentItem = currentEntry ? currentEntry.item : null;
+
+  const progress = decodedCategory ? (categoryProgress && categoryProgress[decodedCategory] ? categoryProgress[decodedCategory] : 0) : (moduleProgress[type] || 0);
+
+  // Build queue when dataset or module progress changes
+  useEffect(() => {
+    buildSessionQueue();
+  }, [type, category, moduleProgress]);
 
   useEffect(() => {
     if (type === 'kanji' && currentItem) {
@@ -91,7 +137,7 @@ export default function Learn() {
       if (currentItem.kunyomi && currentItem.kunyomi !== '-') types.push('kunyomi');
       setKanjiQuestionType(types[Math.floor(Math.random() * types.length)]);
     }
-  }, [currentIndex, type, currentItem]);
+  }, [queuePos, type, currentItem]);
 
   useEffect(() => {
     if (currentItem && sessionState === 'playing') {
@@ -99,7 +145,7 @@ export default function Learn() {
       setOptions(newOptions);
       setSelectedAnswer(null);
     }
-  }, [currentIndex, currentData, currentItem, answerKey, sessionState]);
+  }, [queuePos, currentData, currentItem, answerKey, sessionState]);
 
   if (!currentItem && sessionState === 'playing') {
     return <div style={{ padding: '2rem', textAlign: 'center' }}>Module Complete! Or data not found.</div>;
@@ -147,8 +193,17 @@ export default function Learn() {
       
       setExpPopup({ amount: gainedExp, combo: newCombo });
       setIsAnimating(true);
-      updateModuleProgress(type, currentIndex + 1);
+      // Advance progress: global for modules, category-specific for category sessions
+      if (currentEntry && currentEntry.source === 'base') {
+        if (!decodedCategory) {
+          updateModuleProgress(type, currentEntry.dataIndex + 1);
+        } else {
+          try { updateCategoryProgress && updateCategoryProgress(decodedCategory, currentEntry.dataIndex + 1); } catch (e) {}
+        }
+      }
       updateQuestProgress(type, 1);
+      // If answered correctly, remove from weak items (user mastered it)
+      try { removeWeakItem && removeWeakItem(currentItem.id, type); } catch (e) {}
       
       if (questionsAnswered === 0) unlockAchievement('first_blood');
       
@@ -159,24 +214,24 @@ export default function Learn() {
         const nextQuestionsAnswered = questionsAnswered + 1;
         setQuestionsAnswered(nextQuestionsAnswered);
         
-        if (nextQuestionsAnswered >= 10 || currentIndex >= currentData.length - 1) {
+        if (nextQuestionsAnswered >= 10 || queuePos >= sessionQueue.length - 1) {
           // Finish Session
           setSessionState('summary');
           incrementStreak();
           triggerConfetti();
-          
+
           if (correctAnswers + 1 === nextQuestionsAnswered && hearts === 3) {
             unlockAchievement('speed_run');
           }
-          
+
           const state = useStore.getState();
-          const kanaProg = type === 'kana' ? currentIndex + 1 : (state.moduleProgress.kana || 0);
-          const vocabProg = type === 'vocab' ? currentIndex + 1 : (state.moduleProgress.vocab || 0);
-          if (kanaProg >= kanaData.length && vocabProg >= vocabData.length / 2) {
+          const kanaProg = state.moduleProgress.kana || 0;
+          const vocabProg = state.moduleProgress.vocab || 0;
+          if (kanaProg >= kanaData.length && vocabProg >= Math.ceil(vocabData.length / 2)) {
             state.unlockChapter('kanji');
           }
         } else {
-          setCurrentIndex(currentIndex + 1);
+          setQueuePos((p) => p + 1);
         }
       }, 1000);
       
@@ -186,14 +241,20 @@ export default function Learn() {
       const newHearts = hearts - 1;
       setHearts(newHearts);
       setShakingAnswer(answer);
-      
+
+      // Add to weak items for SRS
+      try { addWeakItem && addWeakItem(currentItem, type); } catch (e) {}
+
       setTimeout(() => setShakingAnswer(null), 400);
-      
+
       if (newHearts === 0) {
         setTimeout(() => setSessionState('gameover'), 800);
       } else {
         setTimeout(() => {
-          setSelectedAnswer(null); // Let them try again
+          // Requeue this question to appear later and advance
+          setSessionQueue((prev) => [...prev, currentEntry]);
+          setSelectedAnswer(null);
+          setQueuePos((p) => p + 1);
         }, 1000);
       }
     }
@@ -245,7 +306,7 @@ export default function Learn() {
         
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
           <button className="glass-panel" style={{ padding: '1rem 2rem', fontWeight: 'bold' }} onClick={() => navigate('/')}>Return Home</button>
-          {currentIndex < currentData.length - 1 && (
+          {progress < currentData.length - 1 && (
             <button className="btn-primary" onClick={() => {
               setHearts(3);
               setCombo(0);
@@ -253,8 +314,12 @@ export default function Learn() {
               setCorrectAnswers(0);
               setQuestionsAnswered(0);
               setSessionState('playing');
-              setCurrentIndex(currentIndex + 1);
+              buildSessionQueue();
             }}>Next Session</button>
+          )}
+          {/* Show Boss Battle option when user completed the module (global progress) and not in a category session */}
+          {!category && (moduleProgress[type] || 0) >= currentData.length && (
+            <button className="btn-primary" onClick={() => navigate('/boss')}>Challenge Boss</button>
           )}
         </div>
       </div>
@@ -271,7 +336,7 @@ export default function Learn() {
           ))}
         </div>
         <div style={{ fontWeight: 'bold', color: 'var(--text-secondary)' }}>
-          {questionsAnswered + 1} / {Math.min(10, currentData.length - (currentIndex - questionsAnswered))}
+          {questionsAnswered + 1} / {Math.min(10, sessionQueue.length || 10)}
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: combo >= 3 ? 'var(--accent-warning)' : 'var(--text-primary)' }}>
           <Zap size={20} fill={combo >= 3 ? "var(--accent-warning)" : "transparent"} />
