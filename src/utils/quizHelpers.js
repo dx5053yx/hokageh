@@ -8,8 +8,8 @@
 export const generateQuizOptions = (fullData, currentItem, answerKey) => {
   let newOptions = [currentItem[answerKey]];
   
-  // Extract all unique answers to avoid infinite loops if data is small
-  const allUniqueAnswers = [...new Set(fullData.map(item => item[answerKey]))];
+  // Extract all unique answers to avoid infinite loops if data is small, and filter out '-'
+  const allUniqueAnswers = [...new Set(fullData.map(item => item[answerKey]).filter(val => val && val !== '-'))];
   const maxOptions = Math.min(4, allUniqueAnswers.length);
   
   while (newOptions.length < maxOptions) {

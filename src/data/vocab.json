@@ -1,650 +1,5028 @@
 [
   {
-    "word": "一",
-    "romaji": "ichi",
-    "meaning": "one",
-    "id": 1
+    "id": 2,
+    "word": "ああ",
+    "romaji": "ああ",
+    "meaning": "Ah!, Oh!",
+    "category": "N5 Vocab"
   },
   {
-    "word": "二",
-    "romaji": "ni",
-    "meaning": "two",
-    "id": 2
-  },
-  {
-    "word": "三",
-    "romaji": "san",
-    "meaning": "three",
-    "id": 3
-  },
-  {
-    "word": "四",
-    "romaji": "yon/shi",
-    "meaning": "four",
-    "id": 4
-  },
-  {
-    "word": "五",
-    "romaji": "go",
-    "meaning": "five",
-    "id": 5
-  },
-  {
-    "word": "六",
-    "romaji": "roku",
-    "meaning": "six",
-    "id": 6
-  },
-  {
-    "word": "七",
-    "romaji": "nana/shichi",
-    "meaning": "seven",
-    "id": 7
-  },
-  {
-    "word": "八",
-    "romaji": "hachi",
-    "meaning": "eight",
-    "id": 8
-  },
-  {
-    "word": "九",
-    "romaji": "kyuu/ku",
-    "meaning": "nine",
-    "id": 9
-  },
-  {
-    "word": "十",
-    "romaji": "juu",
-    "meaning": "ten",
-    "id": 10
-  },
-  {
-    "word": "百",
-    "romaji": "hyaku",
-    "meaning": "hundred",
-    "id": 11
-  },
-  {
-    "word": "千",
-    "romaji": "sen",
-    "meaning": "thousand",
-    "id": 12
-  },
-  {
-    "word": "万",
-    "romaji": "man",
-    "meaning": "ten thousand",
-    "id": 13
-  },
-  {
-    "word": "月曜日",
-    "romaji": "getsuyoubi",
-    "meaning": "Monday",
-    "id": 14
-  },
-  {
-    "word": "火曜日",
-    "romaji": "kayoubi",
-    "meaning": "Tuesday",
-    "id": 15
-  },
-  {
-    "word": "水曜日",
-    "romaji": "suiyoubi",
-    "meaning": "Wednesday",
-    "id": 16
-  },
-  {
-    "word": "木曜日",
-    "romaji": "mokuyoubi",
-    "meaning": "Thursday",
-    "id": 17
-  },
-  {
-    "word": "金曜日",
-    "romaji": "kinyoubi",
-    "meaning": "Friday",
-    "id": 18
-  },
-  {
-    "word": "土曜日",
-    "romaji": "doyoubi",
-    "meaning": "Saturday",
-    "id": 19
-  },
-  {
-    "word": "日曜日",
-    "romaji": "nichiyoubi",
-    "meaning": "Sunday",
-    "id": 20
-  },
-  {
-    "word": "今日",
-    "romaji": "kyou",
-    "meaning": "today",
-    "id": 21
-  },
-  {
-    "word": "明日",
-    "romaji": "ashita",
-    "meaning": "tomorrow",
-    "id": 22
-  },
-  {
-    "word": "昨日",
-    "romaji": "kinou",
-    "meaning": "yesterday",
-    "id": 23
-  },
-  {
-    "word": "今",
-    "romaji": "ima",
-    "meaning": "now",
-    "id": 24
-  },
-  {
-    "word": "朝",
-    "romaji": "asa",
-    "meaning": "morning",
-    "id": 25
-  },
-  {
-    "word": "昼",
-    "romaji": "hiru",
-    "meaning": "noon, daytime",
-    "id": 26
-  },
-  {
-    "word": "夜",
-    "romaji": "yoru",
-    "meaning": "night",
-    "id": 27
-  },
-  {
-    "word": "毎日",
-    "romaji": "mainichi",
-    "meaning": "every day",
-    "id": 28
-  },
-  {
-    "word": "今年",
-    "romaji": "kotoshi",
-    "meaning": "this year",
-    "id": 29
-  },
-  {
-    "word": "来年",
-    "romaji": "rainen",
-    "meaning": "next year",
-    "id": 30
-  },
-  {
-    "word": "時間",
-    "romaji": "jikan",
-    "meaning": "time",
-    "id": 31
-  },
-  {
-    "word": "私",
-    "romaji": "watashi",
-    "meaning": "I, me",
-    "id": 32
-  },
-  {
-    "word": "あなた",
-    "romaji": "anata",
-    "meaning": "you",
-    "id": 33
-  },
-  {
-    "word": "人",
-    "romaji": "hito",
-    "meaning": "person",
-    "id": 34
-  },
-  {
-    "word": "男",
-    "romaji": "otoko",
-    "meaning": "man",
-    "id": 35
-  },
-  {
-    "word": "女",
-    "romaji": "onna",
-    "meaning": "woman",
-    "id": 36
-  },
-  {
-    "word": "子供",
-    "romaji": "kodomo",
-    "meaning": "child",
-    "id": 37
-  },
-  {
-    "word": "父",
-    "romaji": "chichi",
-    "meaning": "father (my)",
-    "id": 38
-  },
-  {
-    "word": "母",
-    "romaji": "haha",
-    "meaning": "mother (my)",
-    "id": 39
-  },
-  {
-    "word": "お父さん",
-    "romaji": "otousan",
-    "meaning": "father (someone else's)",
-    "id": 40
-  },
-  {
-    "word": "お母さん",
-    "romaji": "okaasan",
-    "meaning": "mother (someone else's)",
-    "id": 41
-  },
-  {
-    "word": "友達",
-    "romaji": "tomodachi",
-    "meaning": "friend",
-    "id": 42
-  },
-  {
-    "word": "先生",
-    "romaji": "sensei",
-    "meaning": "teacher",
-    "id": 43
-  },
-  {
-    "word": "学生",
-    "romaji": "gakusei",
-    "meaning": "student",
-    "id": 44
-  },
-  {
-    "word": "本",
-    "romaji": "hon",
-    "meaning": "book",
-    "id": 45
-  },
-  {
-    "word": "ペン",
-    "romaji": "pen",
-    "meaning": "pen",
-    "id": 46
-  },
-  {
-    "word": "鞄",
-    "romaji": "kaban",
-    "meaning": "bag",
-    "id": 47
-  },
-  {
-    "word": "靴",
-    "romaji": "kutsu",
-    "meaning": "shoes",
-    "id": 48
-  },
-  {
-    "word": "時計",
-    "romaji": "tokei",
-    "meaning": "watch, clock",
-    "id": 49
-  },
-  {
-    "word": "車",
-    "romaji": "kuruma",
-    "meaning": "car",
-    "id": 50
-  },
-  {
-    "word": "自転車",
-    "romaji": "jitensha",
-    "meaning": "bicycle",
-    "id": 51
-  },
-  {
-    "word": "電車",
-    "romaji": "densha",
-    "meaning": "train",
-    "id": 52
-  },
-  {
-    "word": "飛行機",
-    "romaji": "hikouki",
-    "meaning": "airplane",
-    "id": 53
-  },
-  {
-    "word": "電話",
-    "romaji": "denwa",
-    "meaning": "telephone",
-    "id": 54
-  },
-  {
-    "word": "傘",
-    "romaji": "kasa",
-    "meaning": "umbrella",
-    "id": 55
-  },
-  {
-    "word": "水",
-    "romaji": "mizu",
-    "meaning": "water",
-    "id": 56
-  },
-  {
-    "word": "お茶",
-    "romaji": "ocha",
-    "meaning": "tea",
-    "id": 57
-  },
-  {
-    "word": "家",
-    "romaji": "ie / uchi",
-    "meaning": "house, home",
-    "id": 58
-  },
-  {
-    "word": "学校",
-    "romaji": "gakkou",
-    "meaning": "school",
-    "id": 59
-  },
-  {
-    "word": "会社",
-    "romaji": "kaisha",
-    "meaning": "company",
-    "id": 60
-  },
-  {
-    "word": "病院",
-    "romaji": "byouin",
-    "meaning": "hospital",
-    "id": 61
-  },
-  {
-    "word": "駅",
-    "romaji": "eki",
-    "meaning": "station",
-    "id": 62
-  },
-  {
-    "word": "銀行",
-    "romaji": "ginkou",
-    "meaning": "bank",
-    "id": 63
-  },
-  {
-    "word": "店",
-    "romaji": "mise",
-    "meaning": "shop, store",
-    "id": 64
-  },
-  {
-    "word": "道",
-    "romaji": "michi",
-    "meaning": "road, street",
-    "id": 65
-  },
-  {
-    "word": "国",
-    "romaji": "kuni",
-    "meaning": "country",
-    "id": 66
-  },
-  {
-    "word": "日本",
-    "romaji": "nihon",
-    "meaning": "Japan",
-    "id": 67
-  },
-  {
-    "word": "行く",
-    "romaji": "iku",
-    "meaning": "to go",
-    "id": 68
-  },
-  {
-    "word": "来る",
-    "romaji": "kuru",
-    "meaning": "to come",
-    "id": 69
-  },
-  {
-    "word": "食べる",
-    "romaji": "taberu",
-    "meaning": "to eat",
-    "id": 70
-  },
-  {
-    "word": "飲む",
-    "romaji": "nomu",
-    "meaning": "to drink",
-    "id": 71
-  },
-  {
-    "word": "見る",
-    "romaji": "miru",
-    "meaning": "to see, to watch",
-    "id": 72
-  },
-  {
-    "word": "聞く",
-    "romaji": "kiku",
-    "meaning": "to hear, to listen",
-    "id": 73
-  },
-  {
-    "word": "話す",
-    "romaji": "hanasu",
-    "meaning": "to speak",
-    "id": 74
-  },
-  {
-    "word": "読む",
-    "romaji": "yomu",
-    "meaning": "to read",
-    "id": 75
-  },
-  {
-    "word": "書く",
-    "romaji": "kaku",
-    "meaning": "to write",
-    "id": 76
-  },
-  {
-    "word": "買う",
-    "romaji": "kau",
-    "meaning": "to buy",
-    "id": 77
-  },
-  {
+    "id": 3,
     "word": "会う",
-    "romaji": "au",
-    "meaning": "to meet",
-    "id": 78
+    "romaji": "あう",
+    "meaning": "to meet, to see",
+    "category": "N5 Vocab"
   },
   {
-    "word": "立つ",
-    "romaji": "tatsu",
-    "meaning": "to stand",
-    "id": 79
+    "id": 4,
+    "word": "青",
+    "romaji": "あお",
+    "meaning": "blue",
+    "category": "N5 Vocab"
   },
   {
-    "word": "座る",
-    "romaji": "suwaru",
-    "meaning": "to sit",
-    "id": 80
+    "id": 5,
+    "word": "青い",
+    "romaji": "あおい",
+    "meaning": "blue",
+    "category": "N5 Vocab"
   },
   {
-    "word": "寝る",
-    "romaji": "neru",
-    "meaning": "to sleep",
-    "id": 81
+    "id": 6,
+    "word": "赤",
+    "romaji": "あか",
+    "meaning": "red",
+    "category": "N5 Vocab"
   },
   {
-    "word": "起きる",
-    "romaji": "okiru",
-    "meaning": "to wake up",
-    "id": 82
+    "id": 7,
+    "word": "赤い",
+    "romaji": "あかい",
+    "meaning": "red",
+    "category": "N5 Vocab"
   },
   {
-    "word": "する",
-    "romaji": "suru",
-    "meaning": "to do",
-    "id": 83
+    "id": 8,
+    "word": "明るい",
+    "romaji": "あかるい",
+    "meaning": "bright (in reference to personality or weather); cheerful",
+    "category": "N5 Vocab"
   },
   {
-    "word": "大きい",
-    "romaji": "ookii",
-    "meaning": "big",
-    "id": 84
+    "id": 9,
+    "word": "秋",
+    "romaji": "あき",
+    "meaning": "fall (season)",
+    "category": "N5 Vocab"
   },
   {
-    "word": "小さい",
-    "romaji": "chiisai",
-    "meaning": "small",
-    "id": 85
+    "id": 10,
+    "word": "開く",
+    "romaji": "あく",
+    "meaning": "to open, to become open",
+    "category": "N5 Vocab"
   },
   {
-    "word": "新しい",
-    "romaji": "atarashii",
-    "meaning": "new",
-    "id": 86
+    "id": 11,
+    "word": "開ける",
+    "romaji": "あける",
+    "meaning": "to open (v.t.)",
+    "category": "N5 Vocab"
   },
   {
-    "word": "古い",
-    "romaji": "furui",
-    "meaning": "old",
-    "id": 87
+    "id": 12,
+    "word": "上げる",
+    "romaji": "あげる",
+    "meaning": "to raise, to lift",
+    "category": "N5 Vocab"
   },
   {
-    "word": "高い",
-    "romaji": "takai",
-    "meaning": "high, expensive",
-    "id": 88
+    "id": 13,
+    "word": "朝",
+    "romaji": "あさ",
+    "meaning": "morning",
+    "category": "N5 Vocab"
   },
   {
-    "word": "安い",
-    "romaji": "yasui",
-    "meaning": "cheap",
-    "id": 89
+    "id": 14,
+    "word": "朝御飯",
+    "romaji": "あさごはん",
+    "meaning": "breakfast",
+    "category": "N5 Vocab"
   },
   {
-    "word": "良い",
-    "romaji": "ii / yoi",
-    "meaning": "good",
-    "id": 90
+    "id": 15,
+    "word": "明後日",
+    "romaji": "あさって",
+    "meaning": "day after tomorrow",
+    "category": "N5 Vocab"
   },
   {
-    "word": "悪い",
-    "romaji": "warui",
-    "meaning": "bad",
-    "id": 91
+    "id": 16,
+    "word": "足; 脚",
+    "romaji": "あし",
+    "meaning": "foot; leg",
+    "category": "N5 Vocab"
   },
   {
-    "word": "熱い",
-    "romaji": "atsui",
-    "meaning": "hot (thing)",
-    "id": 92
+    "id": 17,
+    "word": "明日",
+    "romaji": "あした",
+    "meaning": "tomorrow",
+    "category": "N5 Vocab"
   },
   {
-    "word": "冷たい",
-    "romaji": "tsumetai",
-    "meaning": "cold (thing)",
-    "id": 93
-  },
-  {
-    "word": "暑い",
-    "romaji": "atsui",
-    "meaning": "hot (weather)",
-    "id": 94
-  },
-  {
-    "word": "寒い",
-    "romaji": "samui",
-    "meaning": "cold (weather)",
-    "id": 95
-  },
-  {
-    "word": "難しい",
-    "romaji": "muzukashii",
-    "meaning": "difficult",
-    "id": 96
-  },
-  {
-    "word": "易しい",
-    "romaji": "yasashii",
-    "meaning": "easy",
-    "id": 97
-  },
-  {
-    "word": "面白い",
-    "romaji": "omoshiroi",
-    "meaning": "interesting",
-    "id": 98
-  },
-  {
-    "word": "これ",
-    "romaji": "kore",
-    "meaning": "this (thing)",
-    "id": 99
-  },
-  {
-    "word": "それ",
-    "romaji": "sore",
-    "meaning": "that (thing near you)",
-    "id": 100
-  },
-  {
-    "word": "あれ",
-    "romaji": "are",
-    "meaning": "that (thing over there)",
-    "id": 101
-  },
-  {
-    "word": "どれ",
-    "romaji": "dore",
-    "meaning": "which (thing)",
-    "id": 102
-  },
-  {
-    "word": "ここ",
-    "romaji": "koko",
-    "meaning": "here",
-    "id": 103
-  },
-  {
-    "word": "そこ",
-    "romaji": "soko",
-    "meaning": "there (near you)",
-    "id": 104
-  },
-  {
+    "id": 18,
     "word": "あそこ",
-    "romaji": "asoko",
+    "romaji": "あそこ",
+    "meaning": "there, over there, that place",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 19,
+    "word": "遊ぶ",
+    "romaji": "あそぶ",
+    "meaning": "to play; to spend time pleasantly; to hang out",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 20,
+    "word": "暖かい",
+    "romaji": "あたたかい",
+    "meaning": "warm",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 21,
+    "word": "頭",
+    "romaji": "あたま",
+    "meaning": "head",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 22,
+    "word": "新しい",
+    "romaji": "あたらしい",
+    "meaning": "new",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 23,
+    "word": "あちら",
+    "romaji": "あちら",
+    "meaning": "this way (polite)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 24,
+    "word": "暑い",
+    "romaji": "あつい",
+    "meaning": "hot (in reference to weather), warm",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 25,
+    "word": "熱い",
+    "romaji": "あつい",
+    "meaning": "hot (objects)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 26,
+    "word": "厚い",
+    "romaji": "あつい",
+    "meaning": "kind, warm(hearted), thick, deep",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 27,
+    "word": "あっち",
+    "romaji": "あっち",
     "meaning": "over there",
-    "id": 105
+    "category": "N5 Vocab"
   },
   {
-    "word": "どこ",
-    "romaji": "doko",
-    "meaning": "where",
-    "id": 106
+    "id": 28,
+    "word": "後",
+    "romaji": "あと",
+    "meaning": "afterwards (later); in the future; the rest; since then",
+    "category": "N5 Vocab"
   },
   {
-    "word": "だれ",
-    "romaji": "dare",
+    "id": 29,
+    "word": "あなた",
+    "romaji": "あなた",
+    "meaning": "you",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 30,
+    "word": "兄",
+    "romaji": "あに",
+    "meaning": "(my) older brother (humble)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 31,
+    "word": "姉",
+    "romaji": "あね",
+    "meaning": "(my) older sister (humble)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 32,
+    "word": "アパート",
+    "romaji": "アパート",
+    "meaning": "apartment (abbr.)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 33,
+    "word": "あの",
+    "romaji": "あの",
+    "meaning": "that over there; like that, that way; um...",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 34,
+    "word": "浴びる",
+    "romaji": "あびる",
+    "meaning": "to bathe, to shower",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 35,
+    "word": "危ない",
+    "romaji": "あぶない",
+    "meaning": "dangerous, critical",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 36,
+    "word": "甘い",
+    "romaji": "あまい",
+    "meaning": "generous, sweet",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 37,
+    "word": "余り",
+    "romaji": "あまり",
+    "meaning": "not very; surplus",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 38,
+    "word": "雨",
+    "romaji": "あめ",
+    "meaning": "rain",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 39,
+    "word": "飴",
+    "romaji": "あめ",
+    "meaning": "(hard) candy",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 40,
+    "word": "洗う",
+    "romaji": "あらう",
+    "meaning": "to wash",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 41,
+    "word": "在る",
+    "romaji": "ある",
+    "meaning": "to be, to have",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 42,
+    "word": "有る",
+    "romaji": "ある",
+    "meaning": "to be, to have",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 43,
+    "word": "歩く",
+    "romaji": "あるく",
+    "meaning": "to walk",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 44,
+    "word": "あれ",
+    "romaji": "あれ",
+    "meaning": "that one (over there)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 45,
+    "word": "いい; よい",
+    "romaji": "いい; よい",
+    "meaning": "good",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 46,
+    "word": "いいえ",
+    "romaji": "いいえ",
+    "meaning": "no, not at all",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 47,
+    "word": "言う",
+    "romaji": "いう",
+    "meaning": "to say",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 48,
+    "word": "家",
+    "romaji": "いえ",
+    "meaning": "house, home",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 49,
+    "word": "いかが",
+    "romaji": "いかが",
+    "meaning": "how, in what way",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 50,
+    "word": "行く",
+    "romaji": "いく; ゆく",
+    "meaning": "to go",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 51,
+    "word": "いくつ",
+    "romaji": "いくつ",
+    "meaning": "how many, how old",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 52,
+    "word": "いくら",
+    "romaji": "いくら",
+    "meaning": "how much, how many",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 53,
+    "word": "池",
+    "romaji": "いけ",
+    "meaning": "pond",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 54,
+    "word": "医者",
+    "romaji": "いしゃ",
+    "meaning": "doctor; physician",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 55,
+    "word": "椅子",
+    "romaji": "いす",
+    "meaning": "chair",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 56,
+    "word": "忙しい",
+    "romaji": "いそがしい",
+    "meaning": "busy (people, days)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 57,
+    "word": "痛い",
+    "romaji": "いたい",
+    "meaning": "hurt; painful; sore",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 58,
+    "word": "一",
+    "romaji": "いち",
+    "meaning": "one",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 59,
+    "word": "一日",
+    "romaji": "いちにち",
+    "meaning": "one day (duration)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 60,
+    "word": "一番",
+    "romaji": "いちばん",
+    "meaning": "best (most), first, number one",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 61,
+    "word": "いつ",
+    "romaji": "いつ",
+    "meaning": "when",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 62,
+    "word": "五日",
+    "romaji": "いつか",
+    "meaning": "five days; fifth day of the month",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 63,
+    "word": "一緒",
+    "romaji": "いっしょ",
+    "meaning": "together",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 64,
+    "word": "五つ",
+    "romaji": "いつつ",
+    "meaning": "five things",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 65,
+    "word": "いつも",
+    "romaji": "いつも",
+    "meaning": "always, usually, every time, never (with neg. verb)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 66,
+    "word": "犬",
+    "romaji": "いぬ",
+    "meaning": "dog",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 67,
+    "word": "今",
+    "romaji": "いま",
+    "meaning": "now",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 68,
+    "word": "意味",
+    "romaji": "いみ",
+    "meaning": "meaning, significance",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 69,
+    "word": "妹",
+    "romaji": "いもうと",
+    "meaning": "younger sister (humble)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 70,
+    "word": "嫌",
+    "romaji": "いや",
+    "meaning": "disagreeable, detestable, unpleasant",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 71,
+    "word": "入口",
+    "romaji": "いりぐち",
+    "meaning": "entrance",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 72,
+    "word": "居る",
+    "romaji": "いる",
+    "meaning": "(humble) to be (animate), to exist",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 73,
+    "word": "要る",
+    "romaji": "いる",
+    "meaning": "to need",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 74,
+    "word": "入れる",
+    "romaji": "いれる",
+    "meaning": "to put in",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 75,
+    "word": "色",
+    "romaji": "いろ",
+    "meaning": "color",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 76,
+    "word": "色々",
+    "romaji": "いろいろ",
+    "meaning": "various",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 77,
+    "word": "上",
+    "romaji": "うえ",
+    "meaning": "above (up, top, etc.), over, on top of",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 78,
+    "word": "後ろ",
+    "romaji": "うしろ",
+    "meaning": "back, behind, rear",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 79,
+    "word": "薄い",
+    "romaji": "うすい",
+    "meaning": "thin, weak",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 80,
+    "word": "歌",
+    "romaji": "うた",
+    "meaning": "a song",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 81,
+    "word": "歌う",
+    "romaji": "うたう",
+    "meaning": "to sing",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 82,
+    "word": "うち",
+    "romaji": "うち",
+    "meaning": "home; house; my place",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 83,
+    "word": "生まれる",
+    "romaji": "うまれる",
+    "meaning": "to be born",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 84,
+    "word": "海",
+    "romaji": "うみ",
+    "meaning": "sea, beach",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 85,
+    "word": "売る",
+    "romaji": "うる",
+    "meaning": "to sell (v.t.)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 86,
+    "word": "うるさい",
+    "romaji": "うるさい",
+    "meaning": "noisy; annoying",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 87,
+    "word": "上着",
+    "romaji": "うわぎ",
+    "meaning": "coat, jacket",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 88,
+    "word": "絵",
+    "romaji": "え",
+    "meaning": "a painting; a picture; a drawing",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 89,
+    "word": "映画",
+    "romaji": "えいが",
+    "meaning": "movie, film",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 90,
+    "word": "映画館",
+    "romaji": "えいがかん",
+    "meaning": "movie theater, cinema",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 91,
+    "word": "英語",
+    "romaji": "えいご",
+    "meaning": "English (language)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 92,
+    "word": "ええ",
+    "romaji": "ええ",
+    "meaning": "yes",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 93,
+    "word": "駅",
+    "romaji": "えき",
+    "meaning": "station",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 94,
+    "word": "エレベーター",
+    "romaji": "エレベーター",
+    "meaning": "elevator",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 95,
+    "word": "～円",
+    "romaji": "～えん",
+    "meaning": "Yen",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 96,
+    "word": "鉛筆",
+    "romaji": "えんぴつ",
+    "meaning": "pencil",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 97,
+    "word": "お～",
+    "romaji": "お～",
+    "meaning": "honorable ~ (honorific)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 98,
+    "word": "美味しい",
+    "romaji": "おいしい",
+    "meaning": "delicious, tasty",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 99,
+    "word": "多い",
+    "romaji": "おおい",
+    "meaning": "many; there are a lot",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 100,
+    "word": "大きい",
+    "romaji": "おおきい",
+    "meaning": "big, large",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 101,
+    "word": "大きな",
+    "romaji": "おおきな",
+    "meaning": "big",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 102,
+    "word": "大勢",
+    "romaji": "おおぜい",
+    "meaning": "great number of people",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 103,
+    "word": "お母さん",
+    "romaji": "おかあさん",
+    "meaning": "mother (formal)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 104,
+    "word": "お菓子",
+    "romaji": "おかし",
+    "meaning": "confections, sweets, snack",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 105,
+    "word": "お金",
+    "romaji": "おかね",
+    "meaning": "money",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 106,
+    "word": "起きる",
+    "romaji": "おきる",
+    "meaning": "to get up (e.g., from sleeping); to happen",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 107,
+    "word": "置く",
+    "romaji": "おく",
+    "meaning": "to put; to lay; to place",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 108,
+    "word": "奥さん",
+    "romaji": "おくさん",
+    "meaning": "(someone else's) wife (hon.)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 109,
+    "word": "お酒",
+    "romaji": "おさけ",
+    "meaning": "sake; alcohol",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 110,
+    "word": "お皿",
+    "romaji": "おさら",
+    "meaning": "plate, dish",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 111,
+    "word": "伯父; 叔父さん",
+    "romaji": "おじさん",
+    "meaning": "uncle, middle-aged man",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 112,
+    "word": "おじいさん",
+    "romaji": "おじいさん",
+    "meaning": "grandfather, male senior citizen",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 113,
+    "word": "教える",
+    "romaji": "おしえる",
+    "meaning": "to teach, to inform, to instruct",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 114,
+    "word": "押す",
+    "romaji": "おす",
+    "meaning": "to push, to press, to stamp (e.g., a passport)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 115,
+    "word": "遅い",
+    "romaji": "おそい",
+    "meaning": "slow; (to be) late",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 116,
+    "word": "お茶",
+    "romaji": "おちゃ",
+    "meaning": "(green) tea",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 117,
+    "word": "お手洗い",
+    "romaji": "おてあらい",
+    "meaning": "toilet, restroom, bathroom (lit., a place to wash one's hands)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 118,
+    "word": "お父さん",
+    "romaji": "おとうさん",
+    "meaning": "father (formal)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 119,
+    "word": "弟",
+    "romaji": "おとうと",
+    "meaning": "younger brother",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 120,
+    "word": "男",
+    "romaji": "おとこ",
+    "meaning": "man, male",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 121,
+    "word": "男の子",
+    "romaji": "おとこのこ",
+    "meaning": "boy",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 122,
+    "word": "一昨日",
+    "romaji": "おととい",
+    "meaning": "the day before yesterday",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 123,
+    "word": "おととし",
+    "romaji": "おととし",
+    "meaning": "year before last",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 124,
+    "word": "大人",
+    "romaji": "おとな",
+    "meaning": "adult",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 125,
+    "word": "お腹",
+    "romaji": "おなか",
+    "meaning": "stomach",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 126,
+    "word": "同じ",
+    "romaji": "おなじ",
+    "meaning": "same, identical",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 127,
+    "word": "お兄さん",
+    "romaji": "おにいさん",
+    "meaning": "(someone else's) older brother (formal)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 128,
+    "word": "お姉さん",
+    "romaji": "おねえさん",
+    "meaning": "older sister (formal)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 129,
+    "word": "伯母さん; 叔母さん",
+    "romaji": "おばさん",
+    "meaning": "aunt",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 130,
+    "word": "おばあさん",
+    "romaji": "おばあさん",
+    "meaning": "grandmother, female senior-citizen",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 131,
+    "word": "お風呂",
+    "romaji": "おふろ",
+    "meaning": "a bath",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 132,
+    "word": "お弁当",
+    "romaji": "おべんとう",
+    "meaning": "a boxed lunch",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 133,
+    "word": "覚える",
+    "romaji": "おぼえる",
+    "meaning": "to learn, to commit to memory, to remember, to memorize",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 134,
+    "word": "おまわりさん",
+    "romaji": "おまわりさん",
+    "meaning": "policeman (friendly term)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 135,
+    "word": "重い",
+    "romaji": "おもい",
+    "meaning": "heavy; serious",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 136,
+    "word": "面白い",
+    "romaji": "おもしろい",
+    "meaning": "interesting, amusing",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 137,
+    "word": "泳ぐ",
+    "romaji": "およぐ",
+    "meaning": "to swim",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 138,
+    "word": "降りる",
+    "romaji": "おりる",
+    "meaning": "to get off",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 139,
+    "word": "終る",
+    "romaji": "おわる",
+    "meaning": "to finish, to close",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 140,
+    "word": "音楽",
+    "romaji": "おんがく",
+    "meaning": "Music",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 141,
+    "word": "女",
+    "romaji": "おんな",
+    "meaning": "woman, female",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 142,
+    "word": "女の子",
+    "romaji": "おんなのこ",
+    "meaning": "girl",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 143,
+    "word": "～回",
+    "romaji": "～かい",
+    "meaning": "counter for occurrences (~ times)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 144,
+    "word": "～階",
+    "romaji": "～かい",
+    "meaning": "counter for stories (floors) of a building",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 145,
+    "word": "外国",
+    "romaji": "がいこく",
+    "meaning": "foreign country; abroad",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 146,
+    "word": "外国人",
+    "romaji": "がいこくじん",
+    "meaning": "foreigner",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 147,
+    "word": "会社",
+    "romaji": "かいしゃ",
+    "meaning": "company, corporation",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 148,
+    "word": "階段",
+    "romaji": "かいだん",
+    "meaning": "stairs",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 149,
+    "word": "買い物",
+    "romaji": "かいもの",
+    "meaning": "shopping",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 150,
+    "word": "買う",
+    "romaji": "かう",
+    "meaning": "to buy",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 151,
+    "word": "返す",
+    "romaji": "かえす",
+    "meaning": "to return something",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 152,
+    "word": "帰る",
+    "romaji": "かえる",
+    "meaning": "to go back, to go home, to return",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 153,
+    "word": "顔",
+    "romaji": "かお",
+    "meaning": "face (body part)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 154,
+    "word": "かかる",
+    "romaji": "かかる",
+    "meaning": "it takes (amount of time, money) (v.i.)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 155,
+    "word": "鍵",
+    "romaji": "かぎ",
+    "meaning": "a lock; a key",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 156,
+    "word": "書く",
+    "romaji": "かく",
+    "meaning": "to write",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 157,
+    "word": "学生",
+    "romaji": "がくせい",
+    "meaning": "student",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 158,
+    "word": "～か月",
+    "romaji": "～かげつ",
+    "meaning": "(number of) months",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 159,
+    "word": "掛ける",
+    "romaji": "かける",
+    "meaning": "to put on (e.g., glasses); to hang (e.g., on a wall)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 160,
+    "word": "かける",
+    "romaji": "かける",
+    "meaning": "to dial/call (e.g., phone); to sit down",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 161,
+    "word": "傘",
+    "romaji": "かさ",
+    "meaning": "umbrella, parasol",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 162,
+    "word": "貸す",
+    "romaji": "かす",
+    "meaning": "to lend",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 163,
+    "word": "風",
+    "romaji": "かぜ",
+    "meaning": "wind, breeze",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 164,
+    "word": "風邪",
+    "romaji": "かぜ",
+    "meaning": "cold, flu",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 165,
+    "word": "方",
+    "romaji": "かた",
+    "meaning": "-- honorific form for 人 (ひと) --; way of doing",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 166,
+    "word": "家族",
+    "romaji": "かぞく",
+    "meaning": "family, members of a family",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 167,
+    "word": "片仮名",
+    "romaji": "かたかな",
+    "meaning": "katakana",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 168,
+    "word": "～月",
+    "romaji": "～がつ",
+    "meaning": "month of year",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 169,
+    "word": "学校",
+    "romaji": "がっこう",
+    "meaning": "a school",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 170,
+    "word": "カップ",
+    "romaji": "カップ",
+    "meaning": "cup",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 171,
+    "word": "家庭",
+    "romaji": "かてい",
+    "meaning": "home; family",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 172,
+    "word": "角",
+    "romaji": "かど",
+    "meaning": "corner (e.g., desk, pavement)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 173,
+    "word": "かばん",
+    "romaji": "かばん",
+    "meaning": "bag, basket",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 174,
+    "word": "花瓶",
+    "romaji": "かびん",
+    "meaning": "(flower) vase",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 175,
+    "word": "かぶる",
+    "romaji": "かぶる",
+    "meaning": "to wear, to put on (e.g., a hat on the head)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 176,
+    "word": "紙",
+    "romaji": "かみ",
+    "meaning": "paper",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 177,
+    "word": "カメラ",
+    "romaji": "カメラ",
+    "meaning": "camera",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 178,
+    "word": "火曜日",
+    "romaji": "かようび",
+    "meaning": "Tuesday",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 179,
+    "word": "辛い",
+    "romaji": "からい",
+    "meaning": "hot and spicy; salty",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 180,
+    "word": "体",
+    "romaji": "からだ",
+    "meaning": "body; health",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 181,
+    "word": "借りる",
+    "romaji": "かりる",
+    "meaning": "to borrow, to owe",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 182,
+    "word": "～がる",
+    "romaji": "～がる",
+    "meaning": "feel",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 183,
+    "word": "軽い",
+    "romaji": "かるい",
+    "meaning": "light, non-serious, minor",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 184,
+    "word": "カレー",
+    "romaji": "カレー",
+    "meaning": "curry (abbr. for curry and rice)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 185,
+    "word": "カレンダー",
+    "romaji": "カレンダー",
+    "meaning": "calendar",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 186,
+    "word": "川; 河",
+    "romaji": "かわ",
+    "meaning": "river",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 187,
+    "word": "～側",
+    "romaji": "～がわ",
+    "meaning": "~ side",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 188,
+    "word": "可愛い",
+    "romaji": "かわいい",
+    "meaning": "cute, adorable",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 189,
+    "word": "漢字",
+    "romaji": "かんじ",
+    "meaning": "kanji; Chinese character",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 190,
+    "word": "木",
+    "romaji": "き",
+    "meaning": "tree, wood, timber",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 191,
+    "word": "黄色",
+    "romaji": "きいろ",
+    "meaning": "yellow",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 192,
+    "word": "黄色い",
+    "romaji": "きいろい",
+    "meaning": "yellow",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 193,
+    "word": "消える",
+    "romaji": "きえる",
+    "meaning": "to vanish, to disappear",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 194,
+    "word": "聞く",
+    "romaji": "きく",
+    "meaning": "to hear, to listen, to ask",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 195,
+    "word": "北",
+    "romaji": "きた",
+    "meaning": "north",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 196,
+    "word": "ギター",
+    "romaji": "ギター",
+    "meaning": "guitar",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 197,
+    "word": "汚い",
+    "romaji": "きたない",
+    "meaning": "dirty, unclean, filthy",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 198,
+    "word": "喫茶店",
+    "romaji": "きっさてん",
+    "meaning": "café",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 199,
+    "word": "切手",
+    "romaji": "きって",
+    "meaning": "postal (postage) stamps",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 200,
+    "word": "切符",
+    "romaji": "きっぷ",
+    "meaning": "a ticket",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 201,
+    "word": "昨日",
+    "romaji": "きのう",
+    "meaning": "yesterday",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 202,
+    "word": "九",
+    "romaji": "きゅう",
+    "meaning": "nine",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 203,
+    "word": "牛肉",
+    "romaji": "ぎゅうにく",
+    "meaning": "beef",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 204,
+    "word": "牛乳",
+    "romaji": "ぎゅうにゅう",
+    "meaning": "milk",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 205,
+    "word": "今日",
+    "romaji": "きょう",
+    "meaning": "today, this day",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 206,
+    "word": "教室",
+    "romaji": "きょうしつ",
+    "meaning": "classroom",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 207,
+    "word": "兄弟",
+    "romaji": "きょうだい",
+    "meaning": "siblings (humble), brothers and sisters",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 208,
+    "word": "去年",
+    "romaji": "きょねん",
+    "meaning": "last year",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 209,
+    "word": "嫌い",
+    "romaji": "きらい",
+    "meaning": "dislike",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 210,
+    "word": "切る",
+    "romaji": "きる",
+    "meaning": "to cut; to hang up (a phone)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 211,
+    "word": "着る",
+    "romaji": "きる",
+    "meaning": "to put on (clothes above your waist); to wear",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 212,
+    "word": "綺麗",
+    "romaji": "きれい",
+    "meaning": "pretty, clean, tidy",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 213,
+    "word": "キロ; キログラム",
+    "romaji": "キロ; キログラム",
+    "meaning": "(abbr.) kilo (kilogram)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 214,
+    "word": "キロ; キロメートル",
+    "romaji": "キロ; キロメートル",
+    "meaning": "(abbr.) kilo (kilometer)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 215,
+    "word": "銀行",
+    "romaji": "ぎんこう",
+    "meaning": "bank",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 216,
+    "word": "金曜日",
+    "romaji": "きんようび",
+    "meaning": "Friday",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 217,
+    "word": "九",
+    "romaji": "く",
+    "meaning": "nine",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 218,
+    "word": "薬",
+    "romaji": "くすり",
+    "meaning": "medicine",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 219,
+    "word": "下さい",
+    "romaji": "ください",
+    "meaning": "(with te-form verb) please do for me",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 220,
+    "word": "果物",
+    "romaji": "くだもの",
+    "meaning": "fruit",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 221,
+    "word": "口",
+    "romaji": "くち",
+    "meaning": "job opening; mouth",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 222,
+    "word": "靴",
+    "romaji": "くつ",
+    "meaning": "shoes, footwear",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 223,
+    "word": "靴下",
+    "romaji": "くつした",
+    "meaning": "socks",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 224,
+    "word": "国",
+    "romaji": "くに",
+    "meaning": "country; place of origin",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 225,
+    "word": "曇り",
+    "romaji": "くもり",
+    "meaning": "cloudiness, cloudy weather",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 226,
+    "word": "曇る",
+    "romaji": "くもる",
+    "meaning": "to become cloudy, to become dim",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 227,
+    "word": "暗い",
+    "romaji": "くらい",
+    "meaning": "dark, gloomy",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 228,
+    "word": "～くらい; ぐらい",
+    "romaji": "～くらい; ぐらい",
+    "meaning": "approximate (quantity)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 229,
+    "word": "クラス",
+    "romaji": "クラス",
+    "meaning": "a class",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 230,
+    "word": "グラム",
+    "romaji": "グラム",
+    "meaning": "gram",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 231,
+    "word": "来る",
+    "romaji": "くる",
+    "meaning": "to come",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 232,
+    "word": "車",
+    "romaji": "くるま",
+    "meaning": "car, vehicle",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 233,
+    "word": "黒",
+    "romaji": "くろ",
+    "meaning": "black",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 234,
+    "word": "黒い",
+    "romaji": "くろい",
+    "meaning": "black; dark",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 235,
+    "word": "警官",
+    "romaji": "けいかん",
+    "meaning": "police officer",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 236,
+    "word": "今朝",
+    "romaji": "けさ",
+    "meaning": "this morning",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 237,
+    "word": "消す",
+    "romaji": "けす",
+    "meaning": "to erase, to delete, to turn off power",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 238,
+    "word": "結構",
+    "romaji": "けっこう",
+    "meaning": "splendid; enough, tolerably",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 239,
+    "word": "結婚",
+    "romaji": "けっこん (する)",
+    "meaning": "marriage (get married)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 240,
+    "word": "月曜日",
+    "romaji": "げつようび",
+    "meaning": "Monday",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 241,
+    "word": "玄関",
+    "romaji": "げんかん",
+    "meaning": "entrance (to a house or a building)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 242,
+    "word": "元気",
+    "romaji": "げんき",
+    "meaning": "health(y), energetic",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 243,
+    "word": "～個",
+    "romaji": "～こ",
+    "meaning": "counter for small items (e.g., fruits, cups)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 244,
+    "word": "五",
+    "romaji": "ご",
+    "meaning": "five",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 245,
+    "word": "～語",
+    "romaji": "～ご",
+    "meaning": "word, language",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 246,
+    "word": "公園",
+    "romaji": "こうえん",
+    "meaning": "a park",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 247,
+    "word": "交差点",
+    "romaji": "こうさてん",
+    "meaning": "intersection",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 248,
+    "word": "紅茶",
+    "romaji": "こうちゃ",
+    "meaning": "black tea",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 249,
+    "word": "交番",
+    "romaji": "こうばん",
+    "meaning": "police box",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 250,
+    "word": "声",
+    "romaji": "こえ",
+    "meaning": "voice",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 251,
+    "word": "コート",
+    "romaji": "コート",
+    "meaning": "coat; court (e.g., tennis)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 252,
+    "word": "コーヒー",
+    "romaji": "コーヒー",
+    "meaning": "coffee",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 253,
+    "word": "ここ",
+    "romaji": "ここ",
+    "meaning": "here, this place",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 254,
+    "word": "午後",
+    "romaji": "ごご",
+    "meaning": "afternoon, P.M.",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 255,
+    "word": "九日",
+    "romaji": "ここのか",
+    "meaning": "nine days; ninth day of the month",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 256,
+    "word": "九つ",
+    "romaji": "ここのつ",
+    "meaning": "nine things",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 257,
+    "word": "午前",
+    "romaji": "ごぜん",
+    "meaning": "morning, A.M.",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 258,
+    "word": "答える",
+    "romaji": "こたえる",
+    "meaning": "to answer, to reply",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 259,
+    "word": "こちら",
+    "romaji": "こちら",
+    "meaning": "this person (polite); this way (polite)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 260,
+    "word": "こっち",
+    "romaji": "こっち",
+    "meaning": "this person; this direction; this side",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 261,
+    "word": "コップ",
+    "romaji": "コップ",
+    "meaning": "a tumbler; a glass",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 262,
+    "word": "今年",
+    "romaji": "ことし",
+    "meaning": "this year",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 263,
+    "word": "言葉",
+    "romaji": "ことば",
+    "meaning": "language; word(s); expression(s)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 264,
+    "word": "子供",
+    "romaji": "こども",
+    "meaning": "child(ren)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 265,
+    "word": "この",
+    "romaji": "この",
+    "meaning": "this",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 266,
+    "word": "御飯",
+    "romaji": "ごはん",
+    "meaning": "rice (cooked); meal",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 267,
+    "word": "コピーする",
+    "romaji": "コピーする",
+    "meaning": "to copy",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 268,
+    "word": "困る",
+    "romaji": "こまる",
+    "meaning": "to be bothered, to have difficulty",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 269,
+    "word": "これ",
+    "romaji": "これ",
+    "meaning": "this one",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 270,
+    "word": "～ころ; ～ごろ",
+    "romaji": "～ころ; ～ごろ",
+    "meaning": "about, toward, approximately (time)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 271,
+    "word": "今月",
+    "romaji": "こんげつ",
+    "meaning": "this month",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 272,
+    "word": "今週",
+    "romaji": "こんしゅう",
+    "meaning": "this week",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 273,
+    "word": "こんな",
+    "romaji": "こんな",
+    "meaning": "such, like this",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 274,
+    "word": "今晩",
+    "romaji": "こんばん",
+    "meaning": "tonight, this evening",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 275,
+    "word": "さあ",
+    "romaji": "さあ",
+    "meaning": "come now, well",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 276,
+    "word": "～歳",
+    "romaji": "～さい",
+    "meaning": "~ years old",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 277,
+    "word": "財布",
+    "romaji": "さいふ",
+    "meaning": "wallet",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 278,
+    "word": "魚",
+    "romaji": "さかな",
+    "meaning": "fish",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 279,
+    "word": "先",
+    "romaji": "さき",
+    "meaning": "future; recent, previous",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 280,
+    "word": "咲く",
+    "romaji": "さく",
+    "meaning": "to bloom",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 281,
+    "word": "作文",
+    "romaji": "さくぶん",
+    "meaning": "essay; composition",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 282,
+    "word": "差す",
+    "romaji": "さす",
+    "meaning": "to raise (stretch out) hands, to raise (e.g., umbrella)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 283,
+    "word": "～冊",
+    "romaji": "～さつ",
+    "meaning": "counter for books",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 284,
+    "word": "雑誌",
+    "romaji": "ざっし",
+    "meaning": "magazine, journal",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 285,
+    "word": "砂糖",
+    "romaji": "さとう",
+    "meaning": "sugar",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 286,
+    "word": "寒い",
+    "romaji": "さむい",
+    "meaning": "cold (in reference to weather)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 287,
+    "word": "さ来年",
+    "romaji": "さらいねん",
+    "meaning": "year after next",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 288,
+    "word": "～さん",
+    "romaji": "～さん",
+    "meaning": "Mr. ~, Ms. ~",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 289,
+    "word": "三",
+    "romaji": "さん",
+    "meaning": "three",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 290,
+    "word": "散歩",
+    "romaji": "さんぽ (する)",
+    "meaning": "walk, stroll",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 291,
+    "word": "四",
+    "romaji": "し",
+    "meaning": "four",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 292,
+    "word": "～時",
+    "romaji": "～じ",
+    "meaning": "~ o'clock (time)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 293,
+    "word": "塩",
+    "romaji": "しお",
+    "meaning": "salt",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 294,
+    "word": "しかし",
+    "romaji": "しかし",
+    "meaning": "however; but",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 295,
+    "word": "時間",
+    "romaji": "じかん",
+    "meaning": "time",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 296,
+    "word": "～時間",
+    "romaji": "～じかん",
+    "meaning": "~ hours",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 297,
+    "word": "仕事",
+    "romaji": "しごと",
+    "meaning": "work, job, occupation, employment",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 298,
+    "word": "辞書",
+    "romaji": "じしょ",
+    "meaning": "dictionary",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 299,
+    "word": "静か",
+    "romaji": "しずか",
+    "meaning": "quiet, calm",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 300,
+    "word": "下",
+    "romaji": "した",
+    "meaning": "under, below, beneath",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 301,
+    "word": "七",
+    "romaji": "しち",
+    "meaning": "seven",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 302,
+    "word": "質問",
+    "romaji": "しつもん",
+    "meaning": "question, inquiry",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 303,
+    "word": "自転車",
+    "romaji": "じてんしゃ",
+    "meaning": "bicycle",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 304,
+    "word": "自動車",
+    "romaji": "じどうしゃ",
+    "meaning": "automobile",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 305,
+    "word": "死ぬ",
+    "romaji": "しぬ",
+    "meaning": "to die",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 306,
+    "word": "字引",
+    "romaji": "じびき",
+    "meaning": "dictionary",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 307,
+    "word": "自分",
+    "romaji": "じぶん",
+    "meaning": "myself, oneself",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 308,
+    "word": "閉まる",
+    "romaji": "しまる",
+    "meaning": "to close, to be closed",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 309,
+    "word": "閉める",
+    "romaji": "しめる",
+    "meaning": "to close, to shut",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 310,
+    "word": "締める",
+    "romaji": "しめる",
+    "meaning": "to tie, to fasten, to tighten",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 311,
+    "word": "じゃ; じゃあ",
+    "romaji": "じゃ; じゃあ",
+    "meaning": "well, well then",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 312,
+    "word": "写真",
+    "romaji": "しゃしん",
+    "meaning": "a picture; a photograph",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 313,
+    "word": "シャツ",
+    "romaji": "シャツ",
+    "meaning": "shirt",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 314,
+    "word": "シャワー",
+    "romaji": "シャワー",
+    "meaning": "shower",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 315,
+    "word": "十",
+    "romaji": "じゅう",
+    "meaning": "ten",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 316,
+    "word": "～中",
+    "romaji": "～じゅう",
+    "meaning": "during, while",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 317,
+    "word": "～週間",
+    "romaji": "～しゅうかん",
+    "meaning": "~ weeks",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 318,
+    "word": "授業",
+    "romaji": "じゅぎょう",
+    "meaning": "a class (of school)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 319,
+    "word": "宿題",
+    "romaji": "しゅくだい",
+    "meaning": "homework",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 320,
+    "word": "上手",
+    "romaji": "じょうず",
+    "meaning": "be good at, skillful",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 321,
+    "word": "丈夫",
+    "romaji": "じょうぶ",
+    "meaning": "strong, solid, durable",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 322,
+    "word": "醤油",
+    "romaji": "しょうゆ",
+    "meaning": "soy sauce",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 323,
+    "word": "食堂",
+    "romaji": "しょくどう",
+    "meaning": "cafeteria, dining hall",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 324,
+    "word": "知る",
+    "romaji": "しる",
+    "meaning": "to know, to understand",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 325,
+    "word": "白",
+    "romaji": "しろ",
+    "meaning": "white",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 326,
+    "word": "白い",
+    "romaji": "しろい",
+    "meaning": "white",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 327,
+    "word": "～人",
+    "romaji": "～じん",
+    "meaning": "counter for people",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 328,
+    "word": "新聞",
+    "romaji": "しんぶん",
+    "meaning": "newspaper",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 329,
+    "word": "水曜日",
+    "romaji": "すいようび",
+    "meaning": "Wednesday",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 330,
+    "word": "吸う",
+    "romaji": "すう",
+    "meaning": "to breathe in, to suck",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 331,
+    "word": "スカート",
+    "romaji": "スカート",
+    "meaning": "skirt",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 332,
+    "word": "好き",
+    "romaji": "すき",
+    "meaning": "liking, fondness, love",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 333,
+    "word": "～すぎ",
+    "romaji": "～すぎ",
+    "meaning": "past; to exceed, ~ too much",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 334,
+    "word": "少ない",
+    "romaji": "すくない",
+    "meaning": "a little; a few",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 335,
+    "word": "すぐに",
+    "romaji": "すぐに",
+    "meaning": "immediately, soon",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 336,
+    "word": "少し",
+    "romaji": "すこし",
+    "meaning": "little, few",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 337,
+    "word": "涼しい",
+    "romaji": "すずしい",
+    "meaning": "cool, refreshing (in reference to weather)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 338,
+    "word": "～ずつ",
+    "romaji": "～ずつ",
+    "meaning": "at a time",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 339,
+    "word": "ストーブ",
+    "romaji": "ストーブ",
+    "meaning": "heater (lit: stove)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 340,
+    "word": "スプーン",
+    "romaji": "スプーン",
+    "meaning": "spoon",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 341,
+    "word": "スポーツ",
+    "romaji": "スポーツ",
+    "meaning": "sport(s)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 342,
+    "word": "ズボン",
+    "romaji": "ズボン",
+    "meaning": "trousers",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 343,
+    "word": "住む",
+    "romaji": "すむ",
+    "meaning": "to reside, to live in",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 344,
+    "word": "する",
+    "romaji": "する",
+    "meaning": "to do, to try; to wear small items (e.g., necktie, watch, etc.)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 345,
+    "word": "座る",
+    "romaji": "すわる",
+    "meaning": "to sit",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 346,
+    "word": "背",
+    "romaji": "せい",
+    "meaning": "(one's) height, stature",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 347,
+    "word": "生徒",
+    "romaji": "せいと",
+    "meaning": "student; pupil",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 348,
+    "word": "セーター",
+    "romaji": "セーター",
+    "meaning": "sweater",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 349,
+    "word": "石鹸",
+    "romaji": "せっけん",
+    "meaning": "soap",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 350,
+    "word": "背広",
+    "romaji": "せびろ",
+    "meaning": "men's suit",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 351,
+    "word": "狭い",
+    "romaji": "せまい",
+    "meaning": "narrow; not spacious",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 352,
+    "word": "ゼロ",
+    "romaji": "ゼロ",
+    "meaning": "zero",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 353,
+    "word": "千",
+    "romaji": "せん",
+    "meaning": "thousand",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 354,
+    "word": "先月",
+    "romaji": "せんげつ",
+    "meaning": "last month",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 355,
+    "word": "先週",
+    "romaji": "せんしゅう",
+    "meaning": "last week",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 356,
+    "word": "先生",
+    "romaji": "せんせい",
+    "meaning": "teacher, professor; master; doctor",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 357,
+    "word": "洗濯",
+    "romaji": "せんたく",
+    "meaning": "washing, laundry",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 358,
+    "word": "全部",
+    "romaji": "ぜんぶ",
+    "meaning": "all, entire, whole",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 359,
+    "word": "そう; そうです",
+    "romaji": "そう; そうです",
+    "meaning": "yes; appears, to be the case",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 360,
+    "word": "掃除",
+    "romaji": "そうじ (する)",
+    "meaning": "cleaning, sweeping",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 361,
+    "word": "そうして; そして",
+    "romaji": "そうして; そして",
+    "meaning": "and, like that",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 362,
+    "word": "そこ",
+    "romaji": "そこ",
+    "meaning": "that place, there; bottom, sole",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 363,
+    "word": "そちら",
+    "romaji": "そちら",
+    "meaning": "over there",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 364,
+    "word": "そっち",
+    "romaji": "そっち",
+    "meaning": "over there",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 365,
+    "word": "外",
+    "romaji": "そと",
+    "meaning": "outside, exterior",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 366,
+    "word": "その",
+    "romaji": "その",
+    "meaning": "that",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 367,
+    "word": "そば",
+    "romaji": "そば",
+    "meaning": "near, close, beside; Japanese traditional buckwheat noodle",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 368,
+    "word": "空",
+    "romaji": "そら",
+    "meaning": "sky",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 369,
+    "word": "それ",
+    "romaji": "それ",
+    "meaning": "that one",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 370,
+    "word": "それから",
+    "romaji": "それから",
+    "meaning": "and then, after that",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 371,
+    "word": "それでは",
+    "romaji": "それでは",
+    "meaning": "in that situation, well then...",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 372,
+    "word": "～台",
+    "romaji": "～だい",
+    "meaning": "counter for vehicles; machines",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 373,
+    "word": "大学",
+    "romaji": "だいがく",
+    "meaning": "college; university",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 374,
+    "word": "大使館",
+    "romaji": "たいしかん",
+    "meaning": "embassy",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 375,
+    "word": "大丈夫",
+    "romaji": "だいじょうぶ",
+    "meaning": "It's ok (all right); No need to worry; Everything is under control",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 376,
+    "word": "大好き",
+    "romaji": "だいすき",
+    "meaning": "very like-able, like very much",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 377,
+    "word": "大切",
+    "romaji": "たいせつ",
+    "meaning": "important",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 378,
+    "word": "台所",
+    "romaji": "だいどころ",
+    "meaning": "kitchen",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 379,
+    "word": "大変",
+    "romaji": "たいへん",
+    "meaning": "very; difficult, hard",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 380,
+    "word": "高い",
+    "romaji": "たかい",
+    "meaning": "tall, high; expensive",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 381,
+    "word": "～だけ",
+    "romaji": "～だけ",
+    "meaning": "only ~, just ~, as ~",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 382,
+    "word": "沢山",
+    "romaji": "たくさん",
+    "meaning": "many, much",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 383,
+    "word": "タクシー",
+    "romaji": "タクシー",
+    "meaning": "taxi",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 384,
+    "word": "出す",
+    "romaji": "だす",
+    "meaning": "to take (something) out; to hand in (something)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 385,
+    "word": "～たち",
+    "romaji": "～たち",
+    "meaning": "plural suffix",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 386,
+    "word": "立つ",
+    "romaji": "たつ",
+    "meaning": "to stand up",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 387,
+    "word": "たて",
+    "romaji": "たて",
+    "meaning": "length, height",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 388,
+    "word": "建物",
+    "romaji": "たてもの",
+    "meaning": "building",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 389,
+    "word": "楽しい",
+    "romaji": "たのしい",
+    "meaning": "enjoyable, fun",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 390,
+    "word": "頼む",
+    "romaji": "たのむ",
+    "meaning": "to request, to ask (a favor)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 391,
+    "word": "たばこ",
+    "romaji": "たばこ",
+    "meaning": "tobacco, cigarettes",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 392,
+    "word": "多分",
+    "romaji": "たぶん",
+    "meaning": "perhaps, probably, maybe",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 393,
+    "word": "食べ物",
+    "romaji": "たべもの",
+    "meaning": "food",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 394,
+    "word": "食べる",
+    "romaji": "たべる",
+    "meaning": "to eat",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 395,
+    "word": "卵",
+    "romaji": "たまご",
+    "meaning": "egg",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 396,
+    "word": "誰",
+    "romaji": "だれ",
     "meaning": "who",
-    "id": 107
+    "category": "N5 Vocab"
   },
   {
+    "id": 397,
+    "word": "誰か",
+    "romaji": "だれか",
+    "meaning": "someone",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 398,
+    "word": "誕生日",
+    "romaji": "たんじょうび",
+    "meaning": "birthday",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 399,
+    "word": "段々",
+    "romaji": "だんだん",
+    "meaning": "gradually, by degrees",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 400,
+    "word": "小さい",
+    "romaji": "ちいさい",
+    "meaning": "small, little",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 401,
+    "word": "小さな",
+    "romaji": "ちいさな",
+    "meaning": "small, little",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 402,
+    "word": "近い",
+    "romaji": "ちかい",
+    "meaning": "near, close by, short",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 403,
+    "word": "違う",
+    "romaji": "ちがう",
+    "meaning": "to be different; to differ; wrong",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 404,
+    "word": "近く",
+    "romaji": "ちかく",
+    "meaning": "nearby; in the neighborhood",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 405,
+    "word": "地下鉄",
+    "romaji": "ちかてつ",
+    "meaning": "underground train, subway",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 406,
+    "word": "地図",
+    "romaji": "ちず",
+    "meaning": "a map",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 407,
+    "word": "父",
+    "romaji": "ちち",
+    "meaning": "(my) father",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 408,
+    "word": "茶色",
+    "romaji": "ちゃいろ",
+    "meaning": "brown",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 409,
+    "word": "茶碗",
+    "romaji": "ちゃわん",
+    "meaning": "rice bowl",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 410,
+    "word": "～中",
+    "romaji": "～ちゅう",
+    "meaning": "during, while ~ing",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 411,
+    "word": "丁度",
+    "romaji": "ちょうど",
+    "meaning": "just, right, exactly",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 412,
+    "word": "ちょっと",
+    "romaji": "ちょっと",
+    "meaning": "a little, somewhat; just a little, somewhat",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 413,
+    "word": "一日",
+    "romaji": "ついたち",
+    "meaning": "one day; first day of the month",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 414,
+    "word": "使う",
+    "romaji": "つかう",
+    "meaning": "to use",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 415,
+    "word": "疲れる",
+    "romaji": "つかれる",
+    "meaning": "to get (become) tired; to become fatigued",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 416,
+    "word": "次",
+    "romaji": "つぎ",
+    "meaning": "next",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 417,
+    "word": "着く",
+    "romaji": "つく",
+    "meaning": "to arrive at, to reach",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 418,
+    "word": "机",
+    "romaji": "つくえ",
+    "meaning": "desk",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 419,
+    "word": "作る",
+    "romaji": "つくる",
+    "meaning": "to make, to create",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 420,
+    "word": "つける",
+    "romaji": "つける",
+    "meaning": "to turn on (e.g., a light); to take",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 421,
+    "word": "勤める",
+    "romaji": "つとめる",
+    "meaning": "to work (for)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 422,
+    "word": "つまらない",
+    "romaji": "つまらない",
+    "meaning": "boring, dull; insignificant",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 423,
+    "word": "冷たい",
+    "romaji": "つめたい",
+    "meaning": "cold (things, people)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 424,
+    "word": "強い",
+    "romaji": "つよい",
+    "meaning": "strong, powerful",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 425,
+    "word": "手",
+    "romaji": "て",
+    "meaning": "hand",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 426,
+    "word": "テープ",
+    "romaji": "テープ",
+    "meaning": "tape",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 427,
+    "word": "テープレコーダー",
+    "romaji": "テープレコーダー",
+    "meaning": "tape recorder",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 428,
+    "word": "テーブル",
+    "romaji": "テーブル",
+    "meaning": "table",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 429,
+    "word": "出かける",
+    "romaji": "でかける",
+    "meaning": "to go out; to depart",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 430,
+    "word": "手紙",
+    "romaji": "てがみ",
+    "meaning": "letter",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 431,
+    "word": "できる",
+    "romaji": "できる",
+    "meaning": "to be able to (to accomplish)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 432,
+    "word": "出口",
+    "romaji": "でぐち",
+    "meaning": "an exit",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 433,
+    "word": "テスト",
+    "romaji": "テスト",
+    "meaning": "test",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 434,
+    "word": "では",
+    "romaji": "では",
+    "meaning": "then, well, so",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 435,
+    "word": "デパート",
+    "romaji": "デパート",
+    "meaning": "(abbr.) department store",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 436,
+    "word": "でも",
+    "romaji": "でも",
+    "meaning": "but, however",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 437,
+    "word": "出る",
+    "romaji": "でる",
+    "meaning": "to appear, to leave",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 438,
+    "word": "テレビ",
+    "romaji": "テレビ",
+    "meaning": "television, TV",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 439,
+    "word": "天気",
+    "romaji": "てんき",
+    "meaning": "weather",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 440,
+    "word": "電気",
+    "romaji": "でんき",
+    "meaning": "electricity, (electric) light",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 441,
+    "word": "電車",
+    "romaji": "でんしゃ",
+    "meaning": "electric train",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 442,
+    "word": "電話",
+    "romaji": "でんわ",
+    "meaning": "a telephone",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 443,
+    "word": "戸",
+    "romaji": "と",
+    "meaning": "door (Japanese style)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 444,
+    "word": "～度",
+    "romaji": "～ど",
+    "meaning": "counter for occurrences; ~ degree; ~ point",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 445,
+    "word": "ドア",
+    "romaji": "ドア",
+    "meaning": "door (Western style)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 446,
+    "word": "トイレ",
+    "romaji": "トイレ",
+    "meaning": "bathroom; toilet",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 447,
+    "word": "どう",
+    "romaji": "どう",
+    "meaning": "how, in what way",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 448,
+    "word": "どうして",
+    "romaji": "どうして",
+    "meaning": "why, for what reason",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 449,
+    "word": "どうぞ",
+    "romaji": "どうぞ",
+    "meaning": "please, kindly, by all means",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 450,
+    "word": "動物",
+    "romaji": "どうぶつ",
+    "meaning": "animal",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 451,
+    "word": "どうも",
+    "romaji": "どうも",
+    "meaning": "Thank you; somehow; no matter how hard one may try",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 452,
+    "word": "十",
+    "romaji": "(〜を) とお",
+    "meaning": "ten (~)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 453,
+    "word": "遠い",
+    "romaji": "とおい",
+    "meaning": "far (away), distant",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 454,
+    "word": "十日",
+    "romaji": "とおか",
+    "meaning": "ten days; tenth day of the month",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 455,
+    "word": "～時",
+    "romaji": "～とき",
+    "meaning": "at the time of ~",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 456,
+    "word": "時々",
+    "romaji": "ときどき",
+    "meaning": "sometimes",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 457,
+    "word": "時計",
+    "romaji": "とけい",
+    "meaning": "a watch; a clock",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 458,
+    "word": "どこ",
+    "romaji": "どこ",
+    "meaning": "where, what place",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 459,
+    "word": "所",
+    "romaji": "ところ",
+    "meaning": "place",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 460,
+    "word": "年",
+    "romaji": "とし",
+    "meaning": "year, age",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 461,
+    "word": "図書館",
+    "romaji": "としょかん",
+    "meaning": "library",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 462,
+    "word": "どちら",
+    "romaji": "どちら",
+    "meaning": "which (one) (way); where (polite)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 463,
+    "word": "どっち",
+    "romaji": "どっち",
+    "meaning": "which one, which way",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 464,
+    "word": "とても",
+    "romaji": "とても",
+    "meaning": "very (much), greatly, exceedingly",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 465,
+    "word": "どなた",
+    "romaji": "どなた",
+    "meaning": "who",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 466,
+    "word": "隣",
+    "romaji": "となり",
+    "meaning": "next to, next door to",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 467,
+    "word": "どの",
+    "romaji": "どの",
+    "meaning": "which",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 468,
+    "word": "飛ぶ",
+    "romaji": "とぶ",
+    "meaning": "to fly, to hop",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 469,
+    "word": "止まる",
+    "romaji": "とまる",
+    "meaning": "to come to a halt",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 470,
+    "word": "友達",
+    "romaji": "ともだち",
+    "meaning": "friend",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 471,
+    "word": "土曜日",
+    "romaji": "どようび",
+    "meaning": "Saturday",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 472,
+    "word": "鳥",
+    "romaji": "とり",
+    "meaning": "chicken (lit., bird)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 473,
+    "word": "鶏肉",
+    "romaji": "とりにく",
+    "meaning": "chicken meat",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 474,
+    "word": "取る",
+    "romaji": "とる",
+    "meaning": "to take (a class); to get (a grade)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 475,
+    "word": "撮る",
+    "romaji": "とる",
+    "meaning": "to take (a photo), to make (a film)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 476,
+    "word": "どれ",
+    "romaji": "どれ",
+    "meaning": "which one",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 477,
+    "word": "どんな",
+    "romaji": "どんな",
+    "meaning": "what, what kind of",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 478,
+    "word": "ない",
+    "romaji": "ない",
+    "meaning": "there isn't, doesn't have",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 479,
+    "word": "ナイフ",
+    "romaji": "ナイフ",
+    "meaning": "knife",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 480,
+    "word": "中",
+    "romaji": "なか",
+    "meaning": "inside, middle, among",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 481,
+    "word": "長い",
+    "romaji": "ながい",
+    "meaning": "long, lengthy",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 482,
+    "word": "鳴く",
+    "romaji": "なく",
+    "meaning": "to make sound (animal)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 483,
+    "word": "無くす",
+    "romaji": "なくす",
+    "meaning": "to lose something",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 484,
+    "word": "なぜ",
+    "romaji": "なぜ",
+    "meaning": "why (same as どうして)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 485,
+    "word": "夏",
+    "romaji": "なつ",
+    "meaning": "summer",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 486,
+    "word": "夏休み",
+    "romaji": "なつやすみ",
+    "meaning": "summer vacation",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 487,
+    "word": "～など",
+    "romaji": "～など",
+    "meaning": "et cetera",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 488,
+    "word": "七つ",
+    "romaji": "ななつ",
+    "meaning": "seven things",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 489,
     "word": "何",
-    "romaji": "nani / nan",
+    "romaji": "なん; なに",
     "meaning": "what",
-    "id": 108
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 490,
+    "word": "七日",
+    "romaji": "なのか",
+    "meaning": "seven days; seventh day (of the month)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 491,
+    "word": "名前",
+    "romaji": "なまえ",
+    "meaning": "name",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 492,
+    "word": "習う",
+    "romaji": "ならう",
+    "meaning": "to learn",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 493,
+    "word": "並ぶ",
+    "romaji": "ならぶ",
+    "meaning": "to line up, to stand in a line (v.i.)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 494,
+    "word": "並べる",
+    "romaji": "ならべる",
+    "meaning": "to put (things) side by side; to line up",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 495,
+    "word": "なる",
+    "romaji": "なる",
+    "meaning": "to become",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 496,
+    "word": "何～",
+    "romaji": "なん～",
+    "meaning": "what sort of ~",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 497,
+    "word": "二",
+    "romaji": "に",
+    "meaning": "two",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 498,
+    "word": "にぎやか",
+    "romaji": "にぎやか",
+    "meaning": "bustling, busy",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 499,
+    "word": "肉",
+    "romaji": "にく",
+    "meaning": "meat",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 500,
+    "word": "西",
+    "romaji": "にし",
+    "meaning": "west",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 501,
+    "word": "～日",
+    "romaji": "～にち",
+    "meaning": "~ day of the month, for ~ days",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 502,
+    "word": "日曜日",
+    "romaji": "にちようび",
+    "meaning": "Sunday",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 503,
+    "word": "荷物",
+    "romaji": "にもつ",
+    "meaning": "luggage; baggage",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 504,
+    "word": "ニュース",
+    "romaji": "ニュース",
+    "meaning": "news",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 505,
+    "word": "庭",
+    "romaji": "にわ",
+    "meaning": "garden",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 506,
+    "word": "～人",
+    "romaji": "～にん",
+    "meaning": "counter for people",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 507,
+    "word": "脱ぐ",
+    "romaji": "ぬぐ",
+    "meaning": "to take off (clothes)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 508,
+    "word": "温い",
+    "romaji": "ぬるい",
+    "meaning": "lukewarm",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 509,
+    "word": "ネクタイ",
+    "romaji": "ネクタイ",
+    "meaning": "tie, necktie",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 510,
+    "word": "猫",
+    "romaji": "ねこ",
+    "meaning": "cat",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 511,
+    "word": "寝る",
+    "romaji": "ねる",
+    "meaning": "to sleep; to go to sleep; to go to bed",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 512,
+    "word": "～年",
+    "romaji": "～ねん",
+    "meaning": "~ years",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 513,
+    "word": "ノート",
+    "romaji": "ノート",
+    "meaning": "notebook",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 514,
+    "word": "登る",
+    "romaji": "のぼる",
+    "meaning": "to climb",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 515,
+    "word": "飲み物",
+    "romaji": "のみもの",
+    "meaning": "drink, beverage",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 516,
+    "word": "飲む",
+    "romaji": "のむ",
+    "meaning": "to drink",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 517,
+    "word": "乗る",
+    "romaji": "のる",
+    "meaning": "to get on, to ride in, to board",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 518,
+    "word": "歯",
+    "romaji": "は",
+    "meaning": "tooth",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 519,
+    "word": "パーティー",
+    "romaji": "パーティー",
+    "meaning": "a party",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 520,
+    "word": "はい",
+    "romaji": "はい",
+    "meaning": "yes",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 521,
+    "word": "～杯",
+    "romaji": "～はい",
+    "meaning": "counter for cupfuls",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 522,
+    "word": "灰皿",
+    "romaji": "はいざら",
+    "meaning": "ashtray",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 523,
+    "word": "入る",
+    "romaji": "はいる",
+    "meaning": "to enter, to contain, to hold",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 524,
+    "word": "葉書",
+    "romaji": "はがき",
+    "meaning": "postcard",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 525,
+    "word": "はく",
+    "romaji": "はく",
+    "meaning": "to put on (items below your waist)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 526,
+    "word": "箱",
+    "romaji": "はこ",
+    "meaning": "box",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 527,
+    "word": "橋",
+    "romaji": "はし",
+    "meaning": "bridge",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 528,
+    "word": "箸",
+    "romaji": "はし",
+    "meaning": "chopsticks",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 529,
+    "word": "始まる",
+    "romaji": "はじまる",
+    "meaning": "(something) begins",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 530,
+    "word": "初め; 始め",
+    "romaji": "はじめ",
+    "meaning": "beginning, start",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 531,
+    "word": "初めて",
+    "romaji": "はじめて",
+    "meaning": "for the first time",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 532,
+    "word": "走る",
+    "romaji": "はしる",
+    "meaning": "to run",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 533,
+    "word": "バス",
+    "romaji": "バス",
+    "meaning": "bus; bath; bass",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 534,
+    "word": "バター",
+    "romaji": "バター",
+    "meaning": "butter",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 535,
+    "word": "二十歳",
+    "romaji": "はたち",
+    "meaning": "20 years old",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 536,
+    "word": "働く",
+    "romaji": "はたらく",
+    "meaning": "to work",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 537,
+    "word": "八",
+    "romaji": "はち",
+    "meaning": "eight",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 538,
+    "word": "二十日",
+    "romaji": "はつか",
+    "meaning": "twenty days, twentieth (day of the month)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 539,
+    "word": "花",
+    "romaji": "はな",
+    "meaning": "flower",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 540,
+    "word": "鼻",
+    "romaji": "はな",
+    "meaning": "nose",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 541,
+    "word": "話",
+    "romaji": "はなし",
+    "meaning": "talk (chat), story",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 542,
+    "word": "話す",
+    "romaji": "はなす",
+    "meaning": "to speak",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 543,
+    "word": "母",
+    "romaji": "はは",
+    "meaning": "(my) mother",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 544,
+    "word": "早い",
+    "romaji": "はやい",
+    "meaning": "early",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 545,
+    "word": "速い",
+    "romaji": "はやい",
+    "meaning": "fast, quick",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 546,
+    "word": "春",
+    "romaji": "はる",
+    "meaning": "spring",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 547,
+    "word": "貼る",
+    "romaji": "はる",
+    "meaning": "to post; to paste; to attach",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 548,
+    "word": "晴れ",
+    "romaji": "はれ",
+    "meaning": "clear (sunny) weather",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 549,
+    "word": "晴れる",
+    "romaji": "はれる",
+    "meaning": "to be sunny",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 550,
+    "word": "半",
+    "romaji": "はん",
+    "meaning": "half (e.g., にじはん | half-past two)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 551,
+    "word": "晩",
+    "romaji": "ばん",
+    "meaning": "evening",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 552,
+    "word": "～番",
+    "romaji": "～ばん",
+    "meaning": "~st; ~th best",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 553,
+    "word": "パン",
+    "romaji": "パン",
+    "meaning": "bread",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 554,
+    "word": "ハンカチ",
+    "romaji": "ハンカチ",
+    "meaning": "handkerchief",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 555,
+    "word": "番号",
+    "romaji": "ばんごう",
+    "meaning": "number, series of digits",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 556,
+    "word": "晩御飯",
+    "romaji": "ばんごはん",
+    "meaning": "dinner, evening meal",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 557,
+    "word": "半分",
+    "romaji": "はんぶん",
+    "meaning": "half",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 558,
+    "word": "東",
+    "romaji": "ひがし",
+    "meaning": "east",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 559,
+    "word": "～匹",
+    "romaji": "～ひき",
+    "meaning": "counter for small animals",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 560,
+    "word": "引く",
+    "romaji": "ひく",
+    "meaning": "to pull, to draw; subtract",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 561,
+    "word": "弾く",
+    "romaji": "ひく",
+    "meaning": "to play (a string instrument or piano)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 562,
+    "word": "低い",
+    "romaji": "ひくい",
+    "meaning": "short, low",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 563,
+    "word": "飛行機",
+    "romaji": "ひこうき",
+    "meaning": "airplane",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 564,
+    "word": "左",
+    "romaji": "ひだり",
+    "meaning": "left hand side",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 565,
+    "word": "人",
+    "romaji": "ひと",
+    "meaning": "man, person",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 566,
+    "word": "一つ",
+    "romaji": "ひとつ",
+    "meaning": "one thing",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 567,
+    "word": "一月",
+    "romaji": "ひとつき",
+    "meaning": "one month",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 568,
+    "word": "一人",
+    "romaji": "ひとり",
+    "meaning": "one person",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 569,
+    "word": "暇",
+    "romaji": "ひま",
+    "meaning": "free time, leisure",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 570,
+    "word": "百",
+    "romaji": "ひゃく",
+    "meaning": "hundred",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 571,
+    "word": "病院",
+    "romaji": "びょういん",
+    "meaning": "hospital",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 572,
+    "word": "病気",
+    "romaji": "びょうき",
+    "meaning": "illness; sickness",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 573,
+    "word": "平仮名",
+    "romaji": "ひらがな",
+    "meaning": "hiragana",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 574,
+    "word": "昼",
+    "romaji": "ひる",
+    "meaning": "noon, daytime",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 575,
+    "word": "昼御飯",
+    "romaji": "ひるごはん",
+    "meaning": "lunch, midday meal",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 576,
+    "word": "広い",
+    "romaji": "ひろい",
+    "meaning": "spacious; wide; broad",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 577,
+    "word": "フィルム",
+    "romaji": "フィルム",
+    "meaning": "film (roll of)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 578,
+    "word": "封筒",
+    "romaji": "ふうとう",
+    "meaning": "envelope",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 579,
+    "word": "プール",
+    "romaji": "プール",
+    "meaning": "swimming pool",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 580,
+    "word": "フォーク",
+    "romaji": "フォーク",
+    "meaning": "fork",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 581,
+    "word": "吹く",
+    "romaji": "ふく",
+    "meaning": "to blow (wind, etc.)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 582,
+    "word": "服",
+    "romaji": "ふく",
+    "meaning": "clothes",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 583,
+    "word": "二つ",
+    "romaji": "ふたつ",
+    "meaning": "two things",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 584,
+    "word": "豚肉",
+    "romaji": "ぶたにく",
+    "meaning": "pork",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 585,
+    "word": "二人",
+    "romaji": "ふたり",
+    "meaning": "two people",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 586,
+    "word": "二日",
+    "romaji": "ふつか",
+    "meaning": "two days; second day of the month",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 587,
+    "word": "太い",
+    "romaji": "ふとい",
+    "meaning": "fat, thick",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 588,
+    "word": "冬",
+    "romaji": "ふゆ",
+    "meaning": "winter",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 589,
+    "word": "降る",
+    "romaji": "ふる",
+    "meaning": "to precipitate, to fall (e.g., rain, snow, etc.)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 590,
+    "word": "古い",
+    "romaji": "ふるい",
+    "meaning": "old (in reference to objects, not people), aged, ancient",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 591,
+    "word": "～分",
+    "romaji": "～ふん",
+    "meaning": "~ minutes",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 592,
+    "word": "文章",
+    "romaji": "ぶんしょう",
+    "meaning": "sentence, text",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 593,
+    "word": "ページ",
+    "romaji": "ページ",
+    "meaning": "a page",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 594,
+    "word": "下手",
+    "romaji": "へた",
+    "meaning": "unskillful, poor",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 595,
+    "word": "ベッド",
+    "romaji": "ベッド",
+    "meaning": "bed",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 596,
+    "word": "ペット",
+    "romaji": "ペット",
+    "meaning": "pet",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 597,
+    "word": "部屋",
+    "romaji": "へや",
+    "meaning": "a room",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 598,
+    "word": "辺",
+    "romaji": "へん",
+    "meaning": "area, vicinity",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 599,
+    "word": "ペン",
+    "romaji": "ペン",
+    "meaning": "pen",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 600,
+    "word": "勉強",
+    "romaji": "べんきょう (する)",
+    "meaning": "study",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 601,
+    "word": "便利",
+    "romaji": "べんり",
+    "meaning": "convenient, handy",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 602,
+    "word": "帽子",
+    "romaji": "ぼうし",
+    "meaning": "hat; cap",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 603,
+    "word": "ボールペン",
+    "romaji": "ボールペン",
+    "meaning": "ball-point pen",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 604,
+    "word": "外",
+    "romaji": "ほか",
+    "meaning": "other, the rest",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 605,
+    "word": "ポケット",
+    "romaji": "ポケット",
+    "meaning": "pocket",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 606,
+    "word": "欲しい",
+    "romaji": "ほしい",
+    "meaning": "to want, in need of",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 607,
+    "word": "ポスト",
+    "romaji": "ポスト",
+    "meaning": "mailbox; post, position",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 608,
+    "word": "細い",
+    "romaji": "ほそい",
+    "meaning": "thin, slender, fine",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 609,
+    "word": "ボタン",
+    "romaji": "ボタン",
+    "meaning": "button",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 610,
+    "word": "ホテル",
+    "romaji": "ホテル",
+    "meaning": "hotel",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 611,
+    "word": "本",
+    "romaji": "ほん",
+    "meaning": "book",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 612,
+    "word": "～本",
+    "romaji": "～ほん",
+    "meaning": "counter for long cylindrical things",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 613,
+    "word": "本棚",
+    "romaji": "ほんだな",
+    "meaning": "bookshelf",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 614,
+    "word": "本当",
+    "romaji": "ほんとう",
+    "meaning": "real, true",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 615,
+    "word": "～枚",
+    "romaji": "～まい",
+    "meaning": "counter for flat things",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 616,
+    "word": "毎朝",
+    "romaji": "まいあさ",
+    "meaning": "every morning",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 617,
+    "word": "毎月",
+    "romaji": "まいげつ; まいつき",
+    "meaning": "every month, monthly",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 618,
+    "word": "毎週",
+    "romaji": "まいしゅう",
+    "meaning": "every week",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 619,
+    "word": "毎日",
+    "romaji": "まいにち",
+    "meaning": "every day",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 620,
+    "word": "毎年",
+    "romaji": "まいねん; まいとし",
+    "meaning": "every year, yearly, annually",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 621,
+    "word": "毎晩",
+    "romaji": "まいばん",
+    "meaning": "every night",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 622,
+    "word": "前",
+    "romaji": "まえ",
+    "meaning": "before, in front",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 623,
+    "word": "～前",
+    "romaji": "～まえ",
+    "meaning": "in front of ~",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 624,
+    "word": "曲る",
+    "romaji": "まがる",
+    "meaning": "to turn, to bend",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 625,
+    "word": "まずい",
+    "romaji": "まずい",
+    "meaning": "terrible (in reference to food), unappetizing, unpleasant (taste)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 626,
+    "word": "また",
+    "romaji": "また",
+    "meaning": "and; furthermore",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 627,
+    "word": "まだ",
+    "romaji": "まだ",
+    "meaning": "yet, still, besides",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 628,
+    "word": "町",
+    "romaji": "まち",
+    "meaning": "town; city",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 629,
+    "word": "待つ",
+    "romaji": "まつ",
+    "meaning": "to wait",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 630,
+    "word": "まっすぐ",
+    "romaji": "まっすぐ",
+    "meaning": "straight (ahead), direct",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 631,
+    "word": "マッチ",
+    "romaji": "マッチ",
+    "meaning": "match",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 632,
+    "word": "窓",
+    "romaji": "まど",
+    "meaning": "window",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 633,
+    "word": "丸い; 円い",
+    "romaji": "まるい",
+    "meaning": "round, circular",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 634,
+    "word": "万",
+    "romaji": "まん",
+    "meaning": "ten thousand",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 635,
+    "word": "万年筆",
+    "romaji": "まんねんひつ",
+    "meaning": "fountain pen",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 636,
+    "word": "磨く",
+    "romaji": "みがく",
+    "meaning": "to brush (teeth); to polish",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 637,
+    "word": "右",
+    "romaji": "みぎ",
+    "meaning": "right hand side",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 638,
+    "word": "短い",
+    "romaji": "みじかい",
+    "meaning": "short (length)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 639,
+    "word": "水",
+    "romaji": "みず",
+    "meaning": "water",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 640,
+    "word": "店",
+    "romaji": "みせ",
+    "meaning": "store, shop",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 641,
+    "word": "見せる",
+    "romaji": "みせる",
+    "meaning": "to show, to display",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 642,
+    "word": "道",
+    "romaji": "みち",
+    "meaning": "road, street; way, directions",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 643,
+    "word": "三日",
+    "romaji": "みっか",
+    "meaning": "three days, third day of the month",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 644,
+    "word": "三つ",
+    "romaji": "みっつ",
+    "meaning": "three things",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 645,
+    "word": "緑",
+    "romaji": "みどり",
+    "meaning": "green",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 646,
+    "word": "皆さん",
+    "romaji": "みなさん",
+    "meaning": "all of you, everyone",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 647,
+    "word": "南",
+    "romaji": "みなみ",
+    "meaning": "South",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 648,
+    "word": "耳",
+    "romaji": "みみ",
+    "meaning": "ear",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 649,
+    "word": "見る",
+    "romaji": "みる",
+    "meaning": "to see, to look",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 650,
+    "word": "みんな",
+    "romaji": "みんな",
+    "meaning": "all, everyone, everybody",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 651,
+    "word": "六日",
+    "romaji": "むいか",
+    "meaning": "six days; sixth day of month",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 652,
+    "word": "向こう",
+    "romaji": "むこう",
+    "meaning": "beyond, over there",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 653,
+    "word": "難しい",
+    "romaji": "むずかしい",
+    "meaning": "difficult",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 654,
+    "word": "六つ",
+    "romaji": "むっつ",
+    "meaning": "six things",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 655,
+    "word": "村",
+    "romaji": "むら",
+    "meaning": "village",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 656,
+    "word": "目",
+    "romaji": "め",
+    "meaning": "eye(s)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 657,
+    "word": "メートル",
+    "romaji": "メートル",
+    "meaning": "meter",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 658,
+    "word": "眼鏡",
+    "romaji": "めがね",
+    "meaning": "eye glasses",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 659,
+    "word": "もう",
+    "romaji": "もう",
+    "meaning": "already; again; more",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 660,
+    "word": "木曜日",
+    "romaji": "もくようび",
+    "meaning": "Thursday",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 661,
+    "word": "もしもし",
+    "romaji": "もしもし",
+    "meaning": "Hello? (used on the phone)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 662,
+    "word": "持つ",
+    "romaji": "もつ",
+    "meaning": "to hold, to carry; to possess",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 663,
+    "word": "もっと",
+    "romaji": "もっと",
+    "meaning": "more",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 664,
+    "word": "物",
+    "romaji": "もの",
+    "meaning": "thing (concrete object)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 665,
+    "word": "門",
+    "romaji": "もん",
+    "meaning": "gate",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 666,
+    "word": "問題",
+    "romaji": "もんだい",
+    "meaning": "a problem",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 667,
+    "word": "～屋",
+    "romaji": "～や",
+    "meaning": "~ shop",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 668,
+    "word": "八百屋",
+    "romaji": "やおや",
+    "meaning": "greengrocer",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 669,
+    "word": "野菜",
+    "romaji": "やさい",
+    "meaning": "vegetable",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 670,
+    "word": "易しい",
+    "romaji": "やさしい",
+    "meaning": "easy, plain, simple",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 671,
+    "word": "安い",
+    "romaji": "やすい",
+    "meaning": "inexpensive; cheap (things)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 672,
+    "word": "休み",
+    "romaji": "やすみ",
+    "meaning": "holiday; day off; absence",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 673,
+    "word": "休む",
+    "romaji": "やすむ",
+    "meaning": "to rest, to have a break, to get time off",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 674,
+    "word": "八つ",
+    "romaji": "やっつ",
+    "meaning": "eight things",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 675,
+    "word": "山",
+    "romaji": "やま",
+    "meaning": "mountain",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 676,
+    "word": "やる",
+    "romaji": "やる",
+    "meaning": "to do; to give (to pets, parents, siblings, etc.)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 677,
+    "word": "夕方",
+    "romaji": "ゆうがた",
+    "meaning": "late afternoon (typically just before dinner time), evening",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 678,
+    "word": "夕飯",
+    "romaji": "ゆうはん",
+    "meaning": "dinner, supper, evening meal",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 679,
+    "word": "郵便局",
+    "romaji": "ゆうびんきょく",
+    "meaning": "post office",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 680,
+    "word": "昨夜",
+    "romaji": "ゆうべ",
+    "meaning": "last night",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 681,
+    "word": "有名",
+    "romaji": "ゆうめい",
+    "meaning": "famous",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 682,
+    "word": "雪",
+    "romaji": "ゆき",
+    "meaning": "snow",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 683,
+    "word": "ゆっくりと",
+    "romaji": "ゆっくりと",
+    "meaning": "slowly, at ease",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 684,
+    "word": "八日",
+    "romaji": "ようか",
+    "meaning": "eight days; eighth day of the month",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 685,
+    "word": "洋服",
+    "romaji": "ようふく",
+    "meaning": "Western-style clothes",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 686,
+    "word": "よく",
+    "romaji": "よく",
+    "meaning": "frequently, often (much); well, skillfully",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 687,
+    "word": "横",
+    "romaji": "よこ",
+    "meaning": "beside; side; width",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 688,
+    "word": "四日",
+    "romaji": "よっか",
+    "meaning": "four days; fourth day of the month",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 689,
+    "word": "四つ",
+    "romaji": "よっつ",
+    "meaning": "four things",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 690,
+    "word": "呼ぶ",
+    "romaji": "よぶ",
+    "meaning": "to call (one's name); to invite",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 691,
+    "word": "読む",
+    "romaji": "よむ",
+    "meaning": "to read",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 692,
+    "word": "夜",
+    "romaji": "よる",
+    "meaning": "evening, night",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 693,
+    "word": "弱い",
+    "romaji": "よわい",
+    "meaning": "weak",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 694,
+    "word": "来月",
+    "romaji": "らいげつ",
+    "meaning": "next month",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 695,
+    "word": "来週",
+    "romaji": "らいしゅう",
+    "meaning": "next week",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 696,
+    "word": "来年",
+    "romaji": "らいねん",
+    "meaning": "next year",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 697,
+    "word": "ラジオ",
+    "romaji": "ラジオ",
+    "meaning": "radio",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 698,
+    "word": "ラジオカセ",
+    "romaji": "ラジオカセ",
+    "meaning": "radio cassette player",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 699,
+    "word": "りっぱ",
+    "romaji": "りっぱ",
+    "meaning": "splendid, fine",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 700,
+    "word": "留学生",
+    "romaji": "りゅうがくせい",
+    "meaning": "international student",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 701,
+    "word": "両親",
+    "romaji": "りょうしん",
+    "meaning": "parents (lit., both parents)",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 702,
+    "word": "料理",
+    "romaji": "りょうり",
+    "meaning": "cooking; cuisine",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 703,
+    "word": "旅行",
+    "romaji": "りょこう",
+    "meaning": "travel, trip",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 704,
+    "word": "零",
+    "romaji": "れい",
+    "meaning": "zero, nought",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 705,
+    "word": "冷蔵庫",
+    "romaji": "れいぞうこ",
+    "meaning": "refrigerator",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 706,
+    "word": "レコード",
+    "romaji": "レコード",
+    "meaning": "record",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 707,
+    "word": "レストラン",
+    "romaji": "レストラン",
+    "meaning": "restaurant",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 708,
+    "word": "練習",
+    "romaji": "れんしゅう (する)",
+    "meaning": "(to) practice",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 709,
+    "word": "廊下",
+    "romaji": "ろうか",
+    "meaning": "corridor",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 710,
+    "word": "六",
+    "romaji": "ろく",
+    "meaning": "six",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 711,
+    "word": "ワイシャツ",
+    "romaji": "ワイシャツ",
+    "meaning": "shirt (lit: white shirt), business shirt",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 712,
+    "word": "若い",
+    "romaji": "わかい",
+    "meaning": "young",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 713,
+    "word": "分かる",
+    "romaji": "わかる",
+    "meaning": "to understand",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 714,
+    "word": "忘れる",
+    "romaji": "わすれる",
+    "meaning": "to forget",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 715,
+    "word": "私",
+    "romaji": "わたし",
+    "meaning": "I, myself",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 716,
+    "word": "私",
+    "romaji": "わたくし",
+    "meaning": "I (formal), myself, private affairs",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 717,
+    "word": "渡す",
+    "romaji": "わたす",
+    "meaning": "to hand (something) over (v.t.); to get across",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 718,
+    "word": "渡る",
+    "romaji": "わたる",
+    "meaning": "to cross over, to go across",
+    "category": "N5 Vocab"
+  },
+  {
+    "id": 719,
+    "word": "悪い",
+    "romaji": "わるい",
+    "meaning": "bad, sinful; inferior",
+    "category": "N5 Vocab"
   }
 ]

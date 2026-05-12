@@ -4,510 +4,583 @@
     "meaning": "one",
     "onyomi": "ichi, itsu",
     "kunyomi": "hito",
-    "id": 1
+    "id": 1,
+    "level": "N5"
   },
   {
     "character": "二",
     "meaning": "two",
     "onyomi": "ni",
     "kunyomi": "futa",
-    "id": 2
+    "id": 2,
+    "level": "N5"
   },
   {
     "character": "三",
     "meaning": "three",
     "onyomi": "san",
     "kunyomi": "mi",
-    "id": 3
+    "id": 3,
+    "level": "N5"
   },
   {
     "character": "四",
     "meaning": "four",
     "onyomi": "shi",
     "kunyomi": "yon, yo",
-    "id": 4
+    "id": 4,
+    "level": "N5"
   },
   {
     "character": "五",
     "meaning": "five",
     "onyomi": "go",
     "kunyomi": "itsu",
-    "id": 5
+    "id": 5,
+    "level": "N5"
   },
   {
     "character": "六",
     "meaning": "six",
     "onyomi": "roku",
     "kunyomi": "mu",
-    "id": 6
+    "id": 6,
+    "level": "N5"
   },
   {
     "character": "七",
     "meaning": "seven",
     "onyomi": "shichi",
     "kunyomi": "nana",
-    "id": 7
+    "id": 7,
+    "level": "N5"
   },
   {
     "character": "八",
     "meaning": "eight",
     "onyomi": "hachi",
     "kunyomi": "ya",
-    "id": 8
+    "id": 8,
+    "level": "N5"
   },
   {
     "character": "九",
     "meaning": "nine",
     "onyomi": "kyuu, ku",
     "kunyomi": "kokono",
-    "id": 9
+    "id": 9,
+    "level": "N5"
   },
   {
     "character": "十",
     "meaning": "ten",
     "onyomi": "juu",
     "kunyomi": "too",
-    "id": 10
+    "id": 10,
+    "level": "N5"
   },
   {
     "character": "百",
     "meaning": "hundred",
     "onyomi": "hyaku",
     "kunyomi": "momo",
-    "id": 11
+    "id": 11,
+    "level": "N5"
   },
   {
     "character": "千",
     "meaning": "thousand",
     "onyomi": "sen",
     "kunyomi": "chi",
-    "id": 12
+    "id": 12,
+    "level": "N5"
   },
   {
     "character": "万",
     "meaning": "ten thousand",
     "onyomi": "man, ban",
     "kunyomi": "yorozu",
-    "id": 13
+    "id": 13,
+    "level": "N5"
   },
   {
     "character": "日",
     "meaning": "sun, day",
     "onyomi": "nichi, jitsu",
     "kunyomi": "hi, ka",
-    "id": 14
+    "id": 14,
+    "level": "N5"
   },
   {
     "character": "月",
     "meaning": "moon, month",
     "onyomi": "getsu, gatsu",
     "kunyomi": "tsuki",
-    "id": 15
+    "id": 15,
+    "level": "N5"
   },
   {
     "character": "火",
     "meaning": "fire",
     "onyomi": "ka",
     "kunyomi": "hi",
-    "id": 16
+    "id": 16,
+    "level": "N5"
   },
   {
     "character": "水",
     "meaning": "water",
     "onyomi": "sui",
     "kunyomi": "mizu",
-    "id": 17
+    "id": 17,
+    "level": "N5"
   },
   {
     "character": "木",
     "meaning": "tree, wood",
     "onyomi": "moku, boku",
     "kunyomi": "ki",
-    "id": 18
+    "id": 18,
+    "level": "N5"
   },
   {
     "character": "金",
     "meaning": "gold, money",
     "onyomi": "kin, kon",
     "kunyomi": "kane",
-    "id": 19
+    "id": 19,
+    "level": "N5"
   },
   {
     "character": "土",
     "meaning": "earth, soil",
     "onyomi": "do, to",
     "kunyomi": "tsuchi",
-    "id": 20
+    "id": 20,
+    "level": "N5"
   },
   {
     "character": "年",
     "meaning": "year",
     "onyomi": "nen",
     "kunyomi": "toshi",
-    "id": 21
+    "id": 21,
+    "level": "N5"
   },
   {
     "character": "今",
     "meaning": "now",
     "onyomi": "kon, kin",
     "kunyomi": "ima",
-    "id": 22
+    "id": 22,
+    "level": "N5"
   },
   {
     "character": "時",
     "meaning": "time, hour",
     "onyomi": "ji",
     "kunyomi": "toki",
-    "id": 23
+    "id": 23,
+    "level": "N5"
   },
   {
     "character": "分",
     "meaning": "minute, to divide",
     "onyomi": "bun, fun, bu",
     "kunyomi": "wa",
-    "id": 24
+    "id": 24,
+    "level": "N5"
   },
   {
     "character": "上",
     "meaning": "up, above",
     "onyomi": "jou, shou",
     "kunyomi": "ue",
-    "id": 25
+    "id": 25,
+    "level": "N5"
   },
   {
     "character": "下",
     "meaning": "down, below",
     "onyomi": "ka, ge",
     "kunyomi": "shita",
-    "id": 26
+    "id": 26,
+    "level": "N5"
   },
   {
     "character": "左",
     "meaning": "left",
     "onyomi": "sa",
     "kunyomi": "hidari",
-    "id": 27
+    "id": 27,
+    "level": "N5"
   },
   {
     "character": "右",
     "meaning": "right",
     "onyomi": "u, yuu",
     "kunyomi": "migi",
-    "id": 28
+    "id": 28,
+    "level": "N5"
   },
   {
     "character": "中",
     "meaning": "inside, middle",
     "onyomi": "chuu",
     "kunyomi": "naka",
-    "id": 29
+    "id": 29,
+    "level": "N5"
   },
   {
     "character": "大",
     "meaning": "big, large",
     "onyomi": "dai, tai",
     "kunyomi": "oo",
-    "id": 30
+    "id": 30,
+    "level": "N5"
   },
   {
     "character": "小",
     "meaning": "small",
     "onyomi": "shou",
     "kunyomi": "chii, ko",
-    "id": 31
+    "id": 31,
+    "level": "N5"
   },
   {
     "character": "高",
     "meaning": "high, expensive",
     "onyomi": "kou",
     "kunyomi": "taka",
-    "id": 32
+    "id": 32,
+    "level": "N5"
   },
   {
     "character": "安",
     "meaning": "cheap, safe",
     "onyomi": "an",
     "kunyomi": "yasu",
-    "id": 33
+    "id": 33,
+    "level": "N5"
   },
   {
     "character": "新",
     "meaning": "new",
     "onyomi": "shin",
     "kunyomi": "atara",
-    "id": 34
+    "id": 34,
+    "level": "N5"
   },
   {
     "character": "古",
     "meaning": "old",
     "onyomi": "ko",
     "kunyomi": "furu",
-    "id": 35
+    "id": 35,
+    "level": "N5"
   },
   {
     "character": "長",
     "meaning": "long",
     "onyomi": "chou",
     "kunyomi": "naga",
-    "id": 36
+    "id": 36,
+    "level": "N5"
   },
   {
     "character": "山",
     "meaning": "mountain",
     "onyomi": "san",
     "kunyomi": "yama",
-    "id": 37
+    "id": 37,
+    "level": "N5"
   },
   {
     "character": "川",
     "meaning": "river",
     "onyomi": "sen",
     "kunyomi": "kawa",
-    "id": 38
+    "id": 38,
+    "level": "N5"
   },
   {
     "character": "田",
     "meaning": "rice paddy",
     "onyomi": "den",
     "kunyomi": "ta",
-    "id": 39
+    "id": 39,
+    "level": "N5"
   },
   {
     "character": "天",
     "meaning": "heaven, sky",
     "onyomi": "ten",
     "kunyomi": "ame",
-    "id": 40
+    "id": 40,
+    "level": "N5"
   },
   {
     "character": "気",
     "meaning": "spirit, air",
     "onyomi": "ki, ke",
     "kunyomi": "iki",
-    "id": 41
+    "id": 41,
+    "level": "N5"
   },
   {
     "character": "雨",
     "meaning": "rain",
     "onyomi": "u",
     "kunyomi": "ame",
-    "id": 42
+    "id": 42,
+    "level": "N5"
   },
   {
     "character": "電",
     "meaning": "electricity",
     "onyomi": "den",
     "kunyomi": "-",
-    "id": 43
+    "id": 43,
+    "level": "N5"
   },
   {
     "character": "人",
     "meaning": "person",
     "onyomi": "jin, nin",
     "kunyomi": "hito",
-    "id": 44
+    "id": 44,
+    "level": "N5"
   },
   {
     "character": "男",
     "meaning": "man",
     "onyomi": "dan, nan",
     "kunyomi": "otoko",
-    "id": 45
+    "id": 45,
+    "level": "N5"
   },
   {
     "character": "女",
     "meaning": "woman",
     "onyomi": "jo, nyo",
     "kunyomi": "onna",
-    "id": 46
+    "id": 46,
+    "level": "N5"
   },
   {
     "character": "子",
     "meaning": "child",
     "onyomi": "shi, su",
     "kunyomi": "ko",
-    "id": 47
+    "id": 47,
+    "level": "N5"
   },
   {
     "character": "父",
     "meaning": "father",
     "onyomi": "fu",
     "kunyomi": "chichi",
-    "id": 48
+    "id": 48,
+    "level": "N5"
   },
   {
     "character": "母",
     "meaning": "mother",
     "onyomi": "bo",
     "kunyomi": "haha",
-    "id": 49
+    "id": 49,
+    "level": "N5"
   },
   {
     "character": "友",
     "meaning": "friend",
     "onyomi": "yuu",
     "kunyomi": "tomo",
-    "id": 50
+    "id": 50,
+    "level": "N5"
   },
   {
     "character": "先",
     "meaning": "previous, ahead",
     "onyomi": "sen",
     "kunyomi": "saki",
-    "id": 51
+    "id": 51,
+    "level": "N5"
   },
   {
     "character": "生",
     "meaning": "life, to be born",
     "onyomi": "sei, shou",
     "kunyomi": "i, u",
-    "id": 52
+    "id": 52,
+    "level": "N5"
   },
   {
     "character": "学",
     "meaning": "study, learning",
     "onyomi": "gaku",
     "kunyomi": "mana",
-    "id": 53
+    "id": 53,
+    "level": "N5"
   },
   {
     "character": "校",
     "meaning": "school",
     "onyomi": "kou",
     "kunyomi": "-",
-    "id": 54
+    "id": 54,
+    "level": "N5"
   },
   {
     "character": "目",
     "meaning": "eye",
     "onyomi": "moku",
     "kunyomi": "me",
-    "id": 55
+    "id": 55,
+    "level": "N5"
   },
   {
     "character": "口",
     "meaning": "mouth",
     "onyomi": "kou, ku",
     "kunyomi": "kuchi",
-    "id": 56
+    "id": 56,
+    "level": "N5"
   },
   {
     "character": "耳",
     "meaning": "ear",
     "onyomi": "ji",
     "kunyomi": "mimi",
-    "id": 57
+    "id": 57,
+    "level": "N5"
   },
   {
     "character": "手",
     "meaning": "hand",
     "onyomi": "shu",
     "kunyomi": "te",
-    "id": 58
+    "id": 58,
+    "level": "N5"
   },
   {
     "character": "足",
     "meaning": "leg, foot",
     "onyomi": "soku",
     "kunyomi": "ashi",
-    "id": 59
+    "id": 59,
+    "level": "N5"
   },
   {
     "character": "行",
     "meaning": "to go",
     "onyomi": "kou, gyou",
     "kunyomi": "i, yuku",
-    "id": 60
+    "id": 60,
+    "level": "N5"
   },
   {
     "character": "来",
     "meaning": "to come",
     "onyomi": "rai",
     "kunyomi": "ku, kita",
-    "id": 61
+    "id": 61,
+    "level": "N5"
   },
   {
     "character": "見",
     "meaning": "to see",
     "onyomi": "ken",
     "kunyomi": "mi",
-    "id": 62
+    "id": 62,
+    "level": "N5"
   },
   {
     "character": "食",
     "meaning": "to eat",
     "onyomi": "shoku, jiki",
     "kunyomi": "ta, ku",
-    "id": 63
+    "id": 63,
+    "level": "N5"
   },
   {
     "character": "飲",
     "meaning": "to drink",
     "onyomi": "in",
     "kunyomi": "no",
-    "id": 64
+    "id": 64,
+    "level": "N5"
   },
   {
     "character": "買",
     "meaning": "to buy",
     "onyomi": "bai",
     "kunyomi": "ka",
-    "id": 65
+    "id": 65,
+    "level": "N5"
   },
   {
     "character": "言",
     "meaning": "to say",
     "onyomi": "gen, gon",
     "kunyomi": "i, koto",
-    "id": 66
+    "id": 66,
+    "level": "N5"
   },
   {
     "character": "話",
     "meaning": "to speak",
     "onyomi": "wa",
     "kunyomi": "hana",
-    "id": 67
+    "id": 67,
+    "level": "N5"
   },
   {
     "character": "読",
     "meaning": "to read",
     "onyomi": "doku",
     "kunyomi": "yo",
-    "id": 68
+    "id": 68,
+    "level": "N5"
   },
   {
     "character": "書",
     "meaning": "to write",
     "onyomi": "sho",
     "kunyomi": "ka",
-    "id": 69
+    "id": 69,
+    "level": "N5"
   },
   {
     "character": "出",
     "meaning": "to exit",
     "onyomi": "shutsu",
     "kunyomi": "de, da",
-    "id": 70
+    "id": 70,
+    "level": "N5"
   },
   {
     "character": "入",
     "meaning": "to enter",
     "onyomi": "nyuu",
     "kunyomi": "hai, i",
-    "id": 71
+    "id": 71,
+    "level": "N5"
   },
   {
     "character": "立",
     "meaning": "to stand",
     "onyomi": "ritsu",
     "kunyomi": "ta",
-    "id": 72
+    "id": 72,
+    "level": "N5"
   },
   {
     "character": "休",
     "meaning": "to rest",
     "onyomi": "kyuu",
     "kunyomi": "yasu",
-    "id": 73
+    "id": 73,
+    "level": "N5"
   }
 ]

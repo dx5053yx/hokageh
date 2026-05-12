@@ -59,11 +59,13 @@ export default function Learn() {
 
   // Randomize kanji question type
   useEffect(() => {
-    if (type === 'kanji') {
-      const types = ['meaning', 'onyomi', 'kunyomi'];
+    if (type === 'kanji' && currentItem) {
+      const types = ['meaning'];
+      if (currentItem.onyomi && currentItem.onyomi !== '-') types.push('onyomi');
+      if (currentItem.kunyomi && currentItem.kunyomi !== '-') types.push('kunyomi');
       setKanjiQuestionType(types[Math.floor(Math.random() * types.length)]);
     }
-  }, [currentIndex, type]);
+  }, [currentIndex, type, currentItem]);
 
   useEffect(() => {
     if (currentItem) {
