@@ -78,6 +78,9 @@ const useStore = create(
     }),
     {
       name: 'nihonz-storage', // unique name
+      partialize: (state) => Object.fromEntries(
+        Object.entries(state).filter(([key]) => !['currentUser'].includes(key))
+      ),
     }
   )
 );

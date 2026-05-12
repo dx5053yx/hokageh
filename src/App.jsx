@@ -31,32 +31,38 @@ function App() {
 
     const unsubscribeAuth = onAuthStateChanged(auth, async (user) => {
       setCurrentUser(user);
-      useStore.getState().checkStreak(); // Check and reset streak if a day was missed
 
       if (user) {
-        // Fetch existing data
-        const userRef = doc(db, 'users', user.uid);
-        const docSnap = await getDoc(userRef);
+        try {
+          // Fetch existing data
+          const userRef = doc(db, 'users', user.uid);
+          const docSnap = await getDoc(userRef);
 
-        if (docSnap.exists()) {
-          syncFromFirestore(docSnap.data());
-          useStore.getState().checkStreak(); // Check again after syncing firestore
-        } else {
-          // Initialize user in firestore with local data
-          const state = useStore.getState();
-          await setDoc(userRef, {
-            displayName: user.displayName || 'Guest Senpai',
-            photoURL: user.photoURL || '',
-            userLevel: state.userLevel,
-            exp: state.exp,
-            streak: state.streak,
-            lastStreakDate: state.lastStreakDate || null,
-            moduleProgress: state.moduleProgress || { kana: 0, vocab: 0, kanji: 0 },
-            unlockedChapters: state.unlockedChapters
-          });
+          if (docSnap.exists()) {
+            syncFromFirestore(docSnap.data());
+            useStore.getState().checkStreak(); // Check after syncing firestore
+          } else {
+            // Initialize user in firestore with local data
+            const state = useStore.getState();
+            await setDoc(userRef, {
+              displayName: user.displayName || 'Guest Senpai',
+              photoURL: user.photoURL || '',
+              userLevel: state.userLevel,
+              exp: state.exp,
+              streak: state.streak,
+              lastStreakDate: state.lastStreakDate || null,
+              moduleProgress: state.moduleProgress || { kana: 0, vocab: 0, kanji: 0 },
+              unlockedChapters: state.unlockedChapters
+            });
+            useStore.getState().checkStreak();
+          }
+        } catch (error) {
+          console.error("Error connecting to Firestore:", error);
+          // Still allow app to load, just might be offline or without cloud sync
+          useStore.getState().checkStreak();
+        } finally {
+          setLoadingAuth(false);
         }
-
-        setLoadingAuth(false);
 
         // Subscribe to local changes and push to Firestore with Debounce (2 seconds)
         unsubscribeStore = useStore.subscribe((state) => {

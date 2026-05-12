@@ -18,8 +18,8 @@ export default function Learn() {
 
   // Reset index when route type changes
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setCurrentIndex(0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setCurrentIndex(useStore.getState().moduleProgress[type] || 0);
   }, [type]);
 
   const [options, setOptions] = useState([]);
@@ -140,6 +140,15 @@ export default function Learn() {
           // Completed lesson
           incrementStreak();
           triggerConfetti();
+          
+          const state = useStore.getState();
+          const kanaProg = type === 'kana' ? currentIndex + 1 : (state.moduleProgress.kana || 0);
+          const vocabProg = type === 'vocab' ? currentIndex + 1 : (state.moduleProgress.vocab || 0);
+          
+          if (kanaProg >= kanaData.length && vocabProg >= vocabData.length) {
+            state.unlockChapter('kanji');
+          }
+
           setTimeout(() => {
             navigate('/');
           }, 3500); // Wait for confetti to finish before navigating back
