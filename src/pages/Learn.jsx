@@ -4,6 +4,7 @@ import confetti from 'canvas-confetti';
 import Flashcard from '../components/Flashcard';
 import useStore from '../store/useStore';
 import { generateQuizOptions } from '../utils/quizHelpers';
+import { Heart, Zap, Clock, ShieldAlert } from 'lucide-react';
 
 import kanaData from '../data/kana.json';
 import vocabData from '../data/vocab.json';
@@ -13,13 +14,29 @@ import grammarData from '../data/grammar.json';
 export default function Learn() {
   const { type } = useParams();
   const navigate = useNavigate();
-  const { addExp, incrementStreak, updateModuleProgress, moduleProgress } = useStore();
+  const { addExp, incrementStreak, updateModuleProgress, moduleProgress, updateQuestProgress, unlockAchievement } = useStore();
 
   const [currentIndex, setCurrentIndex] = useState(moduleProgress[type] || 0);
 
-  // Reset index when route type changes
+  // RPG Session State
+  const [hearts, setHearts] = useState(3);
+  const [combo, setCombo] = useState(0);
+  const [sessionExp, setSessionExp] = useState(0);
+  const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [questionsAnswered, setQuestionsAnswered] = useState(0);
+  const [startTime] = useState(Date.now());
+  const [sessionState, setSessionState] = useState('playing'); // playing, gameover, summary
+  const [expPopup, setExpPopup] = useState(null); // { amount, combo }
+
+  // Reset session when route type changes
   useEffect(() => {
     setCurrentIndex(useStore.getState().moduleProgress[type] || 0);
+    setHearts(3);
+    setCombo(0);
+    setSessionExp(0);
+    setCorrectAnswers(0);
+    setQuestionsAnswered(0);
+    setSessionState('playing');
   }, [type]);
 
   const [options, setOptions] = useState([]);
@@ -38,32 +55,35 @@ export default function Learn() {
     };
   }, []);
   
-  // Determine which dataset and keys to use based on dynamic route param
+  // Determine dataset
   let currentData = kanaData;
   let questionKey = 'character';
   let answerKey = 'romaji';
-  let title = 'Hiragana & Katakana Practice';
+  let title = 'Kana Practice';
+  let baseExp = 5;
 
   if (type === 'vocab') {
     currentData = vocabData;
     questionKey = 'word';
     answerKey = 'meaning';
-    title = 'Vocabulary Practice';
+    title = 'Vocabulary';
+    baseExp = 10;
   } else if (type === 'kanji') {
     currentData = kanjiData;
     questionKey = 'character';
-    answerKey = kanjiQuestionType; // dynamic: meaning, onyomi, kunyomi
-    title = `Kanji N5 Practice (${kanjiQuestionType.toUpperCase()})`;
+    answerKey = kanjiQuestionType;
+    title = `Kanji (${kanjiQuestionType.toUpperCase()})`;
+    baseExp = 20;
   } else if (type === 'grammar') {
     currentData = grammarData;
     questionKey = 'quizQuestion';
     answerKey = 'particle';
-    title = 'Grammar Particle Quiz';
+    title = 'Grammar Quiz';
+    baseExp = 15;
   }
 
-  const currentItem = currentData && currentData.length > 0 ? currentData[currentIndex] : null;
+  const currentItem = currentData && currentData.length > currentIndex ? currentData[currentIndex] : null;
 
-  // Randomize kanji question type
   useEffect(() => {
     if (type === 'kanji' && currentItem) {
       const types = ['meaning'];
@@ -74,28 +94,23 @@ export default function Learn() {
   }, [currentIndex, type, currentItem]);
 
   useEffect(() => {
-    if (currentItem) {
-      // Generate new options whenever the current item changes
+    if (currentItem && sessionState === 'playing') {
       const newOptions = generateQuizOptions(currentData, currentItem, answerKey);
       setOptions(newOptions);
       setSelectedAnswer(null);
     }
-  }, [currentIndex, currentData, currentItem, answerKey]);
+  }, [currentIndex, currentData, currentItem, answerKey, sessionState]);
 
-  // Handle case where route is invalid or data is missing
-  if (!currentItem) {
-    return <div style={{ padding: '2rem', textAlign: 'center' }}>Data not found for {type}</div>;
+  if (!currentItem && sessionState === 'playing') {
+    return <div style={{ padding: '2rem', textAlign: 'center' }}>Module Complete! Or data not found.</div>;
   }
 
   const handlePlayAudio = () => {
-    if ('speechSynthesis' in window) {
-      // For vocab or kana, we use the character/word. For kanji, the character. For grammar, the example.
+    if ('speechSynthesis' in window && currentItem) {
       const textToSpeak = type === 'grammar' ? currentItem.example : currentItem[questionKey];
       const utterance = new SpeechSynthesisUtterance(textToSpeak);
       utterance.lang = 'ja-JP';
       window.speechSynthesis.speak(utterance);
-    } else {
-      console.log('Text-to-speech not supported');
     }
   };
 
@@ -104,70 +119,167 @@ export default function Learn() {
     const end = Date.now() + duration;
 
     const frame = () => {
-      confetti({
-        particleCount: 5,
-        angle: 60,
-        spread: 55,
-        origin: { x: 0 },
-        colors: ['#8b5cf6', '#ec4899', '#10b981']
-      });
-      confetti({
-        particleCount: 5,
-        angle: 120,
-        spread: 55,
-        origin: { x: 1 },
-        colors: ['#8b5cf6', '#ec4899', '#10b981']
-      });
-
-      if (Date.now() < end) {
-        confettiRef.current = requestAnimationFrame(frame);
-      }
+      confetti({ particleCount: 5, angle: 60, spread: 55, origin: { x: 0 }, colors: ['#8b5cf6', '#ec4899', '#10b981'] });
+      confetti({ particleCount: 5, angle: 120, spread: 55, origin: { x: 1 }, colors: ['#8b5cf6', '#ec4899', '#10b981'] });
+      if (Date.now() < end) confettiRef.current = requestAnimationFrame(frame);
     };
     frame();
   };
 
   const handleAnswer = (answer) => {
-    if (selectedAnswer !== null) return;
+    if (selectedAnswer !== null || sessionState !== 'playing') return;
     
     setSelectedAnswer(answer);
     
     if (answer === currentItem[answerKey]) {
-      addExp(10);
+      // Correct
+      const newCombo = combo + 1;
+      setCombo(newCombo);
+      
+      let multiplier = 1;
+      if (newCombo >= 5) multiplier = 2.0;
+      else if (newCombo >= 3) multiplier = 1.5;
+      
+      const gainedExp = Math.round(baseExp * multiplier);
+      setSessionExp(prev => prev + gainedExp);
+      addExp(gainedExp);
+      setCorrectAnswers(prev => prev + 1);
+      
+      setExpPopup({ amount: gainedExp, combo: newCombo });
       setIsAnimating(true);
       updateModuleProgress(type, currentIndex + 1);
+      updateQuestProgress(type, 1);
+      
+      if (questionsAnswered === 0) unlockAchievement('first_blood');
       
       setTimeout(() => {
         setIsAnimating(false);
-        if (currentIndex < currentData.length - 1) {
-          setCurrentIndex(currentIndex + 1);
-        } else {
-          // Completed lesson
+        setExpPopup(null);
+        
+        const nextQuestionsAnswered = questionsAnswered + 1;
+        setQuestionsAnswered(nextQuestionsAnswered);
+        
+        if (nextQuestionsAnswered >= 10 || currentIndex >= currentData.length - 1) {
+          // Finish Session
+          setSessionState('summary');
           incrementStreak();
           triggerConfetti();
+          
+          if (correctAnswers + 1 === nextQuestionsAnswered && hearts === 3) {
+            unlockAchievement('speed_run');
+          }
           
           const state = useStore.getState();
           const kanaProg = type === 'kana' ? currentIndex + 1 : (state.moduleProgress.kana || 0);
           const vocabProg = type === 'vocab' ? currentIndex + 1 : (state.moduleProgress.vocab || 0);
-          
-          if (kanaProg >= kanaData.length && vocabProg >= vocabData.length) {
+          if (kanaProg >= kanaData.length && vocabProg >= vocabData.length / 2) {
             state.unlockChapter('kanji');
           }
-
-          setTimeout(() => {
-            navigate('/');
-          }, 3500); // Wait for confetti to finish before navigating back
+        } else {
+          setCurrentIndex(currentIndex + 1);
         }
       }, 1000);
+      
     } else {
-      // Wrong answer
+      // Wrong
+      setCombo(0);
+      const newHearts = hearts - 1;
+      setHearts(newHearts);
       setShakingAnswer(answer);
+      
       setTimeout(() => setShakingAnswer(null), 400);
+      
+      if (newHearts === 0) {
+        setTimeout(() => setSessionState('gameover'), 800);
+      } else {
+        setTimeout(() => {
+          setSelectedAnswer(null); // Let them try again
+        }, 1000);
+      }
     }
   };
 
+  if (sessionState === 'gameover') {
+    return (
+      <div className="animate-pop-in" style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto', textAlign: 'center', minHeight: '80vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <ShieldAlert size={80} color="var(--accent-danger)" style={{ margin: '0 auto 1rem auto' }} />
+        <h1 className="text-gradient" style={{ fontSize: '3rem', marginBottom: '1rem' }}>Game Over!</h1>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '1.2rem' }}>You ran out of hearts. Dust yourself off and try again!</p>
+        <button className="btn-primary" onClick={() => {
+          setHearts(3);
+          setCombo(0);
+          setSessionExp(0);
+          setCorrectAnswers(0);
+          setQuestionsAnswered(0);
+          setSessionState('playing');
+        }}>Retry Session</button>
+      </div>
+    );
+  }
+
+  if (sessionState === 'summary') {
+    const accuracy = Math.round((correctAnswers / questionsAnswered) * 100);
+    const timeSpentSeconds = Math.round((Date.now() - startTime) / 1000);
+    
+    return (
+      <div className="animate-pop-in" style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+        <h1 className="text-gradient" style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>Session Complete!</h1>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Excellent work, Senpai!</p>
+        
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '1rem', marginBottom: '2rem' }}>
+          <div className="glass-panel" style={{ padding: '1.5rem' }}>
+            <Zap size={32} color="var(--accent-warning)" style={{ margin: '0 auto 0.5rem auto' }} />
+            <h3>+{sessionExp}</h3>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>EXP Earned</p>
+          </div>
+          <div className="glass-panel" style={{ padding: '1.5rem' }}>
+            <div style={{ fontSize: '2rem', fontWeight: 'bold', color: 'var(--accent-success)', marginBottom: '0.5rem' }}>{accuracy}%</div>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Accuracy</p>
+          </div>
+          <div className="glass-panel" style={{ padding: '1.5rem' }}>
+            <Clock size={32} color="var(--accent-primary)" style={{ margin: '0 auto 0.5rem auto' }} />
+            <h3>{timeSpentSeconds}s</h3>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Time Spent</p>
+          </div>
+        </div>
+        
+        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+          <button className="glass-panel" style={{ padding: '1rem 2rem', fontWeight: 'bold' }} onClick={() => navigate('/')}>Return Home</button>
+          {currentIndex < currentData.length - 1 && (
+            <button className="btn-primary" onClick={() => {
+              setHearts(3);
+              setCombo(0);
+              setSessionExp(0);
+              setCorrectAnswers(0);
+              setQuestionsAnswered(0);
+              setSessionState('playing');
+              setCurrentIndex(currentIndex + 1);
+            }}>Next Session</button>
+          )}
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto', textAlign: 'center', paddingBottom: '100px' }}>
-      <h2 style={{ marginBottom: '2rem' }}>{title}</h2>
+    <div style={{ padding: '1rem 2rem 5rem 2rem', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
+      {/* RPG HUD */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', padding: '0.5rem 1rem', background: 'var(--bg-glass)', borderRadius: '12px' }}>
+        <div style={{ display: 'flex', gap: '0.25rem' }}>
+          {[...Array(3)].map((_, i) => (
+            <Heart key={i} size={24} fill={i < hearts ? "var(--accent-danger)" : "transparent"} color="var(--accent-danger)" />
+          ))}
+        </div>
+        <div style={{ fontWeight: 'bold', color: 'var(--text-secondary)' }}>
+          {questionsAnswered + 1} / {Math.min(10, currentData.length - (currentIndex - questionsAnswered))}
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: combo >= 3 ? 'var(--accent-warning)' : 'var(--text-primary)' }}>
+          <Zap size={20} fill={combo >= 3 ? "var(--accent-warning)" : "transparent"} />
+          <span style={{ fontWeight: 'bold', fontSize: '1.2rem' }}>x{combo}</span>
+        </div>
+      </div>
+      
+      <h2 style={{ marginBottom: '1.5rem', fontSize: '1.5rem' }}>{title}</h2>
       
       <Flashcard 
         front={currentItem[questionKey]} 
@@ -202,9 +314,16 @@ export default function Learn() {
         ))}
       </div>
 
-      {isAnimating && (
-        <div className="animate-pop-in" style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', fontSize: '5rem', zIndex: 9999 }}>
-          ⭐ +10 EXP
+      {isAnimating && expPopup && (
+        <div className="animate-pop-in" style={{ position: 'fixed', top: '40%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 9999, textAlign: 'center' }}>
+          <div style={{ fontSize: '4rem', fontWeight: 'bold', color: 'var(--accent-warning)', textShadow: '0 4px 15px rgba(0,0,0,0.5)' }}>
+            +{expPopup.amount} EXP
+          </div>
+          {expPopup.combo >= 3 && (
+            <div style={{ fontSize: '1.5rem', color: 'var(--accent-primary)', marginTop: '0.5rem', fontWeight: 'bold' }}>
+              Combo {expPopup.combo}x!
+            </div>
+          )}
         </div>
       )}
     </div>

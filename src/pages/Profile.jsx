@@ -5,8 +5,18 @@ import { signInWithPopup, signOut } from 'firebase/auth';
 import { auth, googleProvider } from '../firebase';
 import '../styles/index.css';
 
+import { getRank } from '../utils/ranks';
+import { Trophy, Medal, Target } from 'lucide-react';
+
+const ACHIEVEMENT_DATA = {
+  first_blood: { title: 'First Blood', desc: 'Answer your first question correctly.', icon: <Target size={24} color="var(--accent-primary)" /> },
+  speed_run: { title: 'Speed Run', desc: 'Finish a session with 100% accuracy and 3 hearts.', icon: <Zap size={24} color="var(--accent-warning)" /> },
+  week_warrior: { title: 'Week Warrior', desc: 'Reach a 7-day streak.', icon: <Flame size={24} color="var(--accent-danger)" /> }
+};
+
 export default function Profile() {
-  const { userLevel, exp, streak, unlockedChapters, currentUser } = useStore();
+  const { userLevel, exp, streak, achievements, currentUser } = useStore();
+  const rank = getRank(userLevel);
 
   const handleLogin = async () => {
     try {
@@ -26,7 +36,7 @@ export default function Profile() {
   };
 
   return (
-    <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
+    <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto', paddingBottom: '100px' }}>
       <header className="glass-panel animate-pop-in" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2rem' }}>
         
         {currentUser ? (
@@ -63,7 +73,10 @@ export default function Profile() {
         <div className="glass-panel animate-pop-in" style={{ padding: '1.5rem', textAlign: 'center', animationDelay: '0.1s' }}>
           <Star size={32} color="var(--accent-primary)" style={{ margin: '0 auto 0.5rem auto' }} />
           <h3 style={{ fontSize: '1.5rem', marginBottom: '0.25rem' }}>Lvl {userLevel}</h3>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Current Level</p>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '0.5rem' }}>Current Level</p>
+          <div style={{ display: 'inline-block', padding: '0.25rem 0.75rem', background: 'var(--bg-secondary)', borderRadius: '999px', fontSize: '0.8rem', fontWeight: 'bold', color: 'var(--accent-success)' }}>
+            {rank.title} ({rank.english})
+          </div>
         </div>
         
         <div className="glass-panel animate-pop-in" style={{ padding: '1.5rem', textAlign: 'center', animationDelay: '0.2s' }}>
@@ -80,8 +93,28 @@ export default function Profile() {
       </div>
 
       <div className="glass-panel animate-pop-in" style={{ padding: '1.5rem', animationDelay: '0.4s' }}>
-        <h3 style={{ marginBottom: '1rem' }}>Achievements</h3>
-        <p style={{ color: 'var(--text-secondary)' }}>You have unlocked {unlockedChapters.length} modules.</p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
+          <Trophy color="var(--accent-primary)" />
+          <h3 style={{ margin: 0 }}>Achievements</h3>
+        </div>
+        
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          {Object.entries(ACHIEVEMENT_DATA).map(([id, data]) => {
+            const isUnlocked = achievements && achievements.includes(id);
+            return (
+              <div key={id} style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem', background: isUnlocked ? 'var(--bg-secondary)' : 'transparent', border: '1px solid', borderColor: isUnlocked ? 'var(--accent-primary)' : 'var(--border-color)', borderRadius: '12px', opacity: isUnlocked ? 1 : 0.5 }}>
+                <div style={{ background: isUnlocked ? 'rgba(139, 92, 246, 0.2)' : 'var(--bg-glass)', padding: '0.75rem', borderRadius: '50%' }}>
+                  {isUnlocked ? data.icon : <Medal size={24} color="var(--text-secondary)" />}
+                </div>
+                <div>
+                  <h4 style={{ marginBottom: '0.25rem', color: isUnlocked ? 'var(--text-primary)' : 'var(--text-secondary)' }}>{data.title}</h4>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>{data.desc}</p>
+                </div>
+                {isUnlocked && <div style={{ marginLeft: 'auto', color: 'var(--accent-success)', fontSize: '0.8rem', fontWeight: 'bold' }}>Unlocked!</div>}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
