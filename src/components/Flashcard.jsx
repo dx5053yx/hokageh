@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Volume2 } from 'lucide-react';
 import '../styles/index.css';
 
-export default function Flashcard({ front, back, onPlayAudio }) {
+export default function Flashcard({ front, back, onPlayAudio, disableFlip = false }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   // Reset flip state when moving to next question
@@ -18,10 +18,16 @@ export default function Flashcard({ front, back, onPlayAudio }) {
     }
   };
 
+  const handleFlip = () => {
+    if (!disableFlip) {
+      setIsFlipped(!isFlipped);
+    }
+  };
+
   return (
     <div 
       className="flashcard-container" 
-      onClick={() => setIsFlipped(!isFlipped)}
+      onClick={handleFlip}
       style={{
         perspective: '1000px',
         width: '100%',

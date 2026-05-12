@@ -30,7 +30,9 @@ export default function BottomNav() {
       zIndex: 1000,
     }}>
       {navItems.map((item) => {
-        const isActive = location.pathname === item.path;
+        const isActive = item.path.startsWith('/learn') 
+          ? location.pathname.startsWith('/learn') 
+          : location.pathname === item.path;
         return (
           <button
             key={item.path}

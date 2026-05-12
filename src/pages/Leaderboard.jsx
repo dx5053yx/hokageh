@@ -8,7 +8,7 @@ import '../styles/index.css';
 export default function Leaderboard() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
-  const currentUserExp = useStore(state => state.exp);
+  const currentUser = useStore(state => state.currentUser);
 
   useEffect(() => {
     const fetchLeaderboard = async () => {
@@ -62,8 +62,8 @@ export default function Leaderboard() {
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'space-between',
-                  background: user.exp === currentUserExp ? 'rgba(139, 92, 246, 0.15)' : 'var(--bg-glass)',
-                  border: user.exp === currentUserExp ? '1px solid var(--accent-primary)' : '1px solid var(--border-color)',
+                  background: currentUser && user.id === currentUser.uid ? 'rgba(139, 92, 246, 0.15)' : 'var(--bg-glass)',
+                  border: currentUser && user.id === currentUser.uid ? '1px solid var(--accent-primary)' : '1px solid var(--border-color)',
                   animationDelay: `${index * 0.1}s`
                 }}
               >
@@ -80,8 +80,8 @@ export default function Leaderboard() {
                     </div>
                   )}
 
-                  <span style={{ fontSize: '1.2rem', fontWeight: user.exp === currentUserExp ? 'bold' : 'normal', textAlign: 'left', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '120px' }}>
-                    {user.displayName} {user.exp === currentUserExp ? '(You)' : ''}
+                  <span style={{ fontSize: '1.2rem', fontWeight: currentUser && user.id === currentUser.uid ? 'bold' : 'normal', textAlign: 'left', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap', maxWidth: '120px' }}>
+                    {user.displayName} {currentUser && user.id === currentUser.uid ? '(You)' : ''}
                   </span>
                 </div>
                 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import confetti from 'canvas-confetti';
 import Flashcard from '../components/Flashcard';
@@ -12,9 +12,9 @@ import kanjiData from '../data/kanji.json';
 export default function Learn() {
   const { type } = useParams();
   const navigate = useNavigate();
-  const { addExp, incrementStreak } = useStore();
+  const { addExp, incrementStreak, updateModuleProgress, moduleProgress } = useStore();
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(moduleProgress[type] || 0);
 
   // Reset index when route type changes
   useEffect(() => {
@@ -25,6 +25,17 @@ export default function Learn() {
   const [options, setOptions] = useState([]);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [shakingAnswer, setShakingAnswer] = useState(null);
+  const confettiRef = useRef(null);
+
+  // Cleanup confetti on unmount
+  useEffect(() => {
+    return () => {
+      if (confettiRef.current) {
+        cancelAnimationFrame(confettiRef.current);
+      }
+    };
+  }, []);
   
   // Determine which dataset and keys to use based on dynamic route param
   let currentData = kanaData;
@@ -95,7 +106,7 @@ export default function Learn() {
       });
 
       if (Date.now() < end) {
-        requestAnimationFrame(frame);
+        confettiRef.current = requestAnimationFrame(frame);
       }
     };
     frame();
@@ -109,6 +120,7 @@ export default function Learn() {
     if (answer === currentItem[answerKey]) {
       addExp(10);
       setIsAnimating(true);
+      updateModuleProgress(type, currentIndex + 1);
       
       setTimeout(() => {
         setIsAnimating(false);
@@ -125,11 +137,8 @@ export default function Learn() {
       }, 1000);
     } else {
       // Wrong answer
-      const btn = document.getElementById(`btn-${answer}`);
-      if(btn) {
-        btn.classList.add('animate-shake');
-        setTimeout(() => btn.classList.remove('animate-shake'), 400);
-      }
+      setShakingAnswer(answer);
+      setTimeout(() => setShakingAnswer(null), 400);
     }
   };
 
@@ -141,15 +150,16 @@ export default function Learn() {
         front={currentItem[questionKey]} 
         back={currentItem[answerKey]} 
         onPlayAudio={handlePlayAudio}
+        disableFlip={true}
       />
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginTop: '2rem' }}>
         {options.map((opt) => (
           <button
-            id={`btn-${opt}`}
             key={opt}
             onClick={() => handleAnswer(opt)}
             disabled={selectedAnswer !== null && opt !== currentItem[answerKey]}
+            className={shakingAnswer === opt ? 'animate-shake' : ''}
             style={{
               padding: '1rem',
               borderRadius: '12px',

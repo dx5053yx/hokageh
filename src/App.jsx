@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { onAuthStateChanged } from 'firebase/auth'
 import { doc, getDoc, setDoc } from 'firebase/firestore'
@@ -22,11 +22,15 @@ const NotFound = () => (
 
 function App() {
   const syncFromFirestore = useStore((state) => state.syncFromFirestore);
+  const setCurrentUser = useStore((state) => state.setCurrentUser);
+  const [loadingAuth, setLoadingAuth] = useState(true);
+  const debounceTimer = useRef(null);
 
   useEffect(() => {
     let unsubscribeStore = null;
 
     const unsubscribeAuth = onAuthStateChanged(auth, async (user) => {
+      setCurrentUser(user);
       if (user) {
         // Fetch existing data
         const userRef = doc(db, 'users', user.uid);
@@ -43,23 +47,34 @@ function App() {
             userLevel: state.userLevel,
             exp: state.exp,
             streak: state.streak,
+            lastStreakDate: state.lastStreakDate || null,
+            moduleProgress: state.moduleProgress || { kana: 0, vocab: 0, kanji: 0 },
             unlockedChapters: state.unlockedChapters
           });
         }
 
-        // Subscribe to local changes and push to Firestore
+        setLoadingAuth(false);
+
+        // Subscribe to local changes and push to Firestore with Debounce (2 seconds)
         unsubscribeStore = useStore.subscribe((state) => {
-          setDoc(userRef, {
-            displayName: user.displayName || 'Guest Senpai',
-            photoURL: user.photoURL || '',
-            userLevel: state.userLevel,
-            exp: state.exp,
-            streak: state.streak,
-            unlockedChapters: state.unlockedChapters
-          }, { merge: true });
+          if (debounceTimer.current) clearTimeout(debounceTimer.current);
+          
+          debounceTimer.current = setTimeout(() => {
+            setDoc(userRef, {
+              displayName: user.displayName || 'Guest Senpai',
+              photoURL: user.photoURL || '',
+              userLevel: state.userLevel,
+              exp: state.exp,
+              streak: state.streak,
+              lastStreakDate: state.lastStreakDate || null,
+              moduleProgress: state.moduleProgress || { kana: 0, vocab: 0, kanji: 0 },
+              unlockedChapters: state.unlockedChapters
+            }, { merge: true });
+          }, 2000);
         });
 
       } else {
+        setLoadingAuth(false);
         if (unsubscribeStore) unsubscribeStore();
       }
     });
@@ -67,8 +82,18 @@ function App() {
     return () => {
       unsubscribeAuth();
       if (unsubscribeStore) unsubscribeStore();
+      if (debounceTimer.current) clearTimeout(debounceTimer.current);
     };
-  }, [syncFromFirestore]);
+  }, [syncFromFirestore, setCurrentUser]);
+
+  if (loadingAuth) {
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', flexDirection: 'column', gap: '1rem' }}>
+        <div className="animate-pulse" style={{ fontSize: '3rem' }}>🎌</div>
+        <p style={{ color: 'var(--text-secondary)' }}>Loading NihonZ...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="app-container" style={{ paddingBottom: '80px' }}>

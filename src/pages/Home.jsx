@@ -1,13 +1,20 @@
-import { BookOpen, Star, Flame, Trophy, Lock } from 'lucide-react';
+import { BookOpen, Star, Flame, Trophy } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import LessonCard from '../components/LessonCard';
 import useStore from '../store/useStore';
 import heroImage from '../assets/hero_image.png';
+import kanaData from '../data/kana.json';
+import vocabData from '../data/vocab.json';
+import kanjiData from '../data/kanji.json';
 import '../styles/index.css';
 
 export default function Home() {
   const navigate = useNavigate();
-  const { userLevel, streak } = useStore();
+  const { userLevel, streak, moduleProgress = { kana: 0, vocab: 0, kanji: 0 } } = useStore();
+
+  const kanaProgress = Math.min(100, Math.round(((moduleProgress.kana || 0) / kanaData.length) * 100) || 0);
+  const vocabProgress = Math.min(100, Math.round(((moduleProgress.vocab || 0) / vocabData.length) * 100) || 0);
+  const kanjiProgress = Math.min(100, Math.round(((moduleProgress.kanji || 0) / kanjiData.length) * 100) || 0);
 
   return (
     <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
@@ -44,13 +51,13 @@ export default function Home() {
           <LessonCard
             title="Hiragana & Katakana"
             description="Master the basic alphabets of Japanese."
-            progress={100}
+            progress={kanaProgress}
             isUnlocked={true}
             icon={<BookOpen size={24} />}
             iconColorClass="var(--accent-primary)"
             iconBgClass="rgba(139, 92, 246, 0.2)"
             progressColorClass="var(--accent-success)"
-            buttonText="Review Kana"
+            buttonText={kanaProgress === 100 ? "Review Kana" : "Continue"}
             animationDelay="0.1s"
             onClick={() => navigate('/learn/kana')}
           />
@@ -71,13 +78,13 @@ export default function Home() {
           <LessonCard
             title="Basic Vocab (JLPT N5)"
             description="Learn essential daily words."
-            progress={35}
+            progress={vocabProgress}
             isUnlocked={true}
             icon={<Trophy size={24} />}
             iconColorClass="var(--accent-secondary)"
             iconBgClass="rgba(236, 72, 153, 0.2)"
             progressColorClass="linear-gradient(90deg, var(--accent-secondary), var(--accent-primary))"
-            buttonText="Continue Lesson"
+            buttonText={vocabProgress === 100 ? "Review Vocab" : "Continue"}
             animationDelay="0.3s"
             onClick={() => navigate('/learn/vocab')}
           />
@@ -85,13 +92,13 @@ export default function Home() {
           <LessonCard
             title="Kanji N5"
             description="Learn 100 basic kanji characters."
-            progress={10}
+            progress={kanjiProgress}
             isUnlocked={true}
-            icon={<Lock size={24} />}
+            icon={<BookOpen size={24} />}
             iconColorClass="var(--accent-primary)"
             iconBgClass="rgba(255, 255, 255, 0.1)"
             progressColorClass="var(--accent-primary)"
-            buttonText="Start Kanji"
+            buttonText={kanjiProgress === 100 ? "Review Kanji" : "Start Kanji"}
             animationDelay="0.4s"
             onClick={() => navigate('/learn/kanji')}
           />

@@ -27,7 +27,8 @@ export default function Theory() {
             <p style={{ marginBottom: '1rem', fontSize: '1.1rem' }}><strong>Usage:</strong> {item.usage}</p>
             
             <div style={{ backgroundColor: 'var(--bg-secondary)', padding: '1rem', borderRadius: '12px', borderLeft: '4px solid var(--accent-secondary)' }}>
-              <p style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>{item.example}</p>
+              <p style={{ fontSize: '1.2rem', marginBottom: '0.25rem' }}>{item.example}</p>
+              <p style={{ fontSize: '0.9rem', color: 'var(--accent-primary)', marginBottom: '0.5rem', fontStyle: 'italic' }}>{item.exampleRomaji}</p>
               <p style={{ color: 'var(--text-secondary)' }}>"{item.meaning}"</p>
             </div>
           </div>

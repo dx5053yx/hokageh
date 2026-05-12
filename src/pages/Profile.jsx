@@ -1,21 +1,12 @@
 import { useState, useEffect } from 'react';
 import useStore from '../store/useStore';
 import { User, Flame, Star, Zap, LogIn, LogOut } from 'lucide-react';
-import { signInWithPopup, signOut, onAuthStateChanged } from 'firebase/auth';
+import { signInWithPopup, signOut } from 'firebase/auth';
 import { auth, googleProvider } from '../firebase';
 import '../styles/index.css';
 
 export default function Profile() {
-  const { userLevel, exp, streak, unlockedChapters } = useStore();
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    // Listen for auth state changes
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-    return () => unsubscribe();
-  }, []);
+  const { userLevel, exp, streak, unlockedChapters, currentUser } = useStore();
 
   const handleLogin = async () => {
     try {
@@ -38,11 +29,11 @@ export default function Profile() {
     <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
       <header className="glass-panel animate-pop-in" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: '2rem' }}>
         
-        {user ? (
+        {currentUser ? (
           <>
-            <img src={user.photoURL} alt="Profile" style={{ width: '100px', height: '100px', borderRadius: '50%', marginBottom: '1rem', boxShadow: 'var(--shadow-glow)' }} />
-            <h2 style={{ fontSize: '1.8rem', marginBottom: '0.25rem' }}>{user.displayName}</h2>
-            <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>{user.email}</p>
+            <img src={currentUser.photoURL} alt="Profile" style={{ width: '100px', height: '100px', borderRadius: '50%', marginBottom: '1rem', boxShadow: 'var(--shadow-glow)' }} />
+            <h2 style={{ fontSize: '1.8rem', marginBottom: '0.25rem' }}>{currentUser.displayName}</h2>
+            <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>{currentUser.email}</p>
             <button onClick={handleLogout} className="glass-panel" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', color: 'var(--accent-danger)', cursor: 'pointer', border: '1px solid var(--accent-danger)' }}>
               <LogOut size={16} /> Logout
             </button>
