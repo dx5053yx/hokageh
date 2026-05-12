@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Search } from 'lucide-react';
 import kanaData from '../data/kana.json';
 import kanjiData from '../data/kanji.json';
 import vocabData from '../data/vocab.json';
@@ -6,13 +7,43 @@ import '../styles/index.css';
 
 export default function Library() {
   const [activeTab, setActiveTab] = useState('hiragana');
+  const [searchQuery, setSearchQuery] = useState('');
 
-  const hiraganaList = kanaData.filter(k => k.type === 'hiragana');
-  const katakanaList = kanaData.filter(k => k.type === 'katakana');
+  const filterData = (data, keys) => {
+    if (!searchQuery) return data;
+    const lowerQuery = searchQuery.toLowerCase();
+    return data.filter(item => 
+      keys.some(key => item[key] && item[key].toLowerCase().includes(lowerQuery))
+    );
+  };
+
+  const hiraganaList = filterData(kanaData.filter(k => k.type.includes('hiragana')), ['character', 'romaji']);
+  const katakanaList = filterData(kanaData.filter(k => k.type.includes('katakana')), ['character', 'romaji']);
+  const filteredKanji = filterData(kanjiData, ['character', 'meaning', 'onyomi', 'kunyomi']);
+  const filteredVocab = filterData(vocabData, ['word', 'romaji', 'meaning']);
 
   return (
     <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto', paddingBottom: '100px' }}>
       <h1 className="text-gradient" style={{ textAlign: 'center', marginBottom: '2rem' }}>Library (Kamus)</h1>
+      
+      {/* Search Bar */}
+      <div className="glass-panel" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.75rem 1rem', marginBottom: '1.5rem', borderRadius: '12px' }}>
+        <Search size={20} color="var(--text-secondary)" />
+        <input 
+          type="text" 
+          placeholder={`Search ${activeTab}...`} 
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          style={{ 
+            background: 'transparent', 
+            border: 'none', 
+            color: 'var(--text-primary)', 
+            width: '100%', 
+            outline: 'none',
+            fontSize: '1rem'
+          }} 
+        />
+      </div>
       
       {/* Tabs */}
       <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '2rem', overflowX: 'auto', paddingBottom: '0.5rem' }}>
@@ -52,7 +83,8 @@ export default function Library() {
       {/* Kanji List */}
       {activeTab === 'kanji' && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          {kanjiData.map(item => (
+          {filteredKanji.length === 0 && <p style={{ textAlign: 'center', color: 'var(--text-secondary)' }}>No kanji found.</p>}
+          {filteredKanji.map(item => (
             <div key={item.id} className="glass-panel animate-pop-in" style={{ padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '2rem' }}>
               <div style={{ fontSize: '3rem', fontWeight: 'bold', color: 'var(--accent-primary)', minWidth: '60px', textAlign: 'center' }}>
                 {item.character}
@@ -70,7 +102,8 @@ export default function Library() {
       {/* Vocab List */}
       {activeTab === 'vocab' && (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          {vocabData.map(item => (
+          {filteredVocab.length === 0 && <p style={{ textAlign: 'center', color: 'var(--text-secondary)' }}>No vocabulary found.</p>}
+          {filteredVocab.map(item => (
             <div key={item.id} className="glass-panel animate-pop-in" style={{ padding: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div>
                 <h3 style={{ fontSize: '1.5rem', color: 'var(--accent-success)', marginBottom: '0.25rem' }}>{item.word}</h3>

@@ -26,6 +26,7 @@ export default function Learn() {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
   const [shakingAnswer, setShakingAnswer] = useState(null);
+  const [kanjiQuestionType, setKanjiQuestionType] = useState('meaning');
   const confettiRef = useRef(null);
 
   // Cleanup confetti on unmount
@@ -51,11 +52,20 @@ export default function Learn() {
   } else if (type === 'kanji') {
     currentData = kanjiData;
     questionKey = 'character';
-    answerKey = 'meaning'; // or kunyomi/onyomi depending on design
-    title = 'Kanji N5 Practice';
+    answerKey = kanjiQuestionType; // dynamic: meaning, onyomi, kunyomi
+    title = `Kanji N5 Practice (${kanjiQuestionType.toUpperCase()})`;
   }
 
   const currentItem = currentData && currentData.length > 0 ? currentData[currentIndex] : null;
+
+  // Randomize kanji question type
+  useEffect(() => {
+    if (type === 'kanji') {
+      const types = ['meaning', 'onyomi', 'kunyomi'];
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setKanjiQuestionType(types[Math.floor(Math.random() * types.length)]);
+    }
+  }, [currentIndex, type]);
 
   useEffect(() => {
     if (currentItem) {

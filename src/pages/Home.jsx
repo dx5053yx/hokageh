@@ -1,4 +1,4 @@
-import { BookOpen, Star, Flame, Trophy } from 'lucide-react';
+import { BookOpen, Star, Flame, Trophy, Lock } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import LessonCard from '../components/LessonCard';
 import useStore from '../store/useStore';
@@ -10,7 +10,7 @@ import '../styles/index.css';
 
 export default function Home() {
   const navigate = useNavigate();
-  const { userLevel, streak, moduleProgress = { kana: 0, vocab: 0, kanji: 0 } } = useStore();
+  const { userLevel, streak, moduleProgress = { kana: 0, vocab: 0, kanji: 0 }, unlockedChapters } = useStore();
 
   const kanaProgress = Math.min(100, Math.round(((moduleProgress.kana || 0) / kanaData.length) * 100) || 0);
   const vocabProgress = Math.min(100, Math.round(((moduleProgress.vocab || 0) / vocabData.length) * 100) || 0);
@@ -93,14 +93,20 @@ export default function Home() {
             title="Kanji N5"
             description="Learn 100 basic kanji characters."
             progress={kanjiProgress}
-            isUnlocked={true}
-            icon={<BookOpen size={24} />}
+            isUnlocked={unlockedChapters.includes('kanji')}
+            icon={unlockedChapters.includes('kanji') ? <BookOpen size={24} /> : <Lock size={24} />}
             iconColorClass="var(--accent-primary)"
             iconBgClass="rgba(255, 255, 255, 0.1)"
             progressColorClass="var(--accent-primary)"
             buttonText={kanjiProgress === 100 ? "Review Kanji" : "Start Kanji"}
             animationDelay="0.4s"
-            onClick={() => navigate('/learn/kanji')}
+            onClick={() => {
+              if (unlockedChapters.includes('kanji')) {
+                navigate('/learn/kanji');
+              } else {
+                alert("Please complete Kana and Vocab lessons to unlock Kanji!");
+              }
+            }}
           />
 
         </div>
