@@ -12,10 +12,11 @@ export default function LessonCard({
   progressColorClass = 'var(--accent-primary)',
   buttonText = 'Continue',
   animationDelay = '0s',
-  onClick
+  secondaryButtonText,
+  onSecondaryClick
 }) {
   return (
-    <div className="glass-panel animate-pop-in" style={{ padding: '1.5rem', animationDelay: animationDelay }}>
+    <div className="glass-panel animate-pop-in" style={{ padding: '1.5rem', animationDelay: animationDelay, display: 'flex', flexDirection: 'column' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
         <div style={{ backgroundColor: iconBgClass, padding: '0.75rem', borderRadius: '12px', color: iconColorClass }}>
           {icon}
@@ -32,22 +33,44 @@ export default function LessonCard({
         </span>
       </div>
       <h3 style={{ marginBottom: '0.5rem', color: isUnlocked ? 'var(--text-primary)' : 'var(--text-secondary)' }}>{title}</h3>
-      <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>{description}</p>
+      <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.5rem', flexGrow: 1 }}>{description}</p>
       
       {isUnlocked && <ProgressBar progress={progress} colorClass={progressColorClass} />}
       
-      <button 
-        className="btn-primary" 
-        style={{ 
-          width: '100%', 
-          opacity: isUnlocked ? 1 : 0.5,
-          cursor: isUnlocked ? 'pointer' : 'not-allowed'
-        }}
-        disabled={!isUnlocked}
-        onClick={onClick}
-      >
-        {isUnlocked ? buttonText : 'Locked'}
-      </button>
+      <div style={{ display: 'flex', gap: '0.5rem', marginTop: 'auto' }}>
+        <button 
+          className="btn-primary" 
+          style={{ 
+            flex: 1, 
+            opacity: isUnlocked ? 1 : 0.5,
+            cursor: isUnlocked ? 'pointer' : 'not-allowed',
+            padding: secondaryButtonText ? '0.75rem' : '12px 24px',
+            fontSize: secondaryButtonText ? '0.9rem' : '1rem'
+          }}
+          disabled={!isUnlocked}
+          onClick={onClick}
+        >
+          {isUnlocked ? buttonText : 'Locked'}
+        </button>
+        
+        {secondaryButtonText && isUnlocked && (
+          <button 
+            className="glass-panel" 
+            style={{ 
+              flex: 1, 
+              cursor: 'pointer',
+              border: `1px solid ${iconColorClass}`,
+              color: iconColorClass,
+              padding: '0.75rem',
+              fontSize: '0.9rem',
+              fontWeight: 'bold'
+            }}
+            onClick={onSecondaryClick}
+          >
+            {secondaryButtonText}
+          </button>
+        )}
+      </div>
     </div>
   );
 }

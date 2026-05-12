@@ -582,5 +582,221 @@
     "kunyomi": "yasu",
     "id": 73,
     "level": "N5"
+  },
+  {
+    "id": 74,
+    "character": "森",
+    "meaning": "forest",
+    "onyomi": "シン",
+    "kunyomi": "もり",
+    "level": "N5"
+  },
+  {
+    "id": 75,
+    "character": "林",
+    "meaning": "woods, grove",
+    "onyomi": "リン",
+    "kunyomi": "はやし",
+    "level": "N5"
+  },
+  {
+    "id": 76,
+    "character": "雲",
+    "meaning": "cloud",
+    "onyomi": "ウン",
+    "kunyomi": "くも",
+    "level": "N5"
+  },
+  {
+    "id": 77,
+    "character": "雪",
+    "meaning": "snow",
+    "onyomi": "セツ",
+    "kunyomi": "ゆき",
+    "level": "N5"
+  },
+  {
+    "id": 78,
+    "character": "空",
+    "meaning": "sky, empty",
+    "onyomi": "クウ",
+    "kunyomi": "そら, あ.く",
+    "level": "N5"
+  },
+  {
+    "id": 79,
+    "character": "海",
+    "meaning": "sea, ocean",
+    "onyomi": "カイ",
+    "kunyomi": "うみ",
+    "level": "N5"
+  },
+  {
+    "id": 80,
+    "character": "池",
+    "meaning": "pond",
+    "onyomi": "チ",
+    "kunyomi": "いけ",
+    "level": "N5"
+  },
+  {
+    "id": 81,
+    "character": "岩",
+    "meaning": "rock, boulder",
+    "onyomi": "ガン",
+    "kunyomi": "いわ",
+    "level": "N5"
+  },
+  {
+    "id": 82,
+    "character": "石",
+    "meaning": "stone",
+    "onyomi": "セキ",
+    "kunyomi": "いし",
+    "level": "N5"
+  },
+  {
+    "id": 83,
+    "character": "道",
+    "meaning": "road, street, way",
+    "onyomi": "ドウ",
+    "kunyomi": "みち",
+    "level": "N5"
+  },
+  {
+    "id": 84,
+    "character": "聞",
+    "meaning": "to hear, to listen",
+    "onyomi": "ブン",
+    "kunyomi": "き.く",
+    "level": "N5"
+  },
+  {
+    "id": 85,
+    "character": "語",
+    "meaning": "word, language",
+    "onyomi": "ゴ",
+    "kunyomi": "かた.る",
+    "level": "N5"
+  },
+  {
+    "id": 86,
+    "character": "名",
+    "meaning": "name",
+    "onyomi": "メイ",
+    "kunyomi": "な",
+    "level": "N5"
+  },
+  {
+    "id": 87,
+    "character": "店",
+    "meaning": "shop, store",
+    "onyomi": "テン",
+    "kunyomi": "みせ",
+    "level": "N5"
+  },
+  {
+    "id": 88,
+    "character": "車",
+    "meaning": "car, wheel",
+    "onyomi": "シャ",
+    "kunyomi": "くるま",
+    "level": "N5"
+  },
+  {
+    "id": 89,
+    "character": "駅",
+    "meaning": "station",
+    "onyomi": "エキ",
+    "kunyomi": "-",
+    "level": "N5"
+  },
+  {
+    "id": 90,
+    "character": "東",
+    "meaning": "east",
+    "onyomi": "トウ",
+    "kunyomi": "ひがし",
+    "level": "N5"
+  },
+  {
+    "id": 91,
+    "character": "西",
+    "meaning": "west",
+    "onyomi": "セイ",
+    "kunyomi": "にし",
+    "level": "N5"
+  },
+  {
+    "id": 92,
+    "character": "南",
+    "meaning": "south",
+    "onyomi": "ナン",
+    "kunyomi": "みなみ",
+    "level": "N5"
+  },
+  {
+    "id": 93,
+    "character": "北",
+    "meaning": "north",
+    "onyomi": "ホク",
+    "kunyomi": "きた",
+    "level": "N5"
+  },
+  {
+    "id": 94,
+    "character": "半",
+    "meaning": "half",
+    "onyomi": "ハン",
+    "kunyomi": "なか.ば",
+    "level": "N5"
+  },
+  {
+    "id": 95,
+    "character": "外",
+    "meaning": "outside",
+    "onyomi": "ガイ",
+    "kunyomi": "そと",
+    "level": "N5"
+  },
+  {
+    "id": 96,
+    "character": "前",
+    "meaning": "before, front",
+    "onyomi": "ゼン",
+    "kunyomi": "まえ",
+    "level": "N5"
+  },
+  {
+    "id": 97,
+    "character": "後",
+    "meaning": "after, behind",
+    "onyomi": "ゴ, コウ",
+    "kunyomi": "あと, うし.ろ",
+    "level": "N5"
+  },
+  {
+    "id": 98,
+    "character": "午",
+    "meaning": "noon",
+    "onyomi": "ゴ",
+    "kunyomi": "-",
+    "level": "N5"
+  },
+  {
+    "id": 99,
+    "character": "毎",
+    "meaning": "every",
+    "onyomi": "マイ",
+    "kunyomi": "ごと",
+    "level": "N5"
+  },
+  {
+    "id": 100,
+    "character": "何",
+    "meaning": "what",
+    "onyomi": "カ",
+    "kunyomi": "なに, なん",
+    "level": "N5"
   }
 ]

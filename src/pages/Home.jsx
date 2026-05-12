@@ -15,6 +15,9 @@ export default function Home() {
   const kanaProgress = Math.min(100, Math.round(((moduleProgress.kana || 0) / kanaData.length) * 100) || 0);
   const vocabProgress = Math.min(100, Math.round(((moduleProgress.vocab || 0) / vocabData.length) * 100) || 0);
   const kanjiProgress = Math.min(100, Math.round(((moduleProgress.kanji || 0) / kanjiData.length) * 100) || 0);
+  
+  // Grammar has 15 items right now
+  const grammarProgress = Math.min(100, Math.round(((moduleProgress.grammar || 0) / 15) * 100) || 0);
 
   return (
     <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto' }}>
@@ -65,14 +68,17 @@ export default function Home() {
           <LessonCard
             title="Basic Grammar & Particles"
             description="Learn how to structure sentences."
-            progress={0}
+            progress={grammarProgress}
             isUnlocked={true}
             icon={<Star size={24} />}
             iconColorClass="var(--accent-warning)"
             iconBgClass="rgba(245, 158, 11, 0.2)"
-            buttonText="Read Theory"
+            progressColorClass="var(--accent-warning)"
+            buttonText={grammarProgress === 100 ? "Review Quiz" : "Take Quiz"}
+            secondaryButtonText="Read Theory"
             animationDelay="0.2s"
-            onClick={() => navigate('/theory')}
+            onClick={() => navigate('/learn/grammar')}
+            onSecondaryClick={() => navigate('/theory')}
           />
 
           <LessonCard

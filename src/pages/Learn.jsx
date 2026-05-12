@@ -8,6 +8,7 @@ import { generateQuizOptions } from '../utils/quizHelpers';
 import kanaData from '../data/kana.json';
 import vocabData from '../data/vocab.json';
 import kanjiData from '../data/kanji.json';
+import grammarData from '../data/grammar.json';
 
 export default function Learn() {
   const { type } = useParams();
@@ -53,6 +54,11 @@ export default function Learn() {
     questionKey = 'character';
     answerKey = kanjiQuestionType; // dynamic: meaning, onyomi, kunyomi
     title = `Kanji N5 Practice (${kanjiQuestionType.toUpperCase()})`;
+  } else if (type === 'grammar') {
+    currentData = grammarData;
+    questionKey = 'quizQuestion';
+    answerKey = 'particle';
+    title = 'Grammar Particle Quiz';
   }
 
   const currentItem = currentData && currentData.length > 0 ? currentData[currentIndex] : null;
@@ -83,8 +89,8 @@ export default function Learn() {
 
   const handlePlayAudio = () => {
     if ('speechSynthesis' in window) {
-      // For vocab or kana, we use the character/word. For kanji, the character.
-      const textToSpeak = currentItem[questionKey];
+      // For vocab or kana, we use the character/word. For kanji, the character. For grammar, the example.
+      const textToSpeak = type === 'grammar' ? currentItem.example : currentItem[questionKey];
       const utterance = new SpeechSynthesisUtterance(textToSpeak);
       utterance.lang = 'ja-JP';
       window.speechSynthesis.speak(utterance);

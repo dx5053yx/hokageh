@@ -1,17 +1,152 @@
 [
-  { "id": 1, "particle": "は", "romaji": "wa", "usage": "Topic marker", "example": "わたしはがくせいです", "exampleRomaji": "watashi wa gakusei desu", "meaning": "I am a student" },
-  { "id": 2, "particle": "を", "romaji": "o", "usage": "Object marker", "example": "りんごをたべます", "exampleRomaji": "ringo o tabemasu", "meaning": "I eat an apple" },
-  { "id": 3, "particle": "も", "romaji": "mo", "usage": "Also / Too", "example": "わたしもがくせいです", "exampleRomaji": "watashi mo gakusei desu", "meaning": "I am also a student" },
-  { "id": 4, "particle": "に", "romaji": "ni", "usage": "Time / Destination", "example": "３じにいきます", "exampleRomaji": "san ji ni ikimasu", "meaning": "I will go at 3 o'clock" },
-  { "id": 5, "particle": "で", "romaji": "de", "usage": "Location of action / Means", "example": "くるまでいきます", "exampleRomaji": "kuruma de ikimasu", "meaning": "I will go by car" },
-  { "id": 6, "particle": "が", "romaji": "ga", "usage": "Subject marker / But", "example": "ねこがすきです", "exampleRomaji": "neko ga suki desu", "meaning": "I like cats" },
-  { "id": 7, "particle": "から", "romaji": "kara", "usage": "From / Because", "example": "にほんからきました", "exampleRomaji": "nihon kara kimashita", "meaning": "I came from Japan" },
-  { "id": 8, "particle": "まで", "romaji": "made", "usage": "Until / To", "example": "とうきょうまでいきます", "exampleRomaji": "toukyou made ikimasu", "meaning": "I will go to Tokyo" },
-  { "id": 9, "particle": "と", "romaji": "to", "usage": "And (exhaustive) / With", "example": "いぬとねこ", "exampleRomaji": "inu to neko", "meaning": "Dog and cat" },
-  { "id": 10, "particle": "や", "romaji": "ya", "usage": "And (non-exhaustive)", "example": "ほんやペン", "exampleRomaji": "hon ya pen", "meaning": "Book, pen, and others" },
-  { "id": 11, "particle": "の", "romaji": "no", "usage": "Possessive marker", "example": "わたしのほん", "exampleRomaji": "watashi no hon", "meaning": "My book" },
-  { "id": 12, "particle": "です", "romaji": "desu", "usage": "To be (Polite)", "example": "これはペンです", "exampleRomaji": "kore wa pen desu", "meaning": "This is a pen" },
-  { "id": 13, "particle": "ます", "romaji": "masu", "usage": "Verb ending (Polite)", "example": "ごはんをたべます", "exampleRomaji": "gohan o tabemasu", "meaning": "I will eat rice" },
-  { "id": 14, "particle": "ません", "romaji": "masen", "usage": "Negative verb ending", "example": "わかりません", "exampleRomaji": "wakarimasen", "meaning": "I don't understand" },
-  { "id": 15, "particle": "ました", "romaji": "mashita", "usage": "Past tense verb ending", "example": "ほんをよみました", "exampleRomaji": "hon o yomimashita", "meaning": "I read a book" }
+  {
+    "id": 1,
+    "particle": "は",
+    "romaji": "wa",
+    "usage": "Topic marker",
+    "example": "わたしはがくせいです",
+    "exampleRomaji": "watashi wa gakusei desu",
+    "meaning": "I am a student",
+    "quizQuestion": "わたし___がくせいです"
+  },
+  {
+    "id": 2,
+    "particle": "を",
+    "romaji": "o",
+    "usage": "Object marker",
+    "example": "りんごをたべます",
+    "exampleRomaji": "ringo o tabemasu",
+    "meaning": "I eat an apple",
+    "quizQuestion": "りんご___たべます"
+  },
+  {
+    "id": 3,
+    "particle": "も",
+    "romaji": "mo",
+    "usage": "Also / Too",
+    "example": "わたしもがくせいです",
+    "exampleRomaji": "watashi mo gakusei desu",
+    "meaning": "I am also a student",
+    "quizQuestion": "わたし___がくせいです"
+  },
+  {
+    "id": 4,
+    "particle": "に",
+    "romaji": "ni",
+    "usage": "Time / Destination",
+    "example": "３じにいきます",
+    "exampleRomaji": "san ji ni ikimasu",
+    "meaning": "I will go at 3 o'clock",
+    "quizQuestion": "３じ___いきます"
+  },
+  {
+    "id": 5,
+    "particle": "で",
+    "romaji": "de",
+    "usage": "Location of action / Means",
+    "example": "くるまでいきます",
+    "exampleRomaji": "kuruma de ikimasu",
+    "meaning": "I will go by car",
+    "quizQuestion": "くるま___いきます"
+  },
+  {
+    "id": 6,
+    "particle": "が",
+    "romaji": "ga",
+    "usage": "Subject marker / But",
+    "example": "ねこがすきです",
+    "exampleRomaji": "neko ga suki desu",
+    "meaning": "I like cats",
+    "quizQuestion": "ねこ___すきです"
+  },
+  {
+    "id": 7,
+    "particle": "から",
+    "romaji": "kara",
+    "usage": "From / Because",
+    "example": "にほんからきました",
+    "exampleRomaji": "nihon kara kimashita",
+    "meaning": "I came from Japan",
+    "quizQuestion": "にほん___きました"
+  },
+  {
+    "id": 8,
+    "particle": "まで",
+    "romaji": "made",
+    "usage": "Until / To",
+    "example": "とうきょうまでいきます",
+    "exampleRomaji": "toukyou made ikimasu",
+    "meaning": "I will go to Tokyo",
+    "quizQuestion": "とうきょう___いきます"
+  },
+  {
+    "id": 9,
+    "particle": "と",
+    "romaji": "to",
+    "usage": "And (exhaustive) / With",
+    "example": "いぬとねこ",
+    "exampleRomaji": "inu to neko",
+    "meaning": "Dog and cat",
+    "quizQuestion": "いぬ___ねこ"
+  },
+  {
+    "id": 10,
+    "particle": "や",
+    "romaji": "ya",
+    "usage": "And (non-exhaustive)",
+    "example": "ほんやペン",
+    "exampleRomaji": "hon ya pen",
+    "meaning": "Book, pen, and others",
+    "quizQuestion": "ほん___ペン"
+  },
+  {
+    "id": 11,
+    "particle": "の",
+    "romaji": "no",
+    "usage": "Possessive marker",
+    "example": "わたしのほん",
+    "exampleRomaji": "watashi no hon",
+    "meaning": "My book",
+    "quizQuestion": "わたし___ほん"
+  },
+  {
+    "id": 12,
+    "particle": "です",
+    "romaji": "desu",
+    "usage": "To be (Polite)",
+    "example": "これはペンです",
+    "exampleRomaji": "kore wa pen desu",
+    "meaning": "This is a pen",
+    "quizQuestion": "これはペン___"
+  },
+  {
+    "id": 13,
+    "particle": "ます",
+    "romaji": "masu",
+    "usage": "Verb ending (Polite)",
+    "example": "ごはんをたべます",
+    "exampleRomaji": "gohan o tabemasu",
+    "meaning": "I will eat rice",
+    "quizQuestion": "ごはんをたべ___"
+  },
+  {
+    "id": 14,
+    "particle": "ません",
+    "romaji": "masen",
+    "usage": "Negative verb ending",
+    "example": "わかりません",
+    "exampleRomaji": "wakarimasen",
+    "meaning": "I don't understand",
+    "quizQuestion": "わかり___"
+  },
+  {
+    "id": 15,
+    "particle": "ました",
+    "romaji": "mashita",
+    "usage": "Past tense verb ending",
+    "example": "ほんをよみました",
+    "exampleRomaji": "hon o yomimashita",
+    "meaning": "I read a book",
+    "quizQuestion": "ほんをよみ___"
+  }
 ]
