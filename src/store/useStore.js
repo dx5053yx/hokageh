@@ -26,11 +26,40 @@ const useStore = create(
         };
       }),
       incrementStreak: () => set((state) => {
-        const today = new Date().toDateString();
-        if (state.lastStreakDate !== today) {
-          return { streak: state.streak + 1, lastStreakDate: today };
+        const today = new Date();
+        const todayStr = today.toDateString();
+        
+        if (state.lastStreakDate === todayStr) return {}; // Already incremented today
+
+        if (state.lastStreakDate) {
+          const lastDate = new Date(state.lastStreakDate);
+          today.setHours(0,0,0,0);
+          lastDate.setHours(0,0,0,0);
+          const diffTime = today - lastDate;
+          const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
+
+          if (diffDays > 1) {
+            // Missed a day! Reset to 1 (they just finished a lesson today)
+            return { streak: 1, lastStreakDate: todayStr };
+          }
         }
-        return {}; // Do nothing if already incremented today
+        
+        return { streak: state.streak + 1, lastStreakDate: todayStr };
+      }),
+      checkStreak: () => set((state) => {
+        if (state.lastStreakDate) {
+          const today = new Date();
+          const lastDate = new Date(state.lastStreakDate);
+          today.setHours(0,0,0,0);
+          lastDate.setHours(0,0,0,0);
+          const diffTime = today - lastDate;
+          const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
+
+          if (diffDays > 1 && state.streak > 0) {
+            return { streak: 0 }; // Missed a day, reset streak to 0
+          }
+        }
+        return {};
       }),
       resetStreak: () => set({ streak: 0, lastStreakDate: null }),
       unlockChapter: (chapterId) => set((state) => ({

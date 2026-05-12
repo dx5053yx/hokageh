@@ -31,6 +31,8 @@ function App() {
 
     const unsubscribeAuth = onAuthStateChanged(auth, async (user) => {
       setCurrentUser(user);
+      useStore.getState().checkStreak(); // Check and reset streak if a day was missed
+
       if (user) {
         // Fetch existing data
         const userRef = doc(db, 'users', user.uid);
@@ -38,6 +40,7 @@ function App() {
 
         if (docSnap.exists()) {
           syncFromFirestore(docSnap.data());
+          useStore.getState().checkStreak(); // Check again after syncing firestore
         } else {
           // Initialize user in firestore with local data
           const state = useStore.getState();
