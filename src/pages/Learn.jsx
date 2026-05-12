@@ -18,7 +18,6 @@ export default function Learn() {
 
   // Reset index when route type changes
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     setCurrentIndex(useStore.getState().moduleProgress[type] || 0);
   }, [type]);
 
@@ -62,7 +61,6 @@ export default function Learn() {
   useEffect(() => {
     if (type === 'kanji') {
       const types = ['meaning', 'onyomi', 'kunyomi'];
-      // eslint-disable-next-line react-hooks/set-state-in-effect
       setKanjiQuestionType(types[Math.floor(Math.random() * types.length)]);
     }
   }, [currentIndex, type]);
@@ -71,7 +69,6 @@ export default function Learn() {
     if (currentItem) {
       // Generate new options whenever the current item changes
       const newOptions = generateQuizOptions(currentData, currentItem, answerKey);
-      // eslint-disable-next-line react-hooks/set-state-in-effect
       setOptions(newOptions);
       setSelectedAnswer(null);
     }
@@ -96,7 +93,6 @@ export default function Learn() {
 
   const triggerConfetti = () => {
     const duration = 3 * 1000;
-    // eslint-disable-next-line react-hooks/purity
     const end = Date.now() + duration;
 
     const frame = () => {

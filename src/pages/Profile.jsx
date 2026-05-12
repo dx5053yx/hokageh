@@ -31,7 +31,13 @@ export default function Profile() {
         
         {currentUser ? (
           <>
-            <img src={currentUser.photoURL} alt="Profile" style={{ width: '100px', height: '100px', borderRadius: '50%', marginBottom: '1rem', boxShadow: 'var(--shadow-glow)' }} />
+            {currentUser.photoURL ? (
+              <img src={currentUser.photoURL} alt="Profile" style={{ width: '100px', height: '100px', borderRadius: '50%', marginBottom: '1rem', boxShadow: 'var(--shadow-glow)' }} />
+            ) : (
+              <div style={{ width: '100px', height: '100px', borderRadius: '50%', background: 'linear-gradient(135deg, var(--accent-primary), var(--accent-secondary))', display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '1rem', boxShadow: 'var(--shadow-glow)' }}>
+                <User size={48} color="white" />
+              </div>
+            )}
             <h2 style={{ fontSize: '1.8rem', marginBottom: '0.25rem' }}>{currentUser.displayName}</h2>
             <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem' }}>{currentUser.email}</p>
             <button onClick={handleLogout} className="glass-panel" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', color: 'var(--accent-danger)', cursor: 'pointer', border: '1px solid var(--accent-danger)' }}>

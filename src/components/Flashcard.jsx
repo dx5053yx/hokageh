@@ -32,7 +32,7 @@ export default function Flashcard({ front, back, onPlayAudio, disableFlip = fals
         perspective: '1000px',
         width: '100%',
         height: '300px',
-        cursor: 'pointer',
+        cursor: disableFlip ? 'default' : 'pointer',
         marginBottom: '2rem'
       }}
     >

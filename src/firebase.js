@@ -4,13 +4,13 @@ import { getFirestore } from 'firebase/firestore';
 
 // Replace this with your actual Firebase config from the Firebase Console
 const firebaseConfig = {
-  apiKey: "AIzaSyBYFu6f_Re-oOXBbb31DRVuNQxWqvXocYw",
-  authDomain: "hokage-fabee.firebaseapp.com",
-  projectId: "hokage-fabee",
-  storageBucket: "hokage-fabee.firebasestorage.app",
-  messagingSenderId: "71225557212",
-  appId: "1:71225557212:web:d5bf06d527dfc92e9c3419",
-  measurementId: "G-ZJ03H935FE"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
