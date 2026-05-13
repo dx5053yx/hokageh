@@ -211,6 +211,50 @@ export default function Home() {
 
         </div>
       </section>
+
+      {/* Boss Battle Section */}
+      <section className="animate-pop-in" style={{ marginTop: '3rem', animationDelay: '0.5s' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.5rem' }}>
+          <Swords color="var(--accent-danger)" />
+          <h2 style={{ margin: 0, fontSize: '1.5rem' }}>Ultimate Challenge</h2>
+        </div>
+        
+        <div 
+          className="glass-panel" 
+          style={{ 
+            padding: '2rem', 
+            textAlign: 'center', 
+            background: 'linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(139, 92, 246, 0.1))',
+            border: '2px solid rgba(239, 68, 68, 0.3)',
+            borderRadius: '16px',
+            position: 'relative',
+            overflow: 'hidden'
+          }}
+        >
+          <div style={{ position: 'absolute', top: '-20px', right: '-20px', opacity: 0.1 }}>
+            <Swords size={120} color="var(--accent-danger)" />
+          </div>
+          
+          <h3 style={{ fontSize: '1.75rem', marginBottom: '0.5rem' }}>Boss Battle ⚔️</h3>
+          <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', maxWidth: '500px', margin: '0 auto 1.5rem auto' }}>
+            Test your knowledge across all modules in this high-stakes, timed challenge. 
+            Win to earn a legendary badge and +200 EXP!
+          </p>
+          
+          <button 
+            className="btn-primary" 
+            style={{ 
+              background: 'var(--accent-danger)', 
+              padding: '1rem 3rem', 
+              fontSize: '1.1rem',
+              boxShadow: '0 4px 15px rgba(239, 68, 68, 0.4)'
+            }}
+            onClick={() => navigate('/boss')}
+          >
+            Enter the Arena
+          </button>
+        </div>
+      </section>
     </div>
   );
 }

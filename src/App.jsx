@@ -74,13 +74,18 @@ function App() {
         }
 
         // Subscribe to local changes and push to Firestore with Debounce (2 seconds)
+        const uid = user.uid;
+        const displayName = user.displayName || 'Guest Senpai';
+        const photoURL = user.photoURL || '';
+        
         unsubscribeStore = useStore.subscribe((state) => {
           if (debounceTimer.current) clearTimeout(debounceTimer.current);
           
           debounceTimer.current = setTimeout(() => {
-            setDoc(userRef, {
-              displayName: user.displayName || 'Guest Senpai',
-              photoURL: user.photoURL || '',
+            const ref = doc(db, 'users', uid);
+            setDoc(ref, {
+              displayName,
+              photoURL,
               userLevel: state.userLevel,
               exp: state.exp,
               streak: state.streak,

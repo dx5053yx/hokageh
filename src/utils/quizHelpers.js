@@ -6,10 +6,17 @@
  * @returns {Array} Shuffled array of 4 options
  */
 export const generateQuizOptions = (fullData, currentItem, answerKey) => {
-  let newOptions = [currentItem[answerKey]];
+  const correctAnswer = currentItem[answerKey];
+  let newOptions = [correctAnswer];
   
-  // Extract all unique answers to avoid infinite loops if data is small, and filter out '-'
-  const allUniqueAnswers = [...new Set(fullData.map(item => item[answerKey]).filter(val => val && val !== '-'))];
+  // Extract all unique answers, filter out '-' and empty
+  const allUniqueAnswers = [...new Set(
+    fullData.map(item => item[answerKey]).filter(val => val && val !== '-')
+  )];
+  
+  // Guard: if no valid answers exist or only the correct one, return what we have
+  if (allUniqueAnswers.length <= 1) return newOptions;
+  
   const maxOptions = Math.min(4, allUniqueAnswers.length);
   
   while (newOptions.length < maxOptions) {

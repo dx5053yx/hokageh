@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import confetti from 'canvas-confetti';
 import Flashcard from '../components/Flashcard';
@@ -89,7 +89,7 @@ export default function Learn() {
     baseExp = 15;
   }
 
-  const buildSessionQueue = () => {
+  const buildSessionQueue = useCallback(() => {
     if (!currentData || currentData.length === 0) {
       setSessionQueue([]);
       setQueuePos(0);
@@ -103,32 +103,32 @@ export default function Learn() {
 
     const q = baseSlice.map((it, idx) => ({ item: it, source: 'base', dataIndex: start + idx }));
 
-    const weakItems = (state.weakItems || []).filter(w => w.__type === type);
-    if (weakItems.length > 0) {
+    const weakPool = (state.weakItems || []).filter(w => w.__type === type);
+    if (weakPool.length > 0) {
       for (let pos = 3; pos < q.length; pos += 4) {
-        const w = weakItems[Math.floor(Math.random() * weakItems.length)];
+        const w = weakPool[Math.floor(Math.random() * weakPool.length)];
         q.splice(pos, 0, { item: w, source: 'weak' });
       }
     }
 
-    while (q.length < 10 && weakItems.length > 0) {
-      const w = weakItems[Math.floor(Math.random() * weakItems.length)];
+    while (q.length < 10 && weakPool.length > 0) {
+      const w = weakPool[Math.floor(Math.random() * weakPool.length)];
       q.push({ item: w, source: 'weak' });
     }
 
     setSessionQueue(q);
     setQueuePos(0);
-  };
+  }, [type, category, decodedCategory, currentData]);
 
   const currentEntry = sessionQueue && sessionQueue.length > 0 ? sessionQueue[queuePos] : null;
   const currentItem = currentEntry ? currentEntry.item : null;
 
   const progress = decodedCategory ? (categoryProgress && categoryProgress[decodedCategory] ? categoryProgress[decodedCategory] : 0) : (moduleProgress[type] || 0);
 
-  // Build queue only when type or category changes, NOT when moduleProgress changes
+  // Build queue only when type or category changes
   useEffect(() => {
     buildSessionQueue();
-  }, [type, category]);
+  }, [buildSessionQueue]);
 
   useEffect(() => {
     if (type === 'kanji' && currentItem) {
@@ -213,11 +213,12 @@ export default function Learn() {
       const gainedExp = Math.round(baseExp * multiplier);
       setSessionExp(prev => prev + gainedExp);
       addExp(gainedExp);
-      setCorrectAnswers(prev => prev + 1);
+      const newCorrectAnswers = correctAnswers + 1;
+      setCorrectAnswers(newCorrectAnswers);
       
       setExpPopup({ amount: gainedExp, combo: newCombo });
       setIsAnimating(true);
-      // Advance progress: global for modules, category-specific for category sessions
+      // Advance progress: only if going forward (prevents regression from weak items)
       if (currentEntry && currentEntry.source === 'base') {
         if (!decodedCategory) {
           updateModuleProgress(type, currentEntry.dataIndex + 1);
@@ -227,7 +228,10 @@ export default function Learn() {
       }
       updateQuestProgress(type, 1);
       // If answered correctly, remove from weak items (user mastered it)
-      try { removeWeakItem && removeWeakItem(currentItem.id, type); } catch (e) {}
+      try {
+        const itemKey = currentItem.id || currentItem.character || currentItem.word || currentItem.particle;
+        if (itemKey) removeWeakItem(itemKey, type);
+      } catch (e) {}
       
       if (questionsAnswered === 0) unlockAchievement('first_blood');
       
@@ -244,7 +248,7 @@ export default function Learn() {
           incrementStreak();
           triggerConfetti();
 
-          if (correctAnswers + 1 === nextQuestionsAnswered && hearts === 3) {
+          if (newCorrectAnswers === nextQuestionsAnswered && hearts === 3) {
             unlockAchievement('speed_run');
           }
 

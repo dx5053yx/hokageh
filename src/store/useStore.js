@@ -22,10 +22,16 @@ const useStore = create(
       
       setCurrentUser: (user) => set({ currentUser: user }),
       updateModuleProgress: (module, index) => set((state) => ({
-        moduleProgress: { ...state.moduleProgress, [module]: index }
+        moduleProgress: { 
+          ...state.moduleProgress, 
+          [module]: Math.max(state.moduleProgress[module] || 0, index) 
+        }
       })),
       updateCategoryProgress: (category, index) => set((state) => ({
-        categoryProgress: { ...state.categoryProgress, [category]: index }
+        categoryProgress: { 
+          ...state.categoryProgress, 
+          [category]: Math.max(state.categoryProgress[category] || 0, index) 
+        }
       })),
       addExp: (amount) => set((state) => {
         const newExp = state.exp + amount;
@@ -83,28 +89,34 @@ const useStore = create(
         };
       }),
       checkStreak: () => set((state) => {
-        if (state.lastStreakDate) {
-          const today = new Date();
-          const lastDate = new Date(state.lastStreakDate);
-          today.setHours(0,0,0,0);
-          lastDate.setHours(0,0,0,0);
-          const diffTime = today - lastDate;
-          const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
-
-          if (diffDays > 1 && state.streak > 0) {
-            if (state.inventory.streakShields > 0) {
-              // Consume shield silently to protect streak until they return
-              return { 
-                inventory: { ...state.inventory, streakShields: state.inventory.streakShields - 1 },
-                // We update lastStreakDate so it doesn't consume multiple shields for the same missed period
-                lastStreakDate: new Date(lastDate.getTime() + (24 * 60 * 60 * 1000)).toDateString()
-              };
-            } else {
-              return { streak: 0 }; // Missed a day, reset streak to 0
-            }
-          }
+        if (!state.lastStreakDate) return {};
+        
+        const today = new Date();
+        today.setHours(0,0,0,0);
+        let lastDate = new Date(state.lastStreakDate);
+        lastDate.setHours(0,0,0,0);
+        const diffTime = today - lastDate;
+        const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
+        
+        if (diffDays <= 1 || state.streak === 0) return {};
+        
+        // Need to cover (diffDays - 1) missed days
+        const missedDays = diffDays - 1;
+        let shieldsAvailable = state.inventory?.streakShields || 0;
+        
+        if (shieldsAvailable >= missedDays) {
+          // Enough shields to cover all missed days
+          return {
+            inventory: { ...state.inventory, streakShields: shieldsAvailable - missedDays },
+            lastStreakDate: new Date(today.getTime() - (24 * 60 * 60 * 1000)).toDateString()
+          };
+        } else {
+          // Not enough shields — streak is lost
+          return { 
+            streak: 0,
+            inventory: { ...state.inventory, streakShields: 0 }
+          };
         }
-        return {};
       }),
       resetStreak: () => set({ streak: 0, lastStreakDate: null }),
       unlockChapter: (chapterId) => set((state) => ({
@@ -167,14 +179,21 @@ const useStore = create(
       }),
 
       addWeakItem: (item, type) => set((state) => {
-        // Prevent duplicates
-        const exists = state.weakItems.some(w => w.id === item.id && w.__type === type);
+        // Use composite key for uniqueness (not all items have .id)
+        const itemKey = item.id || item.character || item.word || item.particle || JSON.stringify(item).slice(0, 50);
+        const exists = state.weakItems.some(w => {
+          const wKey = w.id || w.character || w.word || w.particle || '';
+          return wKey === itemKey && w.__type === type;
+        });
         if (exists) return {};
-        return { weakItems: [...state.weakItems, { ...item, __type: type }] };
+        return { weakItems: [...state.weakItems, { ...item, __type: type, __key: itemKey }] };
       }),
       
-      removeWeakItem: (itemId, type) => set((state) => ({
-        weakItems: state.weakItems.filter(w => !(w.id === itemId && w.__type === type))
+      removeWeakItem: (itemKey, type) => set((state) => ({
+        weakItems: state.weakItems.filter(w => {
+          const wKey = w.__key || w.id || w.character || w.word || w.particle || '';
+          return !(wKey === itemKey && w.__type === type);
+        })
       })),
       
       openDailyChest: () => set((state) => {

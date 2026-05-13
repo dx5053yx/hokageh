@@ -107,13 +107,6 @@ export default function BossBattle() {
     setSelectedAnswer(null);
   }, [questions, pos]);
 
-  const advance = (won, correctCount) => {
-    setTimeout(() => {
-      const next = pos + 1;
-      if (next >= questions.length || (won !== undefined)) finishBattle(won, correctCount);
-      else setPos(next);
-    }, 800);
-  };
 
   const handleAnswer = (answer) => {
     if (selectedAnswer !== null || sessionState !== 'playing') return;
