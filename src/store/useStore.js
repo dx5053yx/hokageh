@@ -44,6 +44,7 @@ const useStore = create(
 
         let newStreak = state.streak + 1;
         let newShields = state.inventory.streakShields;
+        let newAchievements = [...(state.achievements || [])];
 
         if (state.lastStreakDate) {
           const lastDate = new Date(state.lastStreakDate);
@@ -68,12 +69,17 @@ const useStore = create(
         // Grant a shield every 7 days (7, 14, 21) if they just hit it
         if (newStreak > 0 && newStreak % 7 === 0) {
           newShields += 1;
+          // Unlock week_warrior achievement at 7-day streak
+          if (newStreak === 7 && !newAchievements.includes('week_warrior')) {
+            newAchievements.push('week_warrior');
+          }
         }
         
         return { 
           streak: newStreak, 
           lastStreakDate: todayStr,
-          inventory: { ...state.inventory, streakShields: newShields }
+          inventory: { ...state.inventory, streakShields: newShields },
+          achievements: newAchievements
         };
       }),
       checkStreak: () => set((state) => {
@@ -225,7 +231,9 @@ const useStore = create(
         lastQuestDate: data.lastQuestDate ?? state.lastQuestDate,
         inventory: data.inventory ?? state.inventory,
         weakItems: data.weakItems ?? state.weakItems,
-        lastChestDate: data.lastChestDate ?? state.lastChestDate
+        lastChestDate: data.lastChestDate ?? state.lastChestDate,
+        categoryProgress: data.categoryProgress ?? state.categoryProgress,
+        bossBattles: data.bossBattles ?? state.bossBattles
       })),
     }),
     {

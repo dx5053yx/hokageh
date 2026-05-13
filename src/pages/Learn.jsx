@@ -125,10 +125,10 @@ export default function Learn() {
 
   const progress = decodedCategory ? (categoryProgress && categoryProgress[decodedCategory] ? categoryProgress[decodedCategory] : 0) : (moduleProgress[type] || 0);
 
-  // Build queue when dataset or module progress changes
+  // Build queue only when type or category changes, NOT when moduleProgress changes
   useEffect(() => {
     buildSessionQueue();
-  }, [type, category, moduleProgress]);
+  }, [type, category]);
 
   useEffect(() => {
     if (type === 'kanji' && currentItem) {
@@ -147,9 +147,32 @@ export default function Learn() {
     }
   }, [queuePos, currentData, currentItem, answerKey, sessionState]);
 
-  if (!currentItem && sessionState === 'playing') {
-    return <div style={{ padding: '2rem', textAlign: 'center' }}>Module Complete! Or data not found.</div>;
+  if (sessionState === 'playing' && !currentItem) {
+    return (
+      <div className="animate-pop-in" style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto', textAlign: 'center', minHeight: '60vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <ShieldAlert size={64} color="var(--accent-success)" style={{ margin: '0 auto 1rem auto' }} />
+        <h2>Module Complete!</h2>
+        <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>You've finished all available questions in this module. Great job!</p>
+        <button className="btn-primary" onClick={() => navigate('/')}>Return Home</button>
+      </div>
+    );
   }
+
+  const playSound = (freq, dur = 0.15) => {
+    try {
+      const ctx = new (window.AudioContext || window.webkitAudioContext)();
+      const o = ctx.createOscillator();
+      const g = ctx.createGain();
+      o.type = 'sine';
+      o.frequency.value = freq;
+      g.gain.value = 0.05;
+      o.connect(g);
+      g.connect(ctx.destination);
+      o.start();
+      g.gain.exponentialRampToValueAtTime(0.00001, ctx.currentTime + dur);
+      o.stop(ctx.currentTime + dur);
+    } catch (e) { /* ignore */ }
+  };
 
   const handlePlayAudio = () => {
     if ('speechSynthesis' in window && currentItem) {
@@ -179,6 +202,7 @@ export default function Learn() {
     
     if (answer === currentItem[answerKey]) {
       // Correct
+      playSound(880);
       const newCombo = combo + 1;
       setCombo(newCombo);
       
@@ -237,6 +261,7 @@ export default function Learn() {
       
     } else {
       // Wrong
+      playSound(220, 0.25);
       setCombo(0);
       const newHearts = hearts - 1;
       setHearts(newHearts);
@@ -273,6 +298,8 @@ export default function Learn() {
           setCorrectAnswers(0);
           setQuestionsAnswered(0);
           setSessionState('playing');
+          buildSessionQueue();
+          setQueuePos(0);
         }}>Retry Session</button>
       </div>
     );

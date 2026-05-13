@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { BookOpen, Star, Flame, Trophy, Lock, Target, Gift } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { BookOpen, Star, Flame, Trophy, Lock, Target, Gift, Shield, Swords } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import LessonCard from '../components/LessonCard';
 import useStore from '../store/useStore';
@@ -7,12 +7,15 @@ import heroImage from '../assets/hero_image.png';
 import kanaData from '../data/kana.json';
 import vocabData from '../data/vocab.json';
 import kanjiData from '../data/kanji.json';
+import grammarData from '../data/grammar.json';
 import { getRank } from '../utils/ranks';
 import '../styles/index.css';
 
 export default function Home() {
   const navigate = useNavigate();
-  const { userLevel, streak, moduleProgress = { kana: 0, vocab: 0, kanji: 0 }, unlockedChapters, dailyQuests, generateDailyQuests } = useStore();
+  const { userLevel, exp, streak, moduleProgress = { kana: 0, vocab: 0, kanji: 0, grammar: 0 }, unlockedChapters, dailyQuests, generateDailyQuests, inventory, lastChestDate } = useStore();
+
+  const [chestReward, setChestReward] = useState(null); // { type: 'exp'|'shield', amount }
 
   useEffect(() => {
     generateDailyQuests();
@@ -21,11 +24,27 @@ export default function Home() {
   const kanaProgress = Math.min(100, Math.round(((moduleProgress.kana || 0) / kanaData.length) * 100) || 0);
   const vocabProgress = Math.min(100, Math.round(((moduleProgress.vocab || 0) / vocabData.length) * 100) || 0);
   const kanjiProgress = Math.min(100, Math.round(((moduleProgress.kanji || 0) / kanjiData.length) * 100) || 0);
-  
-  // Grammar has 15 items right now
-  const grammarProgress = Math.min(100, Math.round(((moduleProgress.grammar || 0) / 15) * 100) || 0);
+  const grammarProgress = Math.min(100, Math.round(((moduleProgress.grammar || 0) / grammarData.length) * 100) || 0);
 
   const rank = getRank(userLevel);
+  const expInCurrentLevel = exp % 100;
+  const shieldCount = inventory?.streakShields || 0;
+  const chestAlreadyOpened = lastChestDate === new Date().toDateString();
+
+  const handleOpenChest = () => {
+    if (chestAlreadyOpened) return;
+    const prevExp = useStore.getState().exp;
+    const prevShields = useStore.getState().inventory?.streakShields || 0;
+    useStore.getState().openDailyChest();
+    const newExp = useStore.getState().exp;
+    const newShields = useStore.getState().inventory?.streakShields || 0;
+    if (newShields > prevShields) {
+      setChestReward({ type: 'shield', amount: 1 });
+    } else {
+      setChestReward({ type: 'exp', amount: newExp - prevExp });
+    }
+    setTimeout(() => setChestReward(null), 3000);
+  };
 
   return (
     <div style={{ padding: '2rem', maxWidth: '800px', margin: '0 auto', paddingBottom: '100px' }}>
@@ -47,13 +66,47 @@ export default function Home() {
           <div className="glass-panel" style={{ padding: '0.75rem 1rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-warning)' }}>
             <Flame size={20} />
             <span style={{ fontWeight: 'bold' }}>{streak} Day Streak</span>
+            {shieldCount > 0 && <span style={{ fontSize: '0.8rem' }}>🛡️{shieldCount}</span>}
           </div>
           <div className="glass-panel" style={{ padding: '0.75rem 1rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-primary)' }}>
             <Star size={20} />
-            <span style={{ fontWeight: 'bold' }}>Lvl {userLevel} ({rank.title})</span>
+            <div>
+              <span style={{ fontWeight: 'bold' }}>Lvl {userLevel} ({rank.title})</span>
+              <div style={{ width: '100%', height: '4px', background: 'rgba(255,255,255,0.1)', borderRadius: '999px', overflow: 'hidden', marginTop: '3px' }}>
+                <div style={{ height: '100%', width: `${expInCurrentLevel}%`, background: 'var(--accent-primary)', transition: 'width 0.5s ease' }} />
+              </div>
+            </div>
           </div>
         </div>
       </header>
+
+      {/* Daily Chest */}
+      <section className="animate-pop-in" style={{ marginBottom: '2rem', animationDelay: '0.05s' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+          <Gift color="var(--accent-primary)" />
+          <h2 style={{ margin: 0, fontSize: '1.5rem' }}>Daily Chest</h2>
+        </div>
+        <button 
+          className="glass-panel" 
+          disabled={chestAlreadyOpened}
+          style={{ 
+            padding: '1.5rem', width: '100%', fontSize: '1.1rem', fontWeight: 'bold', 
+            cursor: chestAlreadyOpened ? 'default' : 'pointer', 
+            border: `2px solid ${chestAlreadyOpened ? 'var(--border-color)' : 'var(--accent-primary)'}`, 
+            borderRadius: '12px',
+            opacity: chestAlreadyOpened ? 0.5 : 1,
+            position: 'relative'
+          }} 
+          onClick={handleOpenChest}
+        >
+          {chestAlreadyOpened ? 'Chest Already Opened Today ✅' : 'Open Daily Chest 🎁'}
+        </button>
+        {chestReward && (
+          <div className="animate-pop-in" style={{ marginTop: '0.75rem', padding: '0.75rem 1rem', background: 'var(--bg-secondary)', borderRadius: '12px', fontWeight: 'bold', color: chestReward.type === 'shield' ? 'var(--accent-primary)' : 'var(--accent-warning)', textAlign: 'center' }}>
+            {chestReward.type === 'shield' ? '🛡️ You got a Streak Shield!' : `⚡ +${chestReward.amount} EXP!`}
+          </div>
+        )}
+      </section>
 
       {/* Daily Quests */}
       {dailyQuests && dailyQuests.length > 0 && (

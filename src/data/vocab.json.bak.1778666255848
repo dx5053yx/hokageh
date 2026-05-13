@@ -46,14 +46,14 @@
     "word": "明るい",
     "romaji": "あかるい",
     "meaning": "bright (in reference to personality or weather); cheerful",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 9,
     "word": "秋",
     "romaji": "あき",
     "meaning": "fall (season)",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 10,
@@ -88,7 +88,7 @@
     "word": "朝御飯",
     "romaji": "あさごはん",
     "meaning": "breakfast",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 15,
@@ -102,7 +102,7 @@
     "word": "足; 脚",
     "romaji": "あし",
     "meaning": "foot; leg",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 17,
@@ -130,21 +130,21 @@
     "word": "暖かい",
     "romaji": "あたたかい",
     "meaning": "warm",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 21,
     "word": "頭",
     "romaji": "あたま",
     "meaning": "head",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 22,
     "word": "新しい",
     "romaji": "あたらしい",
     "meaning": "new",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 23,
@@ -158,21 +158,21 @@
     "word": "暑い",
     "romaji": "あつい",
     "meaning": "hot (in reference to weather), warm",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 25,
     "word": "熱い",
     "romaji": "あつい",
     "meaning": "hot (objects)",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 26,
     "word": "厚い",
     "romaji": "あつい",
     "meaning": "kind, warm(hearted), thick, deep",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 27,
@@ -186,7 +186,7 @@
     "word": "後",
     "romaji": "あと",
     "meaning": "afterwards (later); in the future; the rest; since then",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 29,
@@ -214,14 +214,14 @@
     "word": "アパート",
     "romaji": "アパート",
     "meaning": "apartment (abbr.)",
-    "category": "House"
+    "category": "Nouns & Others"
   },
   {
     "id": 33,
     "word": "あの",
     "romaji": "あの",
     "meaning": "that over there; like that, that way; um...",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 34,
@@ -235,28 +235,28 @@
     "word": "危ない",
     "romaji": "あぶない",
     "meaning": "dangerous, critical",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 36,
     "word": "甘い",
     "romaji": "あまい",
     "meaning": "generous, sweet",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 37,
     "word": "余り",
     "romaji": "あまり",
     "meaning": "not very; surplus",
-    "category": "Greetings & Expressions"
+    "category": "Nouns & Others"
   },
   {
     "id": 38,
     "word": "雨",
     "romaji": "あめ",
     "meaning": "rain",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 39,
@@ -305,14 +305,14 @@
     "word": "いい; よい",
     "romaji": "いい; よい",
     "meaning": "good",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 46,
     "word": "いいえ",
     "romaji": "いいえ",
     "meaning": "no, not at all",
-    "category": "Greetings & Expressions"
+    "category": "Nouns & Others"
   },
   {
     "id": 47,
@@ -333,7 +333,7 @@
     "word": "いかが",
     "romaji": "いかが",
     "meaning": "how, in what way",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 50,
@@ -347,49 +347,49 @@
     "word": "いくつ",
     "romaji": "いくつ",
     "meaning": "how many, how old",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 52,
     "word": "いくら",
     "romaji": "いくら",
     "meaning": "how much, how many",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 53,
     "word": "池",
     "romaji": "いけ",
     "meaning": "pond",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 54,
     "word": "医者",
     "romaji": "いしゃ",
     "meaning": "doctor; physician",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 55,
     "word": "椅子",
     "romaji": "いす",
     "meaning": "chair",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 56,
     "word": "忙しい",
     "romaji": "いそがしい",
     "meaning": "busy (people, days)",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 57,
     "word": "痛い",
     "romaji": "いたい",
     "meaning": "hurt; painful; sore",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 58,
@@ -452,7 +452,7 @@
     "word": "犬",
     "romaji": "いぬ",
     "meaning": "dog",
-    "category": "Animals"
+    "category": "Nouns & Others"
   },
   {
     "id": 67,
@@ -466,7 +466,7 @@
     "word": "意味",
     "romaji": "いみ",
     "meaning": "meaning, significance",
-    "category": "Communication"
+    "category": "Nouns & Others"
   },
   {
     "id": 69,
@@ -480,14 +480,14 @@
     "word": "嫌",
     "romaji": "いや",
     "meaning": "disagreeable, detestable, unpleasant",
-    "category": "House"
+    "category": "Nouns & Others"
   },
   {
     "id": 71,
     "word": "入口",
     "romaji": "いりぐち",
     "meaning": "entrance",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 72,
@@ -529,28 +529,28 @@
     "word": "上",
     "romaji": "うえ",
     "meaning": "above (up, top, etc.), over, on top of",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 78,
     "word": "後ろ",
     "romaji": "うしろ",
     "meaning": "back, behind, rear",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 79,
     "word": "薄い",
     "romaji": "うすい",
     "meaning": "thin, weak",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 80,
     "word": "歌",
     "romaji": "うた",
     "meaning": "a song",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 81,
@@ -578,7 +578,7 @@
     "word": "海",
     "romaji": "うみ",
     "meaning": "sea, beach",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 85,
@@ -592,49 +592,49 @@
     "word": "うるさい",
     "romaji": "うるさい",
     "meaning": "noisy; annoying",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 87,
     "word": "上着",
     "romaji": "うわぎ",
     "meaning": "coat, jacket",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 88,
     "word": "絵",
     "romaji": "え",
     "meaning": "a painting; a picture; a drawing",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 89,
     "word": "映画",
     "romaji": "えいが",
     "meaning": "movie, film",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 90,
     "word": "映画館",
     "romaji": "えいがかん",
     "meaning": "movie theater, cinema",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 91,
     "word": "英語",
     "romaji": "えいご",
     "meaning": "English (language)",
-    "category": "Communication"
+    "category": "Nouns & Others"
   },
   {
     "id": 92,
     "word": "ええ",
     "romaji": "ええ",
     "meaning": "yes",
-    "category": "Greetings & Expressions"
+    "category": "Nouns & Others"
   },
   {
     "id": 93,
@@ -669,35 +669,35 @@
     "word": "お～",
     "romaji": "お～",
     "meaning": "honorable ~ (honorific)",
-    "category": "Greetings & Expressions"
+    "category": "Nouns & Others"
   },
   {
     "id": 98,
     "word": "美味しい",
     "romaji": "おいしい",
     "meaning": "delicious, tasty",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 99,
     "word": "多い",
     "romaji": "おおい",
     "meaning": "many; there are a lot",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 100,
     "word": "大きい",
     "romaji": "おおきい",
     "meaning": "big, large",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 101,
     "word": "大きな",
     "romaji": "おおきな",
     "meaning": "big",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 102,
@@ -718,14 +718,14 @@
     "word": "お菓子",
     "romaji": "おかし",
     "meaning": "confections, sweets, snack",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 105,
     "word": "お金",
     "romaji": "おかね",
     "meaning": "money",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 106,
@@ -746,7 +746,7 @@
     "word": "奥さん",
     "romaji": "おくさん",
     "meaning": "(someone else's) wife (hon.)",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 109,
@@ -760,7 +760,7 @@
     "word": "お皿",
     "romaji": "おさら",
     "meaning": "plate, dish",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 111,
@@ -795,7 +795,7 @@
     "word": "遅い",
     "romaji": "おそい",
     "meaning": "slow; (to be) late",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 116,
@@ -830,14 +830,14 @@
     "word": "男",
     "romaji": "おとこ",
     "meaning": "man, male",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 121,
     "word": "男の子",
     "romaji": "おとこのこ",
     "meaning": "boy",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 122,
@@ -858,14 +858,14 @@
     "word": "大人",
     "romaji": "おとな",
     "meaning": "adult",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 125,
     "word": "お腹",
     "romaji": "おなか",
     "meaning": "stomach",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 126,
@@ -914,7 +914,7 @@
     "word": "お弁当",
     "romaji": "おべんとう",
     "meaning": "a boxed lunch",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 133,
@@ -928,21 +928,21 @@
     "word": "おまわりさん",
     "romaji": "おまわりさん",
     "meaning": "policeman (friendly term)",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 135,
     "word": "重い",
     "romaji": "おもい",
     "meaning": "heavy; serious",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 136,
     "word": "面白い",
     "romaji": "おもしろい",
     "meaning": "interesting, amusing",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 137,
@@ -970,21 +970,21 @@
     "word": "音楽",
     "romaji": "おんがく",
     "meaning": "Music",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 141,
     "word": "女",
     "romaji": "おんな",
     "meaning": "woman, female",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 142,
     "word": "女の子",
     "romaji": "おんなのこ",
     "meaning": "girl",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 143,
@@ -1005,21 +1005,21 @@
     "word": "外国",
     "romaji": "がいこく",
     "meaning": "foreign country; abroad",
-    "category": "Transportation"
+    "category": "Nouns & Others"
   },
   {
     "id": 146,
     "word": "外国人",
     "romaji": "がいこくじん",
     "meaning": "foreigner",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 147,
     "word": "会社",
     "romaji": "かいしゃ",
     "meaning": "company, corporation",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 148,
@@ -1033,7 +1033,7 @@
     "word": "買い物",
     "romaji": "かいもの",
     "meaning": "shopping",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 150,
@@ -1061,7 +1061,7 @@
     "word": "顔",
     "romaji": "かお",
     "meaning": "face (body part)",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 154,
@@ -1075,7 +1075,7 @@
     "word": "鍵",
     "romaji": "かぎ",
     "meaning": "a lock; a key",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 156,
@@ -1089,7 +1089,7 @@
     "word": "学生",
     "romaji": "がくせい",
     "meaning": "student",
-    "category": "School"
+    "category": "Nouns & Others"
   },
   {
     "id": 158,
@@ -1117,7 +1117,7 @@
     "word": "傘",
     "romaji": "かさ",
     "meaning": "umbrella, parasol",
-    "category": "Weather & Seasons"
+    "category": "Nouns & Others"
   },
   {
     "id": 162,
@@ -1131,21 +1131,21 @@
     "word": "風",
     "romaji": "かぜ",
     "meaning": "wind, breeze",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 164,
     "word": "風邪",
     "romaji": "かぜ",
     "meaning": "cold, flu",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 165,
     "word": "方",
     "romaji": "かた",
     "meaning": "-- honorific form for 人 (ひと) --; way of doing",
-    "category": "Greetings & Expressions"
+    "category": "Nouns & Others"
   },
   {
     "id": 166,
@@ -1194,21 +1194,21 @@
     "word": "角",
     "romaji": "かど",
     "meaning": "corner (e.g., desk, pavement)",
-    "category": "School"
+    "category": "Nouns & Others"
   },
   {
     "id": 173,
     "word": "かばん",
     "romaji": "かばん",
     "meaning": "bag, basket",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 174,
     "word": "花瓶",
     "romaji": "かびん",
     "meaning": "(flower) vase",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 175,
@@ -1222,14 +1222,14 @@
     "word": "紙",
     "romaji": "かみ",
     "meaning": "paper",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 177,
     "word": "カメラ",
     "romaji": "カメラ",
     "meaning": "camera",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 178,
@@ -1243,7 +1243,7 @@
     "word": "辛い",
     "romaji": "からい",
     "meaning": "hot and spicy; salty",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 180,
@@ -1271,7 +1271,7 @@
     "word": "軽い",
     "romaji": "かるい",
     "meaning": "light, non-serious, minor",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 184,
@@ -1292,7 +1292,7 @@
     "word": "川; 河",
     "romaji": "かわ",
     "meaning": "river",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 187,
@@ -1306,7 +1306,7 @@
     "word": "可愛い",
     "romaji": "かわいい",
     "meaning": "cute, adorable",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 189,
@@ -1320,7 +1320,7 @@
     "word": "木",
     "romaji": "き",
     "meaning": "tree, wood, timber",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 191,
@@ -1355,7 +1355,7 @@
     "word": "北",
     "romaji": "きた",
     "meaning": "north",
-    "category": "Greetings & Expressions"
+    "category": "Nouns & Others"
   },
   {
     "id": 196,
@@ -1369,7 +1369,7 @@
     "word": "汚い",
     "romaji": "きたない",
     "meaning": "dirty, unclean, filthy",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 198,
@@ -1383,14 +1383,14 @@
     "word": "切手",
     "romaji": "きって",
     "meaning": "postal (postage) stamps",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 200,
     "word": "切符",
     "romaji": "きっぷ",
     "meaning": "a ticket",
-    "category": "Transportation"
+    "category": "Nouns & Others"
   },
   {
     "id": 201,
@@ -1432,7 +1432,7 @@
     "word": "教室",
     "romaji": "きょうしつ",
     "meaning": "classroom",
-    "category": "House"
+    "category": "Nouns & Others"
   },
   {
     "id": 207,
@@ -1453,7 +1453,7 @@
     "word": "嫌い",
     "romaji": "きらい",
     "meaning": "dislike",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 210,
@@ -1523,7 +1523,7 @@
     "word": "下さい",
     "romaji": "ください",
     "meaning": "(with te-form verb) please do for me",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 220,
@@ -1537,21 +1537,21 @@
     "word": "口",
     "romaji": "くち",
     "meaning": "job opening; mouth",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 222,
     "word": "靴",
     "romaji": "くつ",
     "meaning": "shoes, footwear",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 223,
     "word": "靴下",
     "romaji": "くつした",
     "meaning": "socks",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 224,
@@ -1565,7 +1565,7 @@
     "word": "曇り",
     "romaji": "くもり",
     "meaning": "cloudiness, cloudy weather",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 226,
@@ -1579,21 +1579,21 @@
     "word": "暗い",
     "romaji": "くらい",
     "meaning": "dark, gloomy",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 228,
     "word": "～くらい; ぐらい",
     "romaji": "～くらい; ぐらい",
     "meaning": "approximate (quantity)",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 229,
     "word": "クラス",
     "romaji": "クラス",
     "meaning": "a class",
-    "category": "School"
+    "category": "Nouns & Others"
   },
   {
     "id": 230,
@@ -1614,7 +1614,7 @@
     "word": "車",
     "romaji": "くるま",
     "meaning": "car, vehicle",
-    "category": "Transportation"
+    "category": "Nouns & Others"
   },
   {
     "id": 233,
@@ -1635,7 +1635,7 @@
     "word": "警官",
     "romaji": "けいかん",
     "meaning": "police officer",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 236,
@@ -1656,7 +1656,7 @@
     "word": "結構",
     "romaji": "けっこう",
     "meaning": "splendid; enough, tolerably",
-    "category": "Greetings & Expressions"
+    "category": "Nouns & Others"
   },
   {
     "id": 239,
@@ -1705,7 +1705,7 @@
     "word": "～語",
     "romaji": "～ご",
     "meaning": "word, language",
-    "category": "Communication"
+    "category": "Nouns & Others"
   },
   {
     "id": 246,
@@ -1733,21 +1733,21 @@
     "word": "交番",
     "romaji": "こうばん",
     "meaning": "police box",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 250,
     "word": "声",
     "romaji": "こえ",
     "meaning": "voice",
-    "category": "Communication"
+    "category": "Nouns & Others"
   },
   {
     "id": 251,
     "word": "コート",
     "romaji": "コート",
     "meaning": "coat; court (e.g., tennis)",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 252,
@@ -1803,14 +1803,14 @@
     "word": "こちら",
     "romaji": "こちら",
     "meaning": "this person (polite); this way (polite)",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 260,
     "word": "こっち",
     "romaji": "こっち",
     "meaning": "this person; this direction; this side",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 261,
@@ -1831,14 +1831,14 @@
     "word": "言葉",
     "romaji": "ことば",
     "meaning": "language; word(s); expression(s)",
-    "category": "Communication"
+    "category": "Nouns & Others"
   },
   {
     "id": 264,
     "word": "子供",
     "romaji": "こども",
     "meaning": "child(ren)",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 265,
@@ -1922,14 +1922,14 @@
     "word": "～歳",
     "romaji": "～さい",
     "meaning": "~ years old",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 277,
     "word": "財布",
     "romaji": "さいふ",
     "meaning": "wallet",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 278,
@@ -1978,7 +1978,7 @@
     "word": "雑誌",
     "romaji": "ざっし",
     "meaning": "magazine, journal",
-    "category": "Communication"
+    "category": "Nouns & Others"
   },
   {
     "id": 285,
@@ -1992,7 +1992,7 @@
     "word": "寒い",
     "romaji": "さむい",
     "meaning": "cold (in reference to weather)",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 287,
@@ -2069,21 +2069,21 @@
     "word": "仕事",
     "romaji": "しごと",
     "meaning": "work, job, occupation, employment",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 298,
     "word": "辞書",
     "romaji": "じしょ",
     "meaning": "dictionary",
-    "category": "Communication"
+    "category": "Nouns & Others"
   },
   {
     "id": 299,
     "word": "静か",
     "romaji": "しずか",
     "meaning": "quiet, calm",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 300,
@@ -2104,14 +2104,14 @@
     "word": "質問",
     "romaji": "しつもん",
     "meaning": "question, inquiry",
-    "category": "Communication"
+    "category": "Nouns & Others"
   },
   {
     "id": 303,
     "word": "自転車",
     "romaji": "じてんしゃ",
     "meaning": "bicycle",
-    "category": "Transportation"
+    "category": "Nouns & Others"
   },
   {
     "id": 304,
@@ -2132,7 +2132,7 @@
     "word": "字引",
     "romaji": "じびき",
     "meaning": "dictionary",
-    "category": "Communication"
+    "category": "Nouns & Others"
   },
   {
     "id": 307,
@@ -2174,14 +2174,14 @@
     "word": "写真",
     "romaji": "しゃしん",
     "meaning": "a picture; a photograph",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 313,
     "word": "シャツ",
     "romaji": "シャツ",
     "meaning": "shirt",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 314,
@@ -2223,21 +2223,21 @@
     "word": "宿題",
     "romaji": "しゅくだい",
     "meaning": "homework",
-    "category": "House"
+    "category": "Nouns & Others"
   },
   {
     "id": 320,
     "word": "上手",
     "romaji": "じょうず",
     "meaning": "be good at, skillful",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 321,
     "word": "丈夫",
     "romaji": "じょうぶ",
     "meaning": "strong, solid, durable",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 322,
@@ -2286,7 +2286,7 @@
     "word": "新聞",
     "romaji": "しんぶん",
     "meaning": "newspaper",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 329,
@@ -2307,7 +2307,7 @@
     "word": "スカート",
     "romaji": "スカート",
     "meaning": "skirt",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 332,
@@ -2328,7 +2328,7 @@
     "word": "少ない",
     "romaji": "すくない",
     "meaning": "a little; a few",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 335,
@@ -2349,7 +2349,7 @@
     "word": "涼しい",
     "romaji": "すずしい",
     "meaning": "cool, refreshing (in reference to weather)",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 338,
@@ -2377,14 +2377,14 @@
     "word": "スポーツ",
     "romaji": "スポーツ",
     "meaning": "sport(s)",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 342,
     "word": "ズボン",
     "romaji": "ズボン",
     "meaning": "trousers",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 343,
@@ -2419,14 +2419,14 @@
     "word": "生徒",
     "romaji": "せいと",
     "meaning": "student; pupil",
-    "category": "School"
+    "category": "Nouns & Others"
   },
   {
     "id": 348,
     "word": "セーター",
     "romaji": "セーター",
     "meaning": "sweater",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 349,
@@ -2440,14 +2440,14 @@
     "word": "背広",
     "romaji": "せびろ",
     "meaning": "men's suit",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 351,
     "word": "狭い",
     "romaji": "せまい",
     "meaning": "narrow; not spacious",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 352,
@@ -2482,7 +2482,7 @@
     "word": "先生",
     "romaji": "せんせい",
     "meaning": "teacher, professor; master; doctor",
-    "category": "School"
+    "category": "Nouns & Others"
   },
   {
     "id": 357,
@@ -2503,7 +2503,7 @@
     "word": "そう; そうです",
     "romaji": "そう; そうです",
     "meaning": "yes; appears, to be the case",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 360,
@@ -2517,7 +2517,7 @@
     "word": "そうして; そして",
     "romaji": "そうして; そして",
     "meaning": "and, like that",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 362,
@@ -2552,21 +2552,21 @@
     "word": "その",
     "romaji": "その",
     "meaning": "that",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 367,
     "word": "そば",
     "romaji": "そば",
     "meaning": "near, close, beside; Japanese traditional buckwheat noodle",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 368,
     "word": "空",
     "romaji": "そら",
     "meaning": "sky",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 369,
@@ -2580,14 +2580,14 @@
     "word": "それから",
     "romaji": "それから",
     "meaning": "and then, after that",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 371,
     "word": "それでは",
     "romaji": "それでは",
     "meaning": "in that situation, well then...",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 372,
@@ -2601,7 +2601,7 @@
     "word": "大学",
     "romaji": "だいがく",
     "meaning": "college; university",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 374,
@@ -2615,7 +2615,7 @@
     "word": "大丈夫",
     "romaji": "だいじょうぶ",
     "meaning": "It's ok (all right); No need to worry; Everything is under control",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 376,
@@ -2636,21 +2636,21 @@
     "word": "台所",
     "romaji": "だいどころ",
     "meaning": "kitchen",
-    "category": "House"
+    "category": "Nouns & Others"
   },
   {
     "id": 379,
     "word": "大変",
     "romaji": "たいへん",
     "meaning": "very; difficult, hard",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 380,
     "word": "高い",
     "romaji": "たかい",
     "meaning": "tall, high; expensive",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 381,
@@ -2664,14 +2664,14 @@
     "word": "沢山",
     "romaji": "たくさん",
     "meaning": "many, much",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 383,
     "word": "タクシー",
     "romaji": "タクシー",
     "meaning": "taxi",
-    "category": "Transportation"
+    "category": "Nouns & Others"
   },
   {
     "id": 384,
@@ -2713,7 +2713,7 @@
     "word": "楽しい",
     "romaji": "たのしい",
     "meaning": "enjoyable, fun",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 390,
@@ -2769,14 +2769,14 @@
     "word": "誰か",
     "romaji": "だれか",
     "meaning": "someone",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 398,
     "word": "誕生日",
     "romaji": "たんじょうび",
     "meaning": "birthday",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 399,
@@ -2790,21 +2790,21 @@
     "word": "小さい",
     "romaji": "ちいさい",
     "meaning": "small, little",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 401,
     "word": "小さな",
     "romaji": "ちいさな",
     "meaning": "small, little",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 402,
     "word": "近い",
     "romaji": "ちかい",
     "meaning": "near, close by, short",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 403,
@@ -2818,21 +2818,21 @@
     "word": "近く",
     "romaji": "ちかく",
     "meaning": "nearby; in the neighborhood",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 405,
     "word": "地下鉄",
     "romaji": "ちかてつ",
     "meaning": "underground train, subway",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 406,
     "word": "地図",
     "romaji": "ちず",
     "meaning": "a map",
-    "category": "Transportation"
+    "category": "Nouns & Others"
   },
   {
     "id": 407,
@@ -2874,7 +2874,7 @@
     "word": "ちょっと",
     "romaji": "ちょっと",
     "meaning": "a little, somewhat; just a little, somewhat",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 413,
@@ -2916,7 +2916,7 @@
     "word": "机",
     "romaji": "つくえ",
     "meaning": "desk",
-    "category": "School"
+    "category": "Nouns & Others"
   },
   {
     "id": 419,
@@ -2944,28 +2944,28 @@
     "word": "つまらない",
     "romaji": "つまらない",
     "meaning": "boring, dull; insignificant",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 423,
     "word": "冷たい",
     "romaji": "つめたい",
     "meaning": "cold (things, people)",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 424,
     "word": "強い",
     "romaji": "つよい",
     "meaning": "strong, powerful",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 425,
     "word": "手",
     "romaji": "て",
     "meaning": "hand",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 426,
@@ -2986,7 +2986,7 @@
     "word": "テーブル",
     "romaji": "テーブル",
     "meaning": "table",
-    "category": "House"
+    "category": "Nouns & Others"
   },
   {
     "id": 429,
@@ -3000,7 +3000,7 @@
     "word": "手紙",
     "romaji": "てがみ",
     "meaning": "letter",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 431,
@@ -3014,14 +3014,14 @@
     "word": "出口",
     "romaji": "でぐち",
     "meaning": "an exit",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 433,
     "word": "テスト",
     "romaji": "テスト",
     "meaning": "test",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 434,
@@ -3063,35 +3063,35 @@
     "word": "天気",
     "romaji": "てんき",
     "meaning": "weather",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 440,
     "word": "電気",
     "romaji": "でんき",
     "meaning": "electricity, (electric) light",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 441,
     "word": "電車",
     "romaji": "でんしゃ",
     "meaning": "electric train",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 442,
     "word": "電話",
     "romaji": "でんわ",
     "meaning": "a telephone",
-    "category": "Communication"
+    "category": "Nouns & Others"
   },
   {
     "id": 443,
     "word": "戸",
     "romaji": "と",
     "meaning": "door (Japanese style)",
-    "category": "House"
+    "category": "Nouns & Others"
   },
   {
     "id": 444,
@@ -3105,42 +3105,42 @@
     "word": "ドア",
     "romaji": "ドア",
     "meaning": "door (Western style)",
-    "category": "House"
+    "category": "Nouns & Others"
   },
   {
     "id": 446,
     "word": "トイレ",
     "romaji": "トイレ",
     "meaning": "bathroom; toilet",
-    "category": "House"
+    "category": "Nouns & Others"
   },
   {
     "id": 447,
     "word": "どう",
     "romaji": "どう",
     "meaning": "how, in what way",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 448,
     "word": "どうして",
     "romaji": "どうして",
     "meaning": "why, for what reason",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 449,
     "word": "どうぞ",
     "romaji": "どうぞ",
     "meaning": "please, kindly, by all means",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 450,
     "word": "動物",
     "romaji": "どうぶつ",
     "meaning": "animal",
-    "category": "Animals"
+    "category": "Nouns & Others"
   },
   {
     "id": 451,
@@ -3161,7 +3161,7 @@
     "word": "遠い",
     "romaji": "とおい",
     "meaning": "far (away), distant",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 454,
@@ -3189,7 +3189,7 @@
     "word": "時計",
     "romaji": "とけい",
     "meaning": "a watch; a clock",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 458,
@@ -3217,7 +3217,7 @@
     "word": "図書館",
     "romaji": "としょかん",
     "meaning": "library",
-    "category": "School"
+    "category": "Nouns & Others"
   },
   {
     "id": 462,
@@ -3252,7 +3252,7 @@
     "word": "隣",
     "romaji": "となり",
     "meaning": "next to, next door to",
-    "category": "House"
+    "category": "Nouns & Others"
   },
   {
     "id": 467,
@@ -3280,7 +3280,7 @@
     "word": "友達",
     "romaji": "ともだち",
     "meaning": "friend",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 471,
@@ -3294,7 +3294,7 @@
     "word": "鳥",
     "romaji": "とり",
     "meaning": "chicken (lit., bird)",
-    "category": "Animals"
+    "category": "Nouns & Others"
   },
   {
     "id": 473,
@@ -3329,14 +3329,14 @@
     "word": "どんな",
     "romaji": "どんな",
     "meaning": "what, what kind of",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 478,
     "word": "ない",
     "romaji": "ない",
     "meaning": "there isn't, doesn't have",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 479,
@@ -3357,7 +3357,7 @@
     "word": "長い",
     "romaji": "ながい",
     "meaning": "long, lengthy",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 482,
@@ -3385,14 +3385,14 @@
     "word": "夏",
     "romaji": "なつ",
     "meaning": "summer",
-    "category": "Weather & Seasons"
+    "category": "Nouns & Others"
   },
   {
     "id": 486,
     "word": "夏休み",
     "romaji": "なつやすみ",
     "meaning": "summer vacation",
-    "category": "Animals"
+    "category": "Nouns & Others"
   },
   {
     "id": 487,
@@ -3413,7 +3413,7 @@
     "word": "何",
     "romaji": "なん; なに",
     "meaning": "what",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 490,
@@ -3427,7 +3427,7 @@
     "word": "名前",
     "romaji": "なまえ",
     "meaning": "name",
-    "category": "Communication"
+    "category": "Nouns & Others"
   },
   {
     "id": 492,
@@ -3462,7 +3462,7 @@
     "word": "何～",
     "romaji": "なん～",
     "meaning": "what sort of ~",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 497,
@@ -3476,7 +3476,7 @@
     "word": "にぎやか",
     "romaji": "にぎやか",
     "meaning": "bustling, busy",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 499,
@@ -3504,28 +3504,28 @@
     "word": "日曜日",
     "romaji": "にちようび",
     "meaning": "Sunday",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 503,
     "word": "荷物",
     "romaji": "にもつ",
     "meaning": "luggage; baggage",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 504,
     "word": "ニュース",
     "romaji": "ニュース",
     "meaning": "news",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 505,
     "word": "庭",
     "romaji": "にわ",
     "meaning": "garden",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 506,
@@ -3546,21 +3546,21 @@
     "word": "温い",
     "romaji": "ぬるい",
     "meaning": "lukewarm",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 509,
     "word": "ネクタイ",
     "romaji": "ネクタイ",
     "meaning": "tie, necktie",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 510,
     "word": "猫",
     "romaji": "ねこ",
     "meaning": "cat",
-    "category": "Animals"
+    "category": "Nouns & Others"
   },
   {
     "id": 511,
@@ -3574,14 +3574,14 @@
     "word": "～年",
     "romaji": "～ねん",
     "meaning": "~ years",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 513,
     "word": "ノート",
     "romaji": "ノート",
     "meaning": "notebook",
-    "category": "Greetings & Expressions"
+    "category": "Nouns & Others"
   },
   {
     "id": 514,
@@ -3616,21 +3616,21 @@
     "word": "歯",
     "romaji": "は",
     "meaning": "tooth",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 519,
     "word": "パーティー",
     "romaji": "パーティー",
     "meaning": "a party",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 520,
     "word": "はい",
     "romaji": "はい",
     "meaning": "yes",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 521,
@@ -3658,7 +3658,7 @@
     "word": "葉書",
     "romaji": "はがき",
     "meaning": "postcard",
-    "category": "Transportation"
+    "category": "Nouns & Others"
   },
   {
     "id": 525,
@@ -3672,7 +3672,7 @@
     "word": "箱",
     "romaji": "はこ",
     "meaning": "box",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 527,
@@ -3693,7 +3693,7 @@
     "word": "始まる",
     "romaji": "はじまる",
     "meaning": "(something) begins",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 530,
@@ -3721,7 +3721,7 @@
     "word": "バス",
     "romaji": "バス",
     "meaning": "bus; bath; bass",
-    "category": "Transportation"
+    "category": "Nouns & Others"
   },
   {
     "id": 534,
@@ -3735,7 +3735,7 @@
     "word": "二十歳",
     "romaji": "はたち",
     "meaning": "20 years old",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 536,
@@ -3763,21 +3763,21 @@
     "word": "花",
     "romaji": "はな",
     "meaning": "flower",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 540,
     "word": "鼻",
     "romaji": "はな",
     "meaning": "nose",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 541,
     "word": "話",
     "romaji": "はなし",
     "meaning": "talk (chat), story",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 542,
@@ -3798,21 +3798,21 @@
     "word": "早い",
     "romaji": "はやい",
     "meaning": "early",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 545,
     "word": "速い",
     "romaji": "はやい",
     "meaning": "fast, quick",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 546,
     "word": "春",
     "romaji": "はる",
     "meaning": "spring",
-    "category": "Weather & Seasons"
+    "category": "Nouns & Others"
   },
   {
     "id": 547,
@@ -3826,7 +3826,7 @@
     "word": "晴れ",
     "romaji": "はれ",
     "meaning": "clear (sunny) weather",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 549,
@@ -3868,7 +3868,7 @@
     "word": "ハンカチ",
     "romaji": "ハンカチ",
     "meaning": "handkerchief",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 555,
@@ -3924,28 +3924,28 @@
     "word": "低い",
     "romaji": "ひくい",
     "meaning": "short, low",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 563,
     "word": "飛行機",
     "romaji": "ひこうき",
     "meaning": "airplane",
-    "category": "Transportation"
+    "category": "Nouns & Others"
   },
   {
     "id": 564,
     "word": "左",
     "romaji": "ひだり",
     "meaning": "left hand side",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 565,
     "word": "人",
     "romaji": "ひと",
     "meaning": "man, person",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 566,
@@ -4008,7 +4008,7 @@
     "word": "昼",
     "romaji": "ひる",
     "meaning": "noon, daytime",
-    "category": "Greetings & Expressions"
+    "category": "Nouns & Others"
   },
   {
     "id": 575,
@@ -4022,7 +4022,7 @@
     "word": "広い",
     "romaji": "ひろい",
     "meaning": "spacious; wide; broad",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 577,
@@ -4099,14 +4099,14 @@
     "word": "太い",
     "romaji": "ふとい",
     "meaning": "fat, thick",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 588,
     "word": "冬",
     "romaji": "ふゆ",
     "meaning": "winter",
-    "category": "Weather & Seasons"
+    "category": "Nouns & Others"
   },
   {
     "id": 589,
@@ -4120,7 +4120,7 @@
     "word": "古い",
     "romaji": "ふるい",
     "meaning": "old (in reference to objects, not people), aged, ancient",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 591,
@@ -4148,14 +4148,14 @@
     "word": "下手",
     "romaji": "へた",
     "meaning": "unskillful, poor",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 595,
     "word": "ベッド",
     "romaji": "ベッド",
     "meaning": "bed",
-    "category": "House"
+    "category": "Nouns & Others"
   },
   {
     "id": 596,
@@ -4190,21 +4190,21 @@
     "word": "勉強",
     "romaji": "べんきょう (する)",
     "meaning": "study",
-    "category": "School"
+    "category": "Nouns & Others"
   },
   {
     "id": 601,
     "word": "便利",
     "romaji": "べんり",
     "meaning": "convenient, handy",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 602,
     "word": "帽子",
     "romaji": "ぼうし",
     "meaning": "hat; cap",
-    "category": "Clothing"
+    "category": "Nouns & Others"
   },
   {
     "id": 603,
@@ -4239,14 +4239,14 @@
     "word": "ポスト",
     "romaji": "ポスト",
     "meaning": "mailbox; post, position",
-    "category": "Communication"
+    "category": "Nouns & Others"
   },
   {
     "id": 608,
     "word": "細い",
     "romaji": "ほそい",
     "meaning": "thin, slender, fine",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 609,
@@ -4260,14 +4260,14 @@
     "word": "ホテル",
     "romaji": "ホテル",
     "meaning": "hotel",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 611,
     "word": "本",
     "romaji": "ほん",
     "meaning": "book",
-    "category": "Communication"
+    "category": "Nouns & Others"
   },
   {
     "id": 612,
@@ -4281,7 +4281,7 @@
     "word": "本棚",
     "romaji": "ほんだな",
     "meaning": "bookshelf",
-    "category": "Communication"
+    "category": "Nouns & Others"
   },
   {
     "id": 614,
@@ -4400,7 +4400,7 @@
     "word": "まっすぐ",
     "romaji": "まっすぐ",
     "meaning": "straight (ahead), direct",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 631,
@@ -4414,14 +4414,14 @@
     "word": "窓",
     "romaji": "まど",
     "meaning": "window",
-    "category": "House"
+    "category": "Nouns & Others"
   },
   {
     "id": 633,
     "word": "丸い; 円い",
     "romaji": "まるい",
     "meaning": "round, circular",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 634,
@@ -4449,14 +4449,14 @@
     "word": "右",
     "romaji": "みぎ",
     "meaning": "right hand side",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 638,
     "word": "短い",
     "romaji": "みじかい",
     "meaning": "short (length)",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 639,
@@ -4484,7 +4484,7 @@
     "word": "道",
     "romaji": "みち",
     "meaning": "road, street; way, directions",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 643,
@@ -4512,7 +4512,7 @@
     "word": "皆さん",
     "romaji": "みなさん",
     "meaning": "all of you, everyone",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 647,
@@ -4526,7 +4526,7 @@
     "word": "耳",
     "romaji": "みみ",
     "meaning": "ear",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 649,
@@ -4540,7 +4540,7 @@
     "word": "みんな",
     "romaji": "みんな",
     "meaning": "all, everyone, everybody",
-    "category": "People & Relationships"
+    "category": "Nouns & Others"
   },
   {
     "id": 651,
@@ -4561,7 +4561,7 @@
     "word": "難しい",
     "romaji": "むずかしい",
     "meaning": "difficult",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 654,
@@ -4582,7 +4582,7 @@
     "word": "目",
     "romaji": "め",
     "meaning": "eye(s)",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 657,
@@ -4596,14 +4596,14 @@
     "word": "眼鏡",
     "romaji": "めがね",
     "meaning": "eye glasses",
-    "category": "Body Parts"
+    "category": "Nouns & Others"
   },
   {
     "id": 659,
     "word": "もう",
     "romaji": "もう",
     "meaning": "already; again; more",
-    "category": "Communication"
+    "category": "Nouns & Others"
   },
   {
     "id": 660,
@@ -4617,7 +4617,7 @@
     "word": "もしもし",
     "romaji": "もしもし",
     "meaning": "Hello? (used on the phone)",
-    "category": "Greetings & Expressions"
+    "category": "Nouns & Others"
   },
   {
     "id": 662,
@@ -4638,7 +4638,7 @@
     "word": "物",
     "romaji": "もの",
     "meaning": "thing (concrete object)",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 665,
@@ -4652,7 +4652,7 @@
     "word": "問題",
     "romaji": "もんだい",
     "meaning": "a problem",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 667,
@@ -4680,14 +4680,14 @@
     "word": "易しい",
     "romaji": "やさしい",
     "meaning": "easy, plain, simple",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 671,
     "word": "安い",
     "romaji": "やすい",
     "meaning": "inexpensive; cheap (things)",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 672,
@@ -4715,7 +4715,7 @@
     "word": "山",
     "romaji": "やま",
     "meaning": "mountain",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 676,
@@ -4743,7 +4743,7 @@
     "word": "郵便局",
     "romaji": "ゆうびんきょく",
     "meaning": "post office",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 680,
@@ -4764,14 +4764,14 @@
     "word": "雪",
     "romaji": "ゆき",
     "meaning": "snow",
-    "category": "Nature"
+    "category": "Nouns & Others"
   },
   {
     "id": 683,
     "word": "ゆっくりと",
     "romaji": "ゆっくりと",
     "meaning": "slowly, at ease",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 684,
@@ -4841,7 +4841,7 @@
     "word": "弱い",
     "romaji": "よわい",
     "meaning": "weak",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 694,
@@ -4890,7 +4890,7 @@
     "word": "留学生",
     "romaji": "りゅうがくせい",
     "meaning": "international student",
-    "category": "School"
+    "category": "Nouns & Others"
   },
   {
     "id": 701,
@@ -4911,14 +4911,14 @@
     "word": "旅行",
     "romaji": "りょこう",
     "meaning": "travel, trip",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 704,
     "word": "零",
     "romaji": "れい",
     "meaning": "zero, nought",
-    "category": "Greetings & Expressions"
+    "category": "Nouns & Others"
   },
   {
     "id": 705,
@@ -4946,7 +4946,7 @@
     "word": "練習",
     "romaji": "れんしゅう (する)",
     "meaning": "(to) practice",
-    "category": "Daily Life"
+    "category": "Nouns & Others"
   },
   {
     "id": 709,
@@ -4974,7 +4974,7 @@
     "word": "若い",
     "romaji": "わかい",
     "meaning": "young",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   },
   {
     "id": 713,
@@ -5023,6 +5023,6 @@
     "word": "悪い",
     "romaji": "わるい",
     "meaning": "bad, sinful; inferior",
-    "category": "Adjectives & Adverbs"
+    "category": "Nouns & Others"
   }
 ]

@@ -7,7 +7,6 @@ export default function Flashcard({ front, back, onPlayAudio, disableFlip = fals
 
   // Reset flip state when moving to next question
   useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsFlipped(false);
   }, [front]);
 

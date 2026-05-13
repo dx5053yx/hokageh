@@ -52,8 +52,16 @@ function App() {
               exp: state.exp,
               streak: state.streak,
               lastStreakDate: state.lastStreakDate || null,
-              moduleProgress: state.moduleProgress || { kana: 0, vocab: 0, kanji: 0 },
-              unlockedChapters: state.unlockedChapters
+              moduleProgress: state.moduleProgress || { kana: 0, vocab: 0, kanji: 0, grammar: 0 },
+              unlockedChapters: state.unlockedChapters,
+              achievements: state.achievements || [],
+              dailyQuests: state.dailyQuests || [],
+              lastQuestDate: state.lastQuestDate || null,
+              inventory: state.inventory || { streakShields: 0 },
+              weakItems: state.weakItems || [],
+              lastChestDate: state.lastChestDate || null,
+              categoryProgress: state.categoryProgress || {},
+              bossBattles: state.bossBattles || []
             });
             useStore.getState().checkStreak();
           }
@@ -77,8 +85,16 @@ function App() {
               exp: state.exp,
               streak: state.streak,
               lastStreakDate: state.lastStreakDate || null,
-              moduleProgress: state.moduleProgress || { kana: 0, vocab: 0, kanji: 0 },
-              unlockedChapters: state.unlockedChapters
+              moduleProgress: state.moduleProgress || { kana: 0, vocab: 0, kanji: 0, grammar: 0 },
+              unlockedChapters: state.unlockedChapters,
+              achievements: state.achievements || [],
+              dailyQuests: state.dailyQuests || [],
+              lastQuestDate: state.lastQuestDate || null,
+              inventory: state.inventory || { streakShields: 0 },
+              weakItems: state.weakItems || [],
+              lastChestDate: state.lastChestDate || null,
+              categoryProgress: state.categoryProgress || {},
+              bossBattles: state.bossBattles || []
             }, { merge: true });
           }, 2000);
         });

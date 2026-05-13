@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import useStore from '../store/useStore';
 import { User, Flame, Star, Zap, LogIn, LogOut } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -8,17 +7,20 @@ import { auth, googleProvider } from '../firebase';
 import '../styles/index.css';
 
 import { getRank } from '../utils/ranks';
-import { Trophy, Medal, Target } from 'lucide-react';
+import { Trophy, Medal, Target, Shield, Award } from 'lucide-react';
 
 const ACHIEVEMENT_DATA = {
   first_blood: { title: 'First Blood', desc: 'Answer your first question correctly.', icon: <Target size={24} color="var(--accent-primary)" /> },
   speed_run: { title: 'Speed Run', desc: 'Finish a session with 100% accuracy and 3 hearts.', icon: <Zap size={24} color="var(--accent-warning)" /> },
-  week_warrior: { title: 'Week Warrior', desc: 'Reach a 7-day streak.', icon: <Flame size={24} color="var(--accent-danger)" /> }
+  week_warrior: { title: 'Week Warrior', desc: 'Reach a 7-day streak.', icon: <Flame size={24} color="var(--accent-danger)" /> },
+  boss_victor: { title: 'Boss Victor', desc: 'Defeat the Boss Battle.', icon: <Award size={24} color="var(--accent-success)" /> }
 };
 
 export default function Profile() {
-  const { userLevel, exp, streak, achievements, currentUser, categoryProgress } = useStore();
+  const { userLevel, exp, streak, achievements, currentUser, categoryProgress, inventory } = useStore();
   const rank = getRank(userLevel);
+  const expInCurrentLevel = exp % 100;
+  const shieldCount = inventory?.streakShields || 0;
 
   const handleLogin = async () => {
     try {
@@ -91,6 +93,24 @@ export default function Profile() {
           <Zap size={32} color="var(--accent-success)" style={{ margin: '0 auto 0.5rem auto' }} />
           <h3 style={{ fontSize: '1.5rem', marginBottom: '0.25rem' }}>{exp}</h3>
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem' }}>Total EXP</p>
+          <div style={{ width: '100%', height: '6px', background: 'rgba(255,255,255,0.1)', borderRadius: '999px', overflow: 'hidden', marginTop: '0.5rem' }}>
+            <div style={{ height: '100%', width: `${expInCurrentLevel}%`, background: 'linear-gradient(90deg, var(--accent-primary), var(--accent-success))', transition: 'width 0.5s ease' }} />
+          </div>
+          <p style={{ color: 'var(--text-secondary)', fontSize: '0.75rem', marginTop: '0.25rem' }}>{expInCurrentLevel}/100 to Lvl {userLevel + 1}</p>
+        </div>
+      </div>
+
+      {/* Streak Shield Indicator */}
+      <div className="glass-panel animate-pop-in" style={{ padding: '1rem 1.5rem', marginBottom: '1rem', animationDelay: '0.35s', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <Shield size={24} color="var(--accent-primary)" />
+          <div>
+            <h4 style={{ margin: 0 }}>Streak Shields</h4>
+            <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', margin: 0 }}>Protects your streak if you miss a day</p>
+          </div>
+        </div>
+        <div style={{ fontSize: '1.5rem', fontWeight: 'bold', color: shieldCount > 0 ? 'var(--accent-primary)' : 'var(--text-secondary)' }}>
+          {shieldCount}x 🛡️
         </div>
       </div>
 
