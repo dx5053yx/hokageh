@@ -25,3 +25,6 @@ dist-ssr
 .firebase
 firebase-debug.log
 .env
+*.bak.*
+*.zip
+scripts/
