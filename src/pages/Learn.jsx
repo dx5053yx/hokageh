@@ -233,7 +233,7 @@ export default function Learn() {
         if (itemKey) removeWeakItem(itemKey, type);
       } catch (e) {}
       
-      if (questionsAnswered === 0) unlockAchievement('first_blood');
+      if (questionsAnswered === 0 && correctAnswers === 0) unlockAchievement('first_blood');
       
       setTimeout(() => {
         setIsAnimating(false);
@@ -302,6 +302,10 @@ export default function Learn() {
           setCorrectAnswers(0);
           setQuestionsAnswered(0);
           setSessionState('playing');
+          setSelectedAnswer(null);
+          setIsAnimating(false);
+          setShakingAnswer(null);
+          setExpPopup(null);
           buildSessionQueue();
           setQueuePos(0);
         }}>Retry Session</button>
@@ -310,7 +314,7 @@ export default function Learn() {
   }
 
   if (sessionState === 'summary') {
-    const accuracy = Math.round((correctAnswers / questionsAnswered) * 100);
+    const accuracy = questionsAnswered > 0 ? Math.round((correctAnswers / questionsAnswered) * 100) : 0;
     const timeSpentSeconds = Math.round((Date.now() - startTime) / 1000);
     
     return (
@@ -345,7 +349,12 @@ export default function Learn() {
               setCorrectAnswers(0);
               setQuestionsAnswered(0);
               setSessionState('playing');
+              setSelectedAnswer(null);
+              setIsAnimating(false);
+              setShakingAnswer(null);
+              setExpPopup(null);
               buildSessionQueue();
+              setQueuePos(0);
             }}>Next Session</button>
           )}
           {/* Show Boss Battle option when user completed the module (global progress) and not in a category session */}

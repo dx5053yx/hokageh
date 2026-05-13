@@ -40,7 +40,12 @@ export default function BossBattle() {
   useEffect(() => { heartsRef.current = hearts; }, [hearts]);
   useEffect(() => { correctRef.current = correct; }, [correct]);
 
+  const initialLoadDone = useRef(false);
+
   useEffect(() => {
+    // Only initialize once or when moduleProgress changes while NOT in a battle
+    if (initialLoadDone.current && sessionState === 'playing') return;
+    
     const q = createBossQuestions({ moduleProgress, datasets: { kanaData, vocabData, kanjiData, grammarData }, n: 10 });
     setQuestions(q);
     setPos(0);
@@ -50,7 +55,8 @@ export default function BossBattle() {
     correctRef.current = 0;
     setTimeLeft(15);
     setSessionState('playing');
-  }, [moduleProgress]);
+    initialLoadDone.current = true;
+  }, [moduleProgress, sessionState]);
 
   useEffect(() => {
     if (sessionState !== 'playing') return;
@@ -136,7 +142,7 @@ export default function BossBattle() {
         if (newHearts <= 0) finishBattle(false, correctRef.current);
         else {
           const next = pos + 1;
-          if (next >= questions.length) finishBattle(false, correctRef.current);
+          if (next >= questions.length) finishBattle(newHearts > 0, correctRef.current);
           else setPos(next);
         }
       }, 800);
@@ -153,7 +159,7 @@ export default function BossBattle() {
       if (newHearts <= 0) finishBattle(false, correctRef.current);
       else {
         const next = pos + 1;
-        if (next >= questions.length) finishBattle(false, correctRef.current);
+        if (next >= questions.length) finishBattle(newHearts > 0, correctRef.current);
         else setPos(next);
       }
     }, 800);
