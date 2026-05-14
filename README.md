@@ -177,31 +177,6 @@ firebase deploy
 
 ---
 
-## 🗺️ Roadmap
-
-- [ ] Tambah konten grammar & pola kalimat N4
-- [ ] Mode listening (audio soal)
-- [ ] Sistem review terjadwal (SRS interval sesungguhnya)
-- [ ] Notifikasi streak harian (PWA push notification)
-- [ ] Dark/light mode toggle
-- [ ] Halaman statistik belajar (grafik progres mingguan)
-
----
-
-## 🤝 Kontribusi
-
-Pull request terbuka! Untuk perubahan besar, buka issue dulu ya.
-
-```bash
-# Fork repo, lalu:
-git checkout -b feature/nama-fitur
-git commit -m "feat: tambah fitur X"
-git push origin feature/nama-fitur
-# Buka Pull Request
-```
-
----
-
 ## 📄 Lisensi
 
 MIT © 2025 — bebas dipakai, dimodifikasi, dan didistribusikan.
