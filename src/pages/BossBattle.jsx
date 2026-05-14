@@ -34,18 +34,14 @@ export default function BossBattle() {
   const timerRef = useRef(null);
   const heartsRef = useRef(3);
   const correctRef = useRef(0);
+  const battleEndedRef = useRef(false);
   const [showBadge, setShowBadge] = useState(false);
   const [badgeInfo, setBadgeInfo] = useState(null);
 
   useEffect(() => { heartsRef.current = hearts; }, [hearts]);
   useEffect(() => { correctRef.current = correct; }, [correct]);
 
-  const initialLoadDone = useRef(false);
-
   useEffect(() => {
-    // Only initialize once or when moduleProgress changes while NOT in a battle
-    if (initialLoadDone.current && sessionState === 'playing') return;
-    
     const q = createBossQuestions({ moduleProgress, datasets: { kanaData, vocabData, kanjiData, grammarData }, n: 10 });
     setQuestions(q);
     setPos(0);
@@ -55,8 +51,8 @@ export default function BossBattle() {
     correctRef.current = 0;
     setTimeLeft(15);
     setSessionState('playing');
-    initialLoadDone.current = true;
-  }, [moduleProgress, sessionState]);
+    battleEndedRef.current = false;
+  }, []);
 
   useEffect(() => {
     if (sessionState !== 'playing') return;
@@ -66,15 +62,18 @@ export default function BossBattle() {
       setTimeLeft((t) => {
         if (t <= 1) {
           clearInterval(timerRef.current);
-          handleTimeout();
           return 0;
         }
         return t - 1;
       });
     }, 1000);
     return () => clearInterval(timerRef.current);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pos, sessionState]);
+
+  useEffect(() => {
+    if (sessionState !== 'playing' || timeLeft !== 0 || selectedAnswer !== null) return;
+    handleTimeout();
+  }, [timeLeft, sessionState, selectedAnswer]);
 
   const triggerConfetti = () => {
     const duration = 2500;
@@ -166,6 +165,8 @@ export default function BossBattle() {
   };
 
   const finishBattle = (explicitWin, correctCount) => {
+    if (battleEndedRef.current) return;
+    battleEndedRef.current = true;
     const total = questions.length || 10;
     const finalCorrect = correctCount !== undefined ? correctCount : correctRef.current;
     const win = explicitWin === true && finalCorrect >= Math.ceil(total * 0.5);

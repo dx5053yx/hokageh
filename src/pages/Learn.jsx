@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import confetti from 'canvas-confetti';
 import Flashcard from '../components/Flashcard';
@@ -29,8 +29,13 @@ export default function Learn() {
   const [startTime] = useState(Date.now());
   const [sessionState, setSessionState] = useState('playing'); // playing, gameover, summary
   const [expPopup, setExpPopup] = useState(null); // { amount, combo }
+  const [options, setOptions] = useState([]);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [shakingAnswer, setShakingAnswer] = useState(null);
+  const [kanjiQuestionType, setKanjiQuestionType] = useState('meaning');
 
-  // Reset session when route type changes (basic state)
+  // Reset session when route type or category changes
   useEffect(() => {
     setHearts(3);
     setCombo(0);
@@ -40,13 +45,11 @@ export default function Learn() {
     setSessionState('playing');
     setSessionQueue([]);
     setQueuePos(0);
-  }, [type]);
-
-  const [options, setOptions] = useState([]);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [shakingAnswer, setShakingAnswer] = useState(null);
-  const [kanjiQuestionType, setKanjiQuestionType] = useState('meaning');
+    setSelectedAnswer(null);
+    setIsAnimating(false);
+    setShakingAnswer(null);
+    setExpPopup(null);
+  }, [type, category]);
   const confettiRef = useRef(null);
 
   // Cleanup confetti on unmount
@@ -59,6 +62,12 @@ export default function Learn() {
   }, []);
   
   // Determine dataset
+  const filteredVocabData = useMemo(() => {
+    if (type !== 'vocab') return vocabData;
+    if (!decodedCategory) return vocabData;
+    return vocabData.filter(item => (item.category || '').toLowerCase() === decodedCategory.toLowerCase());
+  }, [type, decodedCategory]);
+
   let currentData = kanaData;
   let questionKey = 'character';
   let answerKey = 'romaji';
@@ -66,15 +75,11 @@ export default function Learn() {
   let baseExp = 5;
 
   if (type === 'vocab') {
-    currentData = vocabData;
+    currentData = filteredVocabData;
     questionKey = 'word';
     answerKey = 'meaning';
-    title = 'Vocabulary';
+    title = decodedCategory ? `Vocabulary — ${decodedCategory}` : 'Vocabulary';
     baseExp = 10;
-    if (decodedCategory) {
-      currentData = vocabData.filter(item => (item.category || '').toLowerCase() === decodedCategory.toLowerCase());
-      title = `Vocabulary — ${decodedCategory}`;
-    }
   } else if (type === 'kanji') {
     currentData = kanjiData;
     questionKey = 'character';
@@ -223,7 +228,12 @@ export default function Learn() {
         if (!decodedCategory) {
           updateModuleProgress(type, currentEntry.dataIndex + 1);
         } else {
-          try { updateCategoryProgress && updateCategoryProgress(decodedCategory, currentEntry.dataIndex + 1); } catch (e) {}
+          try {
+            const filteredIndex = currentData.findIndex((item) => item.id === currentEntry.item.id);
+            if (filteredIndex !== -1) {
+              updateCategoryProgress(decodedCategory, filteredIndex + 1);
+            }
+          } catch (e) {}
         }
       }
       updateQuestProgress(type, 1);
@@ -376,7 +386,7 @@ export default function Learn() {
           ))}
         </div>
         <div style={{ fontWeight: 'bold', color: 'var(--text-secondary)' }}>
-          {questionsAnswered + 1} / {Math.min(10, sessionQueue.length || 10)}
+          {Math.min(questionsAnswered + 1, 10)} / 10
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: combo >= 3 ? 'var(--accent-warning)' : 'var(--text-primary)' }}>
           <Zap size={20} fill={combo >= 3 ? "var(--accent-warning)" : "transparent"} />
